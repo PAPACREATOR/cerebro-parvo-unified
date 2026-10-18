@@ -31,6 +31,8 @@ try {
     # Transfer the literal input as UTF-8 in a temporary data file, not a command.
     $requestTextFile = Join-Path $run_dir ("request-" + [guid]::NewGuid().ToString('N') + '.utf8')
     [System.IO.File]::WriteAllText($requestTextFile, $text, (New-Object System.Text.UTF8Encoding($false)))
+    # Unicode-safe stdout even when Windows PowerShell inherits a legacy code page.
+    $env:PYTHONIOENCODING = 'utf-8'
     & $python.Source -m nexus.run_job --process $process --text-file $requestTextFile --run-dir $run_dir 2>&1 |
         Tee-Object -FilePath $log -Append
     $rc = $LASTEXITCODE
