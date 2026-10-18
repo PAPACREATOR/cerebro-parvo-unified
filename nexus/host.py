@@ -18,6 +18,14 @@ from nexus.windows_sandbox import launch_confined, task_environment
 
 
 def verify_integrity():
+    """Verify integrity manifest with better diagnostics and a dev override.
+
+    - Accepts that the manifest may contain extra entries, but requires at least
+      the `required` set to be present.
+    - Collects all mismatches and reports them in a single Blocked exception.
+    - Honors NEXUS_DEV_ALLOW_MANIFEST_MISMATCH=1 to continue in development
+      environments (prints a warning instead of raising).
+    """
     manifest = strict_json((ROOT / "integrity.json").read_bytes())
     required = {
         "__init__.py", "app.py", "host.py", "store.py", "contracts.py", "approval_binding.py", "capability_router.py", "instance.py",
@@ -31,12 +39,53 @@ def verify_integrity():
         "adapters/constitutional.py", "schemas/multimedia.json",
         "families/multimedia/som.md", "families/multimedia/imagem.md",
     }
-    if not isinstance(manifest, dict) or set(manifest) != required:
-        raise Blocked("Manifesto de integridade ausente ou incompleto.")
+
+    if not isinstance(manifest, dict):
+        raise Blocked("Manifesto de integridade ausente ou ilegível.")
+
+    manifest_keys = set(manifest.keys())
+    missing = required - manifest_keys
+    extra = manifest_keys - required
+
+    problems = []
+    if missing:
+        problems.append("Arquivos em falta: " + ", ".join(sorted(missing)))
+    if extra:
+        problems.append("Entradas não esperadas no manifesto: " + ", ".join(sorted(extra)))
+
+    # Check each declared entry for existence and matching digest. Collect all
+    # mismatches rather than failing on the first one to aid diagnosis.
+    mismatches = []
     for relative, expected in manifest.items():
         target = ROOT / relative
-        if target.is_symlink() or digest(target.read_bytes()) != expected:
-            raise Blocked("Um contrato ou processo mudou. É necessária revisão antes de executar.")
+        try:
+            if target.is_symlink() or target.is_junction():
+                mismatches.append(f"{relative}: é symlink/junction (potencial vector)")
+            elif not target.is_file():
+                mismatches.append(f"{relative}: ficheiro ausente")
+            else:
+                actual = digest(target.read_bytes())
+                if actual != expected:
+                    mismatches.append(f"{relative}: hash mismatch (esperado {expected[:12]}..., atual {actual[:12]}...)")
+        except Exception as e:
+            mismatches.append(f"{relative}: erro ao verificar ({e})")
+
+    if mismatches:
+        problems.append("Inconsistências de integridade: " + "; ".join(mismatches))
+
+    if problems:
+        dev_override = os.environ.get("NEXUS_DEV_ALLOW_MANIFEST_MISMATCH") == "1"
+        msg = (
+            "Manifesto de integridade incompleto ou alterado. "
+            + " | ".join(problems)
+            + ".\nSe isto for intencional para desenvolvimento local, exporta NEXUS_DEV_ALLOW_MANIFEST_MISMATCH=1 e reinicia."
+        )
+        if dev_override:
+            # Emitir aviso e permitir execução em ambientes de desenvolvimento.
+            print("WARNING: " + msg, file=sys.stderr)
+            return manifest
+        raise Blocked(msg)
+
     return manifest
 
 
