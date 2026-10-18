@@ -1,14 +1,9 @@
-"""Simple Windows-focused Nexus mini-host for the white-sheet UI.
+"""Simple Windows-focused Nexus mini-host for the white-sheet UI with direct adapters.
 
 This server accepts POST /api/request with JSON {"text": "..."}, chooses a
-micro-process, invokes the Windows runner-shell.cmd shim, validates the envelope,
-and returns the result to the browser.
-
-Design goals:
-- keep it obvious and minimal
-- use Windows-native shell as the execution boundary
-- no Linux-specific assumptions
-- always return structured JSON with process + envelope + metadata
+micro-process, attempts to run a local adapter when available (proofread, zotero),
+otherwise falls back to the Windows runner-shell.cmd shim. Returns a normalized
+envelope with result + trace.
 """
 import base64
 import json
@@ -17,6 +12,16 @@ import subprocess
 import threading
 import uuid
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
+
+# Direct adapters
+try:
+    from nexus.adapters import languagetool as lt_adapter
+except Exception:
+    lt_adapter = None
+try:
+    from nexus.adapters import zotero as zotero_adapter
+except Exception:
+    zotero_adapter = None
 
 HOST = '127.0.0.1'
 PORT = int(os.environ.get('NEXUS_BACKEND_PORT', '5055'))
@@ -51,7 +56,7 @@ def choose_process(text: str) -> str:
         return 'convert_pdf'
     if any(k in t for k in ['rever', 'revê', 'revisar', 'revisão', 'proofread', 'linguagem']):
         return 'proofread'
-    if any(k in t for k in ['pesquisa', 'procurar', 'procurar', 'web', 'procura', 'fontes']):
+    if any(k in t for k in ['pesquisa', 'procurar', 'web', 'procura', 'fontes']):
         return 'web'
     return 'interpret'
 
@@ -63,7 +68,8 @@ def _safe_json(obj):
         return None
 
 
-def run_process(process: str, text: str):
+def run_process_with_runner(process: str, text: str):
+    # Fallback path that calls the external Windows runner-shell.cmd
     if process not in VALID_PROCESSES:
         return {'status': 'FAIL', 'error': 'unsupported_process', 'process': process}
 
@@ -97,6 +103,37 @@ def run_process(process: str, text: str):
         return {'status': 'OK', 'process': process, 'envelope': parsed}
 
     return {'status': 'OK', 'process': process, 'envelope': {'result': parsed, 'trace': {'source': 'mini-host'}}}
+
+
+def orchestrate(process: str, text: str):
+    """Try direct adapters first for supported processes, else fall back to runner.
+
+    Returns a dict with keys: status, process, envelope (result+trace) and optional error/message.
+    """
+    # Direct proofread using LanguageTool adapter if present
+    if process == 'proofread' and lt_adapter is not None:
+        try:
+            res = lt_adapter.run_languagetool(text)
+            if res.get('status') == 'OK':
+                envelope = {'result': {'alerts': res.get('alerts', 0), 'evidence': res.get('evidence')},
+                            'trace': {'tool': 'languagetool', 'status': 'OK'}}
+                return {'status': 'OK', 'process': process, 'envelope': envelope}
+            else:
+                return {'status': res.get('status', 'FAIL'), 'process': process, 'envelope': {'result': None, 'trace': {'tool': 'languagetool', 'status': res.get('status'), 'message': res.get('message')}}}
+        except Exception as e:
+            return {'status': 'FAIL', 'error': 'adapter_exception', 'message': str(e)}
+
+    # Direct Zotero adapter
+    if process == 'zotero' and zotero_adapter is not None:
+        try:
+            refs = zotero_adapter.import_from_zotero(text)
+            envelope = {'result': {'references': refs}, 'trace': {'tool': 'zotero', 'status': 'OK'}}
+            return {'status': 'OK', 'process': process, 'envelope': envelope}
+        except Exception as e:
+            return {'status': 'FAIL', 'error': 'adapter_exception', 'message': str(e)}
+
+    # Otherwise, fallback to runner-shell
+    return run_process_with_runner(process, text)
 
 
 class Handler(BaseHTTPRequestHandler):
@@ -136,14 +173,18 @@ class Handler(BaseHTTPRequestHandler):
 
         process = choose_process(text)
         run_id = uuid.uuid4().hex
-        result = run_process(process, text)
+
+        # Orchestrate: prefer adapter direct calls when available
+        orchestration = orchestrate(process, text)
+
+        # Normalize response
         response = {
             'run_id': run_id,
             'process': process,
-            'status': result.get('status', 'FAIL'),
-            'envelope': result.get('envelope', {'result': None, 'trace': {'error': result}}),
-            'message': result.get('message') if result.get('message') else None,
-            'error': result.get('error') if result.get('error') else None,
+            'status': orchestration.get('status', 'FAIL'),
+            'envelope': orchestration.get('envelope', {'result': None, 'trace': {'error': orchestration.get('error')}}),
+            'message': orchestration.get('message') if orchestration.get('message') else None,
+            'error': orchestration.get('error') if orchestration.get('error') else None,
         }
         self._reply(200, response)
 
