@@ -1,0 +1,33 @@
+processes:
+  interpret:
+    description: "Interpretação do pedido e preparação de um plano de microprocessos"
+    input: { text: string }
+    output: { plan: object }
+  proofread:
+    description: "Revisão linguística (LanguageTool) — devolve diagnóstico, não aprovacao automática"
+    input: { text: string }
+    output: { evidence: object, alerts: int }
+  convert_pdf:
+    description: "Converter DOCX/ODT para PDF sem alterar conteúdo"
+    input: { filename: string, attachment: bytes }
+    output: { artifact_sha256: string, pages: int, size_bytes: int }
+  web:
+    description: "Pesquisa web controlada e retorno de referências estruturadas"
+    input: { text: string }
+    output: { sources: [{url: string, title: string, snippet: string}] }
+  zotero:
+    description: "Importar/gerir referências via Zotero local/CLI — extrair metadados e referências"
+    input: { text: string }
+    output: { references: [{title: string, url: string, authors: [string]}] }
+  ace_step:
+    description: "Executor ACE-Step/Forge microprocess (external tooling)"
+    input: { text: string }
+    output: { result: object }
+  deforium_forge:
+    description: "Executor Deforum Forge (rendering / media pipelines)"
+    input: { text: string }
+    output: { artifact: { name: string, sha256: string } }
+  visual_podcast:
+    description: "Preparação de plano para podcast visual — devolve roteiro e assets list"
+    input: { text: string }
+    output: { script: string, assets: [string] }
