@@ -9,11 +9,9 @@ def test_zotero_adapter_stub():
 
 
 def test_languagetool_adapter_present_or_absent():
-    # If LANGUAGETOOL_JAR not set, adapter returns UNKNOWN (string in status)
-    res = None
     try:
         from nexus.adapters import languagetool
-n        res = languagetool.run_languagetool('Teste simples')
+        res = languagetool.run_languagetool('Teste simples')
     except Exception:
         # Import or execution failed; that's ok for CI environments without Java
         res = {'status': 'UNKNOWN'}
