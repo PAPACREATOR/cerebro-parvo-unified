@@ -20,9 +20,13 @@ import sys
 
 p = argparse.ArgumentParser()
 p.add_argument("--process", required=True)
-p.add_argument("--text", required=True)
+text_input = p.add_mutually_exclusive_group(required=True)
+text_input.add_argument("--text")
+text_input.add_argument("--text-file")
 p.add_argument("--run-dir", required=True)
 args = p.parse_args()
+if args.text_file is not None:
+    args.text = pathlib.Path(args.text_file).read_text(encoding="utf-8")
 pathlib.Path(args.run_dir).mkdir(parents=True, exist_ok=True)
 (pathlib.Path(args.run_dir) / "argv.json").write_text(
     json.dumps(vars(args), ensure_ascii=False), encoding="utf-8"
@@ -76,11 +80,12 @@ class WindowsRunnerTests(unittest.TestCase):
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
         observed = json.loads((self.run_dir / "argv.json").read_text(encoding="utf-8"))
         self.assertEqual(observed["text"], payload)
+        self.assertEqual(list(self.run_dir.glob('request-*.utf8')), [], 'Temporary text file must be removed')
         self.assertEqual(observed["process"], "interpret")
         self.assertEqual(observed["run_dir"], str(self.run_dir))
         self.assertFalse(sentinel.exists(), "User text was interpreted as PowerShell code")
         self.assertFalse((self.run_dir / ".lock").exists())
-        self.assertIn("runner: OK", (self.run_dir / "runner.log").read_text(errors="replace"))
+        self.assertIn("runner: OK", (self.run_dir / "runner.log").read_text(encoding="utf-16"))
 
     def test_unknown_exit_code_preserved(self):
         result = self.invoke("dados insuficientes", exit_code=2)
