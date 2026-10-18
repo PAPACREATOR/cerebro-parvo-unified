@@ -90,13 +90,13 @@ class WindowsRunnerTests(unittest.TestCase):
     def test_unknown_exit_code_preserved(self):
         result = self.invoke("dados insuficientes", exit_code=2)
         self.assertEqual(result.returncode, 2, result.stdout + result.stderr)
-        self.assertIn("runner: UNKNOWN", (self.run_dir / "runner.log").read_text(errors="replace"))
+        self.assertIn("runner: UNKNOWN", (self.run_dir / "runner.log").read_text(encoding="utf-16"))
         self.assertFalse((self.run_dir / ".lock").exists())
 
     def test_failure_exit_code_preserved(self):
         result = self.invoke("erro de execução", exit_code=7)
         self.assertEqual(result.returncode, 7, result.stdout + result.stderr)
-        self.assertIn("runner: FAIL (7)", (self.run_dir / "runner.log").read_text(errors="replace"))
+        self.assertIn("runner: FAIL (7)", (self.run_dir / "runner.log").read_text(encoding="utf-16"))
         self.assertFalse((self.run_dir / ".lock").exists())
 
     def test_existing_lock_fails_closed_without_running_tool(self):
