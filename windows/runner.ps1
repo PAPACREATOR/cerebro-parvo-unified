@@ -14,10 +14,10 @@ if (Test-Path -LiteralPath $lock) {
     exit 1
 }
 Set-Content -LiteralPath $lock -Value $PID
+$requestTextFile = $null
 try {
     "runner start: $(Get-Date -Format o)" | Out-File -LiteralPath $log -Append
     "process: $process" | Out-File -LiteralPath $log -Append
-    "text: $text" | Out-File -LiteralPath $log -Append
 
     # Resolve an application, not a user-defined function or PowerShell expression.
     $python = Get-Command python.exe -CommandType Application -ErrorAction SilentlyContinue |
@@ -27,8 +27,11 @@ try {
         exit 1
     }
 
-    # Native argv boundary: quotes, Unicode and metacharacters are data.
-    & $python.Source -m nexus.run_job --process $process --text $text --run-dir $run_dir 2>&1 |
+    # Windows PowerShell 5.1 does not preserve embedded quotes in native argv.
+    # Transfer the literal input as UTF-8 in a temporary data file, not a command.
+    $requestTextFile = Join-Path $run_dir ("request-" + [guid]::NewGuid().ToString('N') + '.utf8')
+    [System.IO.File]::WriteAllText($requestTextFile, $text, (New-Object System.Text.UTF8Encoding($false)))
+    & $python.Source -m nexus.run_job --process $process --text-file $requestTextFile --run-dir $run_dir 2>&1 |
         Tee-Object -FilePath $log -Append
     $rc = $LASTEXITCODE
     if ($null -eq $rc) { $rc = 1 }
@@ -44,5 +47,6 @@ try {
         exit $rc
     }
 } finally {
+    if ($requestTextFile) { Remove-Item -LiteralPath $requestTextFile -ErrorAction SilentlyContinue }
     Remove-Item -LiteralPath $lock -ErrorAction SilentlyContinue
 }
