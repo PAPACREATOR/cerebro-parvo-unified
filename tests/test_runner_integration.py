@@ -1,9 +1,9 @@
 # Runner envelope integration test: start server and call /api/request
+import json
 import threading
 import time
-import json
-import urllib.request
 import urllib.error
+import urllib.request
 
 from simple_server import serve
 
@@ -17,7 +17,7 @@ def start_server():
 
 def do_request(text):
     data = json.dumps({'text': text}).encode('utf-8')
-    req = urllib.request.Request('http://127.0.0.1:5055/api/request', data=data, headers={'Content-Type':'application/json'})
+    req = urllib.request.Request('http://127.0.0.1:5055/api/request', data=data, headers={'Content-Type': 'application/json'})
     try:
         with urllib.request.urlopen(req, timeout=20) as resp:
             return resp.read().decode('utf-8')
@@ -34,6 +34,7 @@ if __name__ == '__main__':
         ('Converte para PDF o documento anexo.', 'convert_pdf'),
         ('Revisa o texto e devolve diagnóstico.', 'proofread'),
         ('Quero um podcast visual com imagens e guião.', 'visual_podcast'),
+        ('Interpreta este pedido e prepara um plano de ação.', 'interpret'),
     ]
     for text, expected in tests:
         out = do_request(text)

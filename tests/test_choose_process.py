@@ -9,11 +9,12 @@ cases = {
     'Usa ACE-Step para orquestrar o workflow.': 'ace_step',
     'Render com Deforum Forge um storyboard.': 'deforium_forge',
     'Quero produzir um podcast visual com imagens e áudio.': 'visual_podcast',
+    'interpreta este pedido e prepara um plano.': 'interpret',
 }
 
 for text, expected in cases.items():
     got = choose_process(text)
-    print(f"{text[:40]!r} -> {got}")
+    print(f"{text[:50]!r} -> {got}")
     assert got == expected, f"Expected {expected}, got {got} for {text}"
 
 print('choose_process tests passed')
