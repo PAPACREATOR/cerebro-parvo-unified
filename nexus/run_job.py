@@ -14,18 +14,22 @@ Prints JSON envelope to stdout.
 import argparse
 import json
 import sys
+from pathlib import Path
 from nexus import orchestrator
 
 
 def main():
     p = argparse.ArgumentParser()
     p.add_argument('--process', required=True)
-    p.add_argument('--text', required=True)
+    text_input = p.add_mutually_exclusive_group(required=True)
+    text_input.add_argument('--text')
+    text_input.add_argument('--text-file', help='Read literal UTF-8 request text from a file (Windows PowerShell 5.1)')
     p.add_argument('--run-dir', required=True)
     p.add_argument('--confidence-threshold', type=float, default=0.5)
     args = p.parse_args()
 
-    res = orchestrator.handle_request(args.text, args.run_dir, confidence_threshold=args.confidence_threshold)
+    request_text = args.text if args.text is not None else Path(args.text_file).read_text(encoding='utf-8')
+    res = orchestrator.handle_request(request_text, args.run_dir, confidence_threshold=args.confidence_threshold)
     # print envelope if present
     envelope = res.get('envelope') if isinstance(res, dict) else None
     out = {'status': res.get('status') if isinstance(res, dict) else 'FAIL', 'envelope': envelope}
