@@ -1,0 +1,26 @@
+# nexus-title: Pesquisa na biblioteca
+# nexus-terms: procurar procura pesquisar pesquisa buscar busca biblioteca fontes cronicas crónicas regras
+# nexus-match: ^\s*(?:quero\s+)?(?:procurar|procura|pesquisar|pesquisa|buscar|busca)\s+na\s+biblioteca\s*(?::|sobre\s)\s*(?<body>\S[\s\S]*)$
+# nexus-attachment: false
+description: Pesquisar os textos locais indexados por SQLite FTS5, sem IA.
+type: chain
+working_dir: __WORK_DIR_JSON__
+shell: [powershell.exe, -NoProfile, -NonInteractive, -ExecutionPolicy, Bypass]
+steps:
+  - id: pesquisar_fontes
+    run: |
+      $ErrorActionPreference = 'Stop'
+      $request = Get-Content -LiteralPath request.json -Raw -Encoding UTF8 | ConvertFrom-Json
+      . $request.index_script
+      $found = @(Search-FolhaLibrary $request.sqlite_exe $request.database_file $request.body)
+      $report = [Text.StringBuilder]::new()
+      $null = $report.AppendLine('Pesquisa: ' + $request.body)
+      $null = $report.AppendLine('Documentos encontrados: ' + $found.Count + ' (até 20 por pesquisa).')
+      if (-not $found.Count) { $null = $report.AppendLine('Não foram encontrados textos com todas estas palavras na biblioteca local.') }
+      foreach ($item in $found) {
+        $null = $report.AppendLine()
+        $null = $report.AppendLine($item.title)
+        $null = $report.AppendLine('Origem: ' + $item.relative_path)
+        $null = $report.AppendLine($item.body)
+      }
+      [IO.File]::WriteAllText((Join-Path (Get-Location).Path 'content.md'),$report.ToString(),[Text.UTF8Encoding]::new($false))

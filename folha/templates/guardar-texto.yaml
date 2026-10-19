@@ -1,0 +1,27 @@
+# nexus-title: Texto guardado
+# nexus-terms: guardar guarda conservar texto memorizar arquivar
+# nexus-match: ^\s*(?:@@\s?|(?:quero\s+)?(?:guardar|guarda|conservar|conserva)\s+(?:este\s+)?texto\s*:\s?)(?<body>[\s\S]*\S[\s\S]*)$
+# nexus-attachment: false
+description: Conservar exatamente o texto recebido na Folha.
+type: chain
+working_dir: __WORK_DIR_JSON__
+shell: [powershell.exe, -NoProfile, -NonInteractive, -ExecutionPolicy, Bypass]
+steps:
+  - id: guardar_texto
+    run: |
+      $ErrorActionPreference = 'Stop'
+      $request = Get-Content -LiteralPath request.json -Raw -Encoding UTF8 | ConvertFrom-Json
+      [IO.File]::WriteAllText((Join-Path (Get-Location).Path 'texto.md'), [string]$request.body, [Text.UTF8Encoding]::new($false))
+  - id: verificar_copia
+    run: |
+      $ErrorActionPreference = 'Stop'
+      $request = Get-Content -LiteralPath request.json -Raw -Encoding UTF8 | ConvertFrom-Json
+      $content = [IO.File]::ReadAllText((Join-Path (Get-Location).Path 'texto.md'), [Text.Encoding]::UTF8)
+      if ($content -cne [string]$request.body) { throw 'O texto guardado não corresponde ao pedido.' }
+      Copy-Item -LiteralPath texto.md -Destination content.md
+  - id: guardar_na_biblioteca
+    run: |
+      $ErrorActionPreference = 'Stop'
+      $request = Get-Content -LiteralPath request.json -Raw -Encoding UTF8 | ConvertFrom-Json
+      . $request.index_script
+      Publish-FolhaWiki $request
