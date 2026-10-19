@@ -1,0 +1,41 @@
+# nexus-title: Verificar ficheiro
+# nexus-terms: verificar verifica verifique integridade ficheiro documento
+# nexus-match: ^\s*(?:&\s*)?(?:quero\s+)?(?:verificar|verifica|verifique)(?:\s+a)?\s+integridade(?:\s+de|\s+deste|\s+do)?\s+(?:ficheiro|documento)[.!?]?\s*$
+# nexus-attachment: true
+description: Verificar o ficheiro recebido na Folha.
+type: chain
+working_dir: __WORK_DIR_JSON__
+shell: [powershell.exe, -NoProfile, -NonInteractive, -ExecutionPolicy, Bypass]
+steps:
+  - id: verificar_original
+    run: |
+      $ErrorActionPreference = 'Stop'
+      $request = Get-Content -LiteralPath request.json -Raw -Encoding UTF8 | ConvertFrom-Json
+      $file = Get-Item -LiteralPath $request.input_file
+      $sha = [Security.Cryptography.SHA256]::Create()
+      try { $hash = [BitConverter]::ToString($sha.ComputeHash([IO.File]::ReadAllBytes($file.FullName))).Replace('-','').ToLowerInvariant() } finally { $sha.Dispose() }
+      Add-Content -LiteralPath $env:DAGU_OUTPUT_FILE -Value ('sha256=' + $hash) -Encoding ASCII
+      Add-Content -LiteralPath $env:DAGU_OUTPUT_FILE -Value ('bytes=' + $file.Length) -Encoding ASCII
+    outputs:
+      - name: sha256
+      - name: bytes
+  - id: apresentar_resultado
+    action: template.render
+    with:
+      template: |
+        # Ficheiro verificado
+
+        Tamanho: {{ .bytes }} bytes
+        SHA256: {{ .sha256 }}
+
+        O original foi conservado. Esta verificação identifica os bytes recebidos; não avalia o conteúdo nem procura vírus.
+      data:
+        bytes: ${steps.verificar_original.outputs.bytes}
+        sha256: ${steps.verificar_original.outputs.sha256}
+      output: content.md
+  - id: guardar_na_biblioteca
+    run: |
+      $ErrorActionPreference = 'Stop'
+      $request = Get-Content -LiteralPath request.json -Raw -Encoding UTF8 | ConvertFrom-Json
+      . $request.index_script
+      Publish-FolhaWiki $request
