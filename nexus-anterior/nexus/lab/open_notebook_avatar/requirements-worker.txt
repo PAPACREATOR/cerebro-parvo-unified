@@ -1,0 +1,8 @@
+# Install torch/torchvision first using the CPU or CUDA index appropriate to the host.
+torch==2.5.1
+torchvision==0.20.1
+av==14.0.1
+face-alignment==1.5.0
+lipsync==0.1.0
+Pillow>=12.2.0
+filelock==3.20.3

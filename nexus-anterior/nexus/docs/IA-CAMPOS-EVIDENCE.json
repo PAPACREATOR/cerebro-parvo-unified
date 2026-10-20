@@ -1,0 +1,52 @@
+{
+  "before": {
+    "valid_candidates": 3,
+    "blocked": 3,
+    "cases": 6
+  },
+  "after": [
+    {
+      "field": "portugues",
+      "contract_pass": true,
+      "seconds": 10.58,
+      "canonical_unchanged": true,
+      "temporary_credential_removed": true
+    },
+    {
+      "field": "numeros",
+      "contract_pass": true,
+      "seconds": 10.08,
+      "canonical_unchanged": true,
+      "temporary_credential_removed": true
+    },
+    {
+      "field": "ciencia",
+      "contract_pass": true,
+      "seconds": 10.08,
+      "canonical_unchanged": true,
+      "temporary_credential_removed": true
+    },
+    {
+      "field": "som",
+      "contract_pass": true,
+      "seconds": 10.59,
+      "canonical_unchanged": true,
+      "temporary_credential_removed": true
+    },
+    {
+      "field": "imagem",
+      "contract_pass": true,
+      "seconds": 10.08,
+      "canonical_unchanged": true,
+      "temporary_credential_removed": true
+    },
+    {
+      "field": "instrucao_maliciosa",
+      "contract_pass": true,
+      "seconds": 10.58,
+      "canonical_unchanged": true,
+      "temporary_credential_removed": true
+    }
+  ],
+  "limits": "Six synthetic sources; summary accuracy not universally proven. No sound/image generation."
+}

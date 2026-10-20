@@ -1,0 +1,76 @@
+name: Nexus Windows isolated acceptance package
+on:
+  pull_request:
+    paths:
+      - 'nexus/**'
+      - '.github/workflows/nexus-windows-acceptance.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  windows_acceptance:
+    name: Pinned install and real Windows core gates
+    runs-on: windows-latest
+    timeout-minutes: 30
+    env:
+      PYTHONUTF8: '1'
+      PYTHONIOENCODING: utf-8
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: Validate same SHA and install into disposable Windows test workspace
+        shell: pwsh
+        run: |
+          $head = '${{ github.event.pull_request.head.sha || github.sha }}'
+          $actual = (git rev-parse HEAD).Trim()
+          if ($head -cne $actual) { throw "WRONG_CHECKOUT_HEAD: $actual != $head" }
+          $workspace = Join-Path $env:RUNNER_TEMP 'Nexus-Acceptance'
+          & powershell.exe -NoProfile -NonInteractive -File nexus/windows/install-nexus-test-isolated.ps1 -ExpectedHead $head -WorkspaceRoot $workspace -AuthorizeInstall -CiRunnerElevationException
+          if ($LASTEXITCODE -ne 0) {
+            $report = Join-Path (Join-Path (Join-Path $workspace 'reports') $head) 'acceptance.json'
+            if (Test-Path -LiteralPath $report) { Get-Content -LiteralPath $report -Raw }
+            throw 'ISOLATED_WINDOWS_INSTALL_OR_ACCEPTANCE_FAILED'
+          }
+          $report = Join-Path (Join-Path (Join-Path $workspace 'reports') $head) 'acceptance.json'
+          $state = Get-Content -LiteralPath $report -Raw | ConvertFrom-Json
+          if ($state.status -cne 'PASS_TESTABLE_CORE' -or $state.head -cne $head) {
+            throw 'ISOLATED_ACCEPTANCE_REPORT_INVALID'
+          }
+          Write-Output "ISOLATED_WINDOWS_ACCEPTANCE=PASS_TESTABLE_CORE HEAD=$head"
+      - name: Assemble pinned user-reviewable Windows test package
+        shell: pwsh
+        run: |
+          $head = '${{ github.event.pull_request.head.sha || github.sha }}'
+          $actual = (git rev-parse HEAD).Trim()
+          if ($head -cne $actual) { throw 'PACKAGE_CHECKOUT_HEAD_MISMATCH' }
+          $pack = Join-Path $env:RUNNER_TEMP 'Nexus-Windows-Test-Pinned'
+          $null = New-Item -ItemType Directory -Path $pack
+          Copy-Item 'nexus/windows/install-nexus-test-isolated.ps1' (Join-Path $pack 'install-nexus-test-isolated.ps1')
+          Copy-Item 'nexus/windows/start-nexus-test-isolated.ps1' (Join-Path $pack 'start-nexus-test-isolated.ps1')
+          Copy-Item 'nexus/docs/WINDOWS-ACCEPTANCE-ISOLATED.md' (Join-Path $pack 'LEIA-ME-WINDOWS.md')
+          Set-Content -LiteralPath (Join-Path $pack 'candidate-head.txt') -Value $head -NoNewline -Encoding ascii
+          $scriptPath = (Join-Path $pack 'install-nexus-test-isolated.ps1')
+          $pinHash = (Get-FileHash -LiteralPath $scriptPath -Algorithm SHA256).Hash.ToLowerInvariant()
+          Set-Content -LiteralPath (Join-Path $pack 'installer-sha256.txt') -Value $pinHash -NoNewline -Encoding ascii
+          if (@(Get-ChildItem -LiteralPath $pack -File).Count -ne 5) { throw 'PACKAGE_CONTENT_MISMATCH' }
+          Write-Output "NEXUS_PINNED_PACKAGE=$head INSTALLER_SHA256=$pinHash"
+      - name: Upload pinned Windows acceptance package only after successful tests
+        uses: actions/upload-artifact@v4
+        with:
+          name: nexus-windows-acceptance-PINNED
+          path: ${{ runner.temp }}/Nexus-Windows-Test-Pinned/
+          if-no-files-found: error
+          retention-days: 14
+      - name: Upload Windows install/pytest diagnostic report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: isolated-acceptance-test-evidence
+          path: ${{ runner.temp }}/Nexus-Acceptance/reports/
+          if-no-files-found: ignore
+          retention-days: 14

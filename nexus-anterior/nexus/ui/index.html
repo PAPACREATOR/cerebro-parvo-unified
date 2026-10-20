@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Folha Nexus</title>
+  <meta name="description" content="Uma folha para pensar, pesquisar, preparar e rever o teu trabalho.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <span class="identity">Nexus</span>
+      <details id="navigation" class="navigation">
+        <summary aria-label="Abrir opções da folha">···</summary>
+        <div class="navigation-options">
+          <button id="new" type="button">Nova folha</button>
+          <button id="browse-file" type="button">Juntar ficheiro</button>
+          <button id="resume" type="button" hidden>Retomar preparação</button>
+          <button id="history-toggle" type="button" aria-expanded="false">Trabalhos anteriores</button>
+        </div>
+      </details>
+    </header>
+    <main>
+      <section class="sheet" aria-labelledby="page-title">
+        <h1 id="page-title" class="sr-only">Folha</h1>
+        <form id="form">
+          <label for="text" class="sr-only">Escreve o teu pedido ou ideia</label>
+          <textarea id="text" spellcheck="true" autofocus maxlength="100000"></textarea>
+          <div id="composer-bottom" class="composer-bottom" hidden>
+            <label for="file" class="attachment" tabindex="0">Juntar ficheiro <span id="file-label"></span></label>
+            <input type="file" id="file" hidden>
+            <button id="submit" type="submit" class="primary">Continuar <span aria-hidden="true">→</span></button>
+          </div>
+        </form>
+        <p id="notice" class="notice" role="status" aria-live="polite" hidden></p>
+        <div id="empty" hidden></div>
+
+        <section id="workspace" class="workspace" aria-label="Preparação do trabalho" hidden>
+          <div class="workspace-heading">
+            <label for="product" class="sr-only">Produto</label>
+            <select id="product">
+              <option value="">Escolhe o produto</option>
+              <option value="text">Texto</option>
+              <option value="podcast">Podcast</option>
+              <option value="music">Música</option>
+              <option value="short">Curta</option>
+            </select>
+            <span id="workspace-status" class="subtle">Preparação</span>
+          </div>
+          <nav aria-label="Etapas do trabalho">
+            <ol class="stages">
+              <li><button type="button" id="stage-0">1. Ideia</button></li>
+              <li><button type="button" id="stage-1">2. Pesquisa</button></li>
+              <li><button type="button" id="stage-2">3. Plano</button></li>
+              <li><button type="button" id="stage-3">4. Guião / texto</button></li>
+              <li><button type="button" id="stage-4">5. Produção</button></li>
+              <li><button type="button" id="stage-5">6. Rever e finalizar</button></li>
+            </ol>
+          </nav>
+          <h2 id="stage-title"></h2>
+          <p id="stage-guidance" class="subtle"></p>
+          <div id="brief-fields" class="brief-grid">
+            <label>Objetivo<input id="brief-objective" maxlength="500"></label>
+            <label>Público<input id="brief-audience" maxlength="500"></label>
+            <label class="wide">Tema<input id="brief-topic" maxlength="2000"></label>
+            <label>Tom<input id="brief-tone" maxlength="500"></label>
+            <label>Duração / tamanho<input id="brief-length" maxlength="500"></label>
+            <label>Formato<input id="brief-format" maxlength="500"></label>
+            <label>Data de corte<input id="brief-cutoff" type="date"></label>
+            <label class="wide">Fontes permitidas<textarea id="brief-sources" rows="2" maxlength="10000"></textarea></label>
+          </div>
+          <label id="stage-note-label" for="stage-notes"></label>
+          <textarea id="stage-notes" class="stage-notes" spellcheck="true" maxlength="100000"></textarea>
+          <label class="stage-review"><input id="stage-reviewed" type="checkbox"> Revisei esta etapa.</label>
+          <div class="stage-actions">
+            <button id="stage-next" type="button" class="primary" disabled>Continuar</button>
+            <button id="save-preparation" type="button" class="quiet">Guardar preparação</button>
+          </div>
+        </section>
+
+        <section id="result" class="result" aria-label="Resultado ou interpretação" hidden>
+          <div class="result-head"><span id="status" class="status"></span><h2 id="result-title"></h2></div>
+          <p id="message"></p>
+          <pre id="content"></pre>
+          <div id="actions" class="result-actions" hidden>
+            <p class="gate-note">Revê esta versão antes de a guardar como aprovada.</p>
+            <button id="prepare" type="button" class="primary">Rever e aprovar</button>
+            <button id="pdf" type="button" class="quiet" hidden>Descarregar PDF</button>
+            <button id="download" type="button" class="quiet">Descarregar texto</button>
+          </div>
+        </section>
+      </section>
+      <section id="history-panel" class="history-panel" aria-labelledby="history-title" hidden>
+        <h2 id="history-title">Trabalhos anteriores</h2>
+        <div id="history" class="history" aria-label="Histórico de pedidos"></div>
+      </section>
+    </main>
+  </div>
+  <dialog id="execution-confirmation" aria-labelledby="execution-title">
+    <div class="dialog-inner">
+      <h2 id="execution-title">Avançar com este trabalho?</h2>
+      <p id="execution-summary"></p>
+      <details><summary>Rever o pedido e o ficheiro</summary><pre id="execution-review"></pre></details>
+      <label class="confirm"><input id="execution-confirm" type="checkbox"> Confirmo este pedido e o ficheiro indicado.</label>
+      <div class="dialog-actions"><button id="execution-cancel" type="button" class="quiet">Cancelar</button><button id="execution-approve" type="button" class="primary" disabled>Avançar</button></div>
+    </div>
+  </dialog>
+  <dialog id="approval" aria-labelledby="approval-title">
+    <div class="dialog-inner">
+      <h2 id="approval-title">Aprovar esta versão?</h2>
+      <pre id="review"></pre>
+      <label class="confirm"><input id="confirm" type="checkbox"> Li e aprovo exatamente esta versão.</label>
+      <div class="dialog-actions"><button id="cancel" type="button" class="quiet">Não aprovar</button><button id="approve" type="button" class="primary" disabled>Guardar como aprovado</button></div>
+    </div>
+  </dialog>
+  <script src="app.js"></script>
+</body>
+</html>

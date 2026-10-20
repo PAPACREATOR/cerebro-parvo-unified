@@ -1,0 +1,24 @@
+name: Wiki 100K study
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'nexus/lab/wiki/**'
+      - '.github/workflows/wiki-100k.yml'
+jobs:
+  study:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run study
+        run: python nexus/lab/wiki/test_web_research_wiki_100k.py --cases 100000 --output nexus/lab/wiki/results
+      - name: Upload results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: wiki-100k-results
+          if-no-files-found: error
+          path: nexus/lab/wiki/results

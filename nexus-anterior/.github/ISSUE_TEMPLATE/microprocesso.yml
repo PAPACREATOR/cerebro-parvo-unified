@@ -1,0 +1,28 @@
+name: Microprocesso ou falha de contrato
+description: Registar âmbito, evidência e critérios de fecho
+title: "[IMP-XXX] "
+body:
+  - type: textarea
+    id: contract
+    attributes:
+      label: Contrato e fonte vigente
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidência real e estado PASS / FAIL / NOT RUN
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Alteração técnica permitida e decisões POR DEFINIR
+    validations:
+      required: true
+  - type: textarea
+    id: completion
+    attributes:
+      label: Testes e critério observável de fecho
+    validations:
+      required: true

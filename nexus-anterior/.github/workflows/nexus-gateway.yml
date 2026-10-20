@@ -1,0 +1,61 @@
+name: Nexus Optional AI Studio Gateway
+
+on:
+  pull_request:
+    paths:
+      - 'server.js'
+      - 'package.json'
+      - 'nexus/tests/gateway_*.test.cjs'
+      - 'nexus/tests/folha_search_smoke.cjs'
+      - 'nexus/tests/test_single_runtime_boundary.py'
+      - 'nexus/tests/test_gateway_real_host.py'
+      - 'nexus/tests/test_memory_search_http.py'
+      - 'nexus/app.py'
+      - 'nexus/ui/app.js'
+      - 'nexus/integrity.json'
+      - 'nexus/ui/index.html'
+      - '.github/workflows/nexus-gateway.yml'
+  push:
+    branches:
+      - 'fix/single-runtime-boundary-*'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  node-transport:
+    name: Python authority and Node gateway
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 12
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: Verify gateway JavaScript syntax
+        run: node --check server.js
+      - name: Install optional gateway dependency
+        run: npm install --ignore-scripts --no-audit --no-fund
+      - name: HTTP forwarding and authority E2E with Python-backend stub
+        run: npm test
+      - name: Install pinned Python test dependencies
+        run: python -m pip install -r nexus/requirements-test.txt
+      - name: Single authority and original sealed HTML
+        run: python -m pytest nexus/tests/test_single_runtime_boundary.py -q -o pythonpath=.
+      - name: Real Python app and Host over optional Node transport
+        run: python -m pytest nexus/tests/test_gateway_real_host.py -q -o pythonpath=.
+      - name: Real authenticated FTS5 HTTP and adversarial regressions
+        run: python -m pytest nexus/tests/test_memory_search_http.py -q -o pythonpath=.
+      - name: Existing FTS5 derived-index and Store provenance lab
+        run: python -m pytest nexus/lab/wiki/test_kernel_bridge.py -q -o pythonpath=.

@@ -1,0 +1,155 @@
+diff --git a/app/services/task.py b/app/services/task.py
+index 418b516..a293154 100644
+--- a/app/services/task.py
++++ b/app/services/task.py
+@@ -19,6 +19,7 @@ from app.models.schema import VideoConcatMode, VideoParams
+ from app.services import bgm as bgm_service
+ from app.services import (
+     elevenlabs_music,
++    nexus_ace_music,
+     llm,
+     loomloom,
+     material,
+@@ -75,6 +76,8 @@ _CROSS_POST_SOCIAL_PLATFORMS = {
+ # 文件扩展名、领域异常和 WebUI 警告代码；任务编排、0 音量短路及失败降级
+ # 全部复用同一路径，避免后续新增供应商时维护多份相似流程。
+ _VIDEO_MUSIC_PROVIDERS = {
++    "ace_step": {"service": nexus_ace_music, "error_type": nexus_ace_music.AceMusicError,
++                 "suffix": ".wav", "warning_code": "ace_step_bgm_failed", "display_name": "ACE-Step local"},
+     "sonilo": {
+         "service": sonilo,
+         "error_type": sonilo.SoniloError,
+diff --git a/cli.py b/cli.py
+index e8ecef6..deca36e 100644
+--- a/cli.py
++++ b/cli.py
+@@ -224,7 +224,7 @@ def _video_fit_mode(value: str) -> str:
+ # 只有这些取值会请求外部音乐生成服务，因此只有它们消费配乐提示词。取值需与
+ # app/services/task.py 的 _VIDEO_MUSIC_PROVIDERS 保持一致；集中定义后，新增
+ # 配乐供应商不会再次遗漏 --bgm-type 校验、批量校验和提示词参数。
+-_CLI_MUSIC_BGM_TYPES = ("sonilo", "elevenlabs")
++_CLI_MUSIC_BGM_TYPES = ("sonilo", "elevenlabs", "ace_step")
+ _BGM_TYPE_CHOICES_TEXT = "none, random, custom, " + ", ".join(_CLI_MUSIC_BGM_TYPES)
+ _BGM_TYPE_METAVAR = "{none,random,custom," + ",".join(_CLI_MUSIC_BGM_TYPES) + "}"
+ 
+diff --git a/webui/Main.py b/webui/Main.py
+index 7da0319..4821923 100644
+--- a/webui/Main.py
++++ b/webui/Main.py
+@@ -6582,6 +6582,7 @@ def _render_background_music_settings(params, elevenlabs_api_key_rendered=False)
+     previous_bgm_type = st.session_state.get("last_rendered_bgm_type")
+     st.divider()
+     bgm_options = [
++        ("Música local ACE-Step", "ace_step"),
+         (tr("No Background Music"), ""),
+         (tr("Random Background Music"), "random"),
+         (tr("Preset Song"), "preset"),
+@@ -6809,6 +6810,12 @@ def _render_background_music_settings(params, elevenlabs_api_key_rendered=False)
+             else:
+                 params.bgm_file = ""
+ 
++    if params.bgm_type == "ace_step":
++        params.video_music_prompt = st.text_input(
++            "Descrição da música local", value=config.ui.get("ace_step_music_prompt", "Soft instrumental piano, calm, no vocals"),
++            max_chars=1000, key="ace_step_music_prompt_input",
++        ).strip()
++        _set_runtime_config("ui", "ace_step_music_prompt", params.video_music_prompt)
+     if params.bgm_type == "sonilo":
+         if previous_bgm_type != "sonilo":
+             st.session_state["sonilo_bgm_prompt_input"] = _saved_ui_text(
+diff --git a/app/services/nexus_ace_music.py b/app/services/nexus_ace_music.py
+new file mode 100644
+--- /dev/null
++++ b/app/services/nexus_ace_music.py
+@@ -0,0 +1,91 @@
++"""Local ACE-Step music provider; submit once and retain the job for resumption."""
++import hashlib
++import json
++import math
++from pathlib import Path
++import time
++import urllib.parse
++import urllib.request
++
++BASE_URL = 'http://127.0.0.1:8001'
++MAX_PROMPT_LENGTH = 1000
++
++class AceMusicError(RuntimeError):
++    pass
++
++def _request(route, payload=None):
++    data = None if payload is None else json.dumps(payload).encode('utf-8')
++    req = urllib.request.Request(BASE_URL + route, data, {'Content-Type': 'application/json'})
++    with urllib.request.urlopen(req, timeout=30) as response:
++        raw = response.read(2_000_001)
++    if len(raw) > 2_000_000:
++        raise AceMusicError('ACE-Step response exceeds limit')
++    value = json.loads(raw)
++    if value.get('code', 200) != 200 or value.get('error'):
++        raise AceMusicError('ACE-Step refused the request')
++    return value
++
++def is_enabled():
++    return True  # Local provider does not use a paid account or API key.
++
++def validate_generation_access():
++    try:
++        _request('/health')
++    except Exception as exc:
++        raise AceMusicError('A API local ACE-Step não está disponível na porta 8001') from exc
++
++def generate_bgm(video_path, output_path, video_duration, prompt=''):
++    try:
++        duration = float(video_duration)
++        if not math.isfinite(duration) or duration <= 0 or duration > 600:
++            raise AceMusicError('Music duration must be between 0 and 600 seconds')
++        prompt = str(prompt or 'Soft instrumental piano background, calm, no vocals').strip()
++        if not prompt or len(prompt) > MAX_PROMPT_LENGTH:
++            raise AceMusicError('Invalid music description')
++        output = Path(output_path).resolve()
++        from app.utils import utils
++        output.relative_to(Path(utils.task_dir()).resolve())
++        if output.suffix.lower() != '.wav':
++            raise AceMusicError('ACE-Step output must be WAV')
++        payload = dict(prompt=prompt, lyrics='[Instrumental]', audio_duration=max(10, duration),
++                       model='acestep-v15-turbo', inference_steps=8, thinking=False,
++                       use_cot_caption=False, use_cot_language=False, batch_size=1,
++                       bpm=90, key_scale='C major', time_signature='4/4', audio_format='wav')
++        fingerprint = hashlib.sha256(json.dumps(payload, sort_keys=True).encode()).hexdigest()
++        sidecar = output.with_suffix('.ace-job.json')
++        if sidecar.exists():
++            record = json.loads(sidecar.read_text(encoding='utf-8'))
++            if record['input_sha256'] != fingerprint:
++                raise AceMusicError('Existing music job has different parameters')
++            if not record.get('task_id'):
++                raise AceMusicError('Previous submission outcome unknown; inspect job before retrying')
++        else:
++            record = {'input_sha256': fingerprint, 'status': 'submitting'}
++            output.parent.mkdir(parents=True, exist_ok=True)
++            with sidecar.open('x', encoding='utf-8') as handle:
++                json.dump(record, handle)
++            response = _request('/release_task', payload)
++            record.update(task_id=response['data']['task_id'], status='submitted')
++            sidecar.write_text(json.dumps(record, indent=2), encoding='utf-8')
++        deadline = time.monotonic() + 900
++        while time.monotonic() < deadline:
++            rows = _request('/query_result', {'task_id_list': [record['task_id']]})['data']
++            if rows and rows[0]['status'] == 2:
++                raise AceMusicError('ACE-Step generation failed: ' + record['task_id'])
++            if rows and rows[0]['status'] == 1:
++                result = json.loads(rows[0]['result'])[0]
++                route = '/v1/audio?' + urllib.parse.urlencode({'path': result['file']})
++                with urllib.request.urlopen(BASE_URL + route, timeout=60) as response:
++                    audio = response.read(150_000_001)
++                if len(audio) > 150_000_000 or audio[:4] != b'RIFF' or audio[8:12] != b'WAVE':
++                    raise AceMusicError('ACE-Step returned invalid WAV')
++                output.write_bytes(audio)
++                record.update(status='completed', audio_sha256=hashlib.sha256(audio).hexdigest(), result=result)
++                sidecar.write_text(json.dumps(record, indent=2), encoding='utf-8')
++                return str(output)
++            time.sleep(3)
++        raise AceMusicError('Music job still pending; retained for resumption: ' + record['task_id'])
++    except AceMusicError:
++        raise
++    except Exception as exc:
++        raise AceMusicError('Local ACE-Step request failed: ' + str(exc)) from exc

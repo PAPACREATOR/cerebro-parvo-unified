@@ -1,0 +1,237 @@
+[
+  {
+    "path": "historico/repositorio-2026-09-24/.cursorignore",
+    "sha256": "d929ecb1522377a30e868a1d00b8ae0cae72ce40eb10a7a3d1799dbcfacd9e75",
+    "origin": "GitHub main 83d478a982cfb515e7bd90b86a7d502b0965ca57: .cursorignore"
+  },
+  {
+    "path": "historico/repositorio-2026-09-24/.gitignore",
+    "sha256": "2fca3c7f06b7cc883cd1f3ff76dec0a5ed8458c9827cc05930e9c28f9d35a86d",
+    "origin": "GitHub main 83d478a982cfb515e7bd90b86a7d502b0965ca57: .gitignore"
+  },
+  {
+    "path": "historico/repositorio-2026-09-24/AGENTS.md",
+    "sha256": "ce3de510f5fecd73fd6e8f9ee83bcd84af97f55d725c88886ad9cc68a86636c7",
+    "origin": "GitHub main 83d478a982cfb515e7bd90b86a7d502b0965ca57: AGENTS.md"
+  },
+  {
+    "path": "historico/repositorio-2026-09-24/ARQUITETURA-ATUAL-2026-09-24.md",
+    "sha256": "af41050abeedbb00e886e1debe66b67f7b1d7571296d5cfd33566e1c7f3bf334",
+    "origin": "GitHub main 83d478a982cfb515e7bd90b86a7d502b0965ca57: ARQUITETURA-ATUAL-2026-09-24.md"
+  },
+  {
+    "path": "historico/repositorio-2026-09-24/ARQUITETURA-CORRIGIDA-2026-09-22.md",
+    "sha256": "dcc723c4db06caa96663344afa7a0be985cd34a56d981b712ac597b1fa4d5070",
+    "origin": "GitHub main 83d478a982cfb515e7bd90b86a7d502b0965ca57: ARQUITETURA-CORRIGIDA-2026-09-22.md"
+  },
+  {
+    "path": "historico/repositorio-2026-09-24/AUDITORIA-ARQUITETURA-LEGO-2026-09-22.md",
+    "sha256": "abb3a236947f06ad4f6f6e332239e6e34d776cb19d86c08cc99661e1a083c4c4",
+    "origin": "GitHub main 83d478a982cfb515e7bd90b86a7d502b0965ca57: AUDITORIA-ARQUITETURA-LEGO-2026-09-22.md"
+  },
+  {
+    "path": "historico/repositorio-2026-09-24/AUDITORIA-DOCUMENTAL-P4.md",
+    "sha256": "e71fa11d70903857e196c1654a4426028a1e6c7ceec41fd102814e8e059ef569",
+    "origin": "GitHub main 83d478a982cfb515e7bd90b86a7d502b0965ca57: AUDITORIA-DOCUMENTAL-P4.md"
+  },
+  {
+    "path": "historico/repositorio-2026-09-24/CEREBRO_ARCHITECTURE.md",
+    "sha256": "35c8195219d455f2b285907904e89cd52a51d861b36f83219f2524e9218d4f4c",
+    "origin": "GitHub main 83d478a982cfb515e7bd90b86a7d502b0965ca57: CEREBRO_ARCHITECTURE.md"
+  },
+  {
+    "path": "historico/repositorio-2026-09-24/CEREBRO_CONSTITUTION.md",
+    "sha256": "25ace3fc8bfd8299caf1b6b193df642f199955e01138d679b74fe9848c0339a3",
+    "origin": "GitHub main 83d478a982cfb515e7bd90b86a7d502b0965ca57: CEREBRO_CONSTITUTION.md"
+  },
+  {
+    "path": "historico/repositorio-2026-09-24/CHANGELOG.md",
+    "sha256": "02087038fa8dd3810fdd448c7b86751421bc33bc323be17a1afe4ff1185ad6c8",
+    "origin": "GitHub main 83d478a982cfb515e7bd90b86a7d502b0965ca57: CHANGELOG.md"
+  },
+  {
+    "path": "historico/repositorio-2026-09-24/COMPARACAO-ARQUITETURAS-COGNITIVAS-DETERMINISTICAS-2026-09-23.md",
+    "sha256": "b6279a334d0358a17505edce3a4eab8ad2874d3e18d1a1af056258173298bb83",
+    "origin": "GitHub main 83d478a982cfb515e7bd90b86a7d502b0965ca57: COMPARACAO-ARQUITETURAS-COGNITIVAS-DETERMINISTICAS-2026-09-23.md"
+  },
+  {
+    "path": "historico/repositorio-2026-09-24/COMPARACAO-RESEARCHVAULT-WILL-2026-09-22.md",
+    "sha256": "89a42607bbaccee72a70fc6835d59040ddf0f8664eb9caa4851b2ead46de7cdc",
+    "origin": "GitHub main 83d478a982cfb515e7bd90b86a7d502b0965ca57: COMPARACAO-RESEARCHVAULT-WILL-2026-09-22.md"
+  },
+  {
+    "path": "historico/repositorio-2026-09-24/COMPARACAO-WILL-E-PROBABILIDADES.md",
+    "sha256": "199b1f03bccc706d105310992e9fe5517f856f14dda6c47060520f94f3ee7b7f",
+    "origin": "GitHub main 83d478a982cfb515e7bd90b86a7d502b0965ca57: COMPARACAO-WILL-E-PROBABILIDADES.md"
+  },
+  {
+    "path": "historico/repositorio-2026-09-24/COMPATIBILITY-MATRIX.md",
+    "sha256": "111636e17e77c7f218a615a83229f217a6efc95aec17d97d1d51e688fd34fc45",
+    "origin": "GitHub main 83d478a982cfb515e7bd90b86a7d502b0965ca57: COMPATIBILITY-MATRIX.md"
+  },
+  {
+    "path": "historico/repositorio-2026-09-24/DECISIONS.md",
+    "sha256": "ed0a672413e8b8491a6ff8c84c7d38942c60f9460b18d172d1bb4e6db0bc3ca0",
+    "origin": "GitHub main 83d478a982cfb515e7bd90b86a7d502b0965ca57: DECISIONS.md"
+  },
+  {
+    "path": "historico/repositorio-2026-09-24/FECHO-FASE-CONCEPTUAL-PROBABILIDADE-VALIDACAO-2026-09-23.md",
+    "sha256": "e8b459c27be1707dfdc3f166fb41bbdf730e114fe3d50f1746a428585d6a6432",
+    "origin": "GitHub main 83d478a982cfb515e7bd90b86a7d502b0965ca57: FECHO-FASE-CONCEPTUAL-PROBABILIDADE-VALIDACAO-2026-09-23.md"
+  },
+  {
+    "path": "historico/repositorio-2026-09-24/FERRAMENTAS-GRATUITAS-E-EQUIPA.md",
+    "sha256": "b7f523e1b84fd102665ba714d59d615f0e63606bf21d38a72844a835fe30d8c5",
+    "origin": "GitHub main 83d478a982cfb515e7bd90b86a7d502b0965ca57: FERRAMENTAS-GRATUITAS-E-EQUIPA.md"
+  },
+  {
+    "path": "historico/repositorio-2026-09-24/IMPLEMENTATION_PLAN.md",
+    "sha256": "9ee9399acd9dd391cc51105a7db90a0c78bfce05adce06b0fca39b939539b99c",
+    "origin": "GitHub main 83d478a982cfb515e7bd90b86a7d502b0965ca57: IMPLEMENTATION_PLAN.md"
+  },
+  {
+    "path": "historico/repositorio-2026-09-24/INSTALLATION_PLAN.md",
+    "sha256": "d5cb3dff02568cf41a537ad80ab72425690b635d2d3dbd041770990b0e7c3d7c",
+    "origin": "GitHub main 83d478a982cfb515e7bd90b86a7d502b0965ca57: INSTALLATION_PLAN.md"
+  },
+  {
+    "path": "historico/repositorio-2026-09-24/LEGO-LOCK.md",
+    "sha256": "c5b0d6347f45dcf03bebb8d4d30ecc661dbeba8d33b9863f9cca3374b6a03786",
+    "origin": "GitHub main 83d478a982cfb515e7bd90b86a7d502b0965ca57: LEGO-LOCK.md"
+  },
+  {
+    "path": "historico/repositorio-2026-09-24/MAPA-DE-VERSOES-COFRES-ACTIVEPIECES.md",
+    "sha256": "8cd070cecac72ca0de04dceb394acbc555a657f7d80a1d1671faee78d6a3d758",
+    "origin": "GitHub main 83d478a982cfb515e7bd90b86a7d502b0965ca57: MAPA-DE-VERSOES-COFRES-ACTIVEPIECES.md"
+  },
+  {
+    "path": "historico/repositorio-2026-09-24/MIGRACAO-ARQUITETURAL-2026-09-24.md",
+    "sha256": "0fef190fed511cd4ff452228c201d7764a44bf22e30a38fbe5a07bde9a8eab88",
+    "origin": "GitHub main 83d478a982cfb515e7bd90b86a7d502b0965ca57: MIGRACAO-ARQUITETURAL-2026-09-24.md"
+  },
+  {
+    "path": "historico/repositorio-2026-09-24/NOTA-COGNITIVA-MEMORIAS-COMPARADORES-LINGUAGEM-NATURAL-2026-09-23.md",
+    "sha256": "6c0630d5987676bbb4ef63400857ecbd70bcde82fa72872ade2a2bfc760bafe1",
+    "origin": "GitHub main 83d478a982cfb515e7bd90b86a7d502b0965ca57: NOTA-COGNITIVA-MEMORIAS-COMPARADORES-LINGUAGEM-NATURAL-2026-09-23.md"
+  },
+  {
+    "path": "historico/repositorio-2026-09-24/NOTA-ESCALADA-RESOLUCAO-LLM-WEB-2026-09-23.md",
+    "sha256": "75033ed030f885f7d8f0e7d58dd7b19e1398676193f152a3487569be5491c93e",
+    "origin": "GitHub main 83d478a982cfb515e7bd90b86a7d502b0965ca57: NOTA-ESCALADA-RESOLUCAO-LLM-WEB-2026-09-23.md"
+  },
+  {
+    "path": "historico/repositorio-2026-09-24/PESQUISA-SANDBOX-WINDOWS-APPContainer-LPAC-2026-09-23.md",
+    "sha256": "3a1b6f9db0c458cf8a4810517c296da950850f52653a4dcdf2fdf0b333f678d2",
+    "origin": "GitHub main 83d478a982cfb515e7bd90b86a7d502b0965ca57: PESQUISA-SANDBOX-WINDOWS-APPContainer-LPAC-2026-09-23.md"
+  },
+  {
+    "path": "historico/repositorio-2026-09-24/PLANO-DE-TAREFAS-POR-FASE.md",
+    "sha256": "831c0baae9b5cdaa5004027a93af7af08b3793be5bc4c8ac5605472c7b71ab28",
+    "origin": "GitHub main 83d478a982cfb515e7bd90b86a7d502b0965ca57: PLANO-DE-TAREFAS-POR-FASE.md"
+  },
+  {
+    "path": "historico/repositorio-2026-09-24/PROTOCOLO-GEMINI-CONTEXTO-MINIMO.md",
+    "sha256": "bef65b93bc20c92b703732e0d6b9d0423c2ca58b5220659aee88a5c448ccbed2",
+    "origin": "GitHub main 83d478a982cfb515e7bd90b86a7d502b0965ca57: PROTOCOLO-GEMINI-CONTEXTO-MINIMO.md"
+  },
+  {
+    "path": "historico/repositorio-2026-09-24/README.md",
+    "sha256": "658f341961e9eab68cd34fbd6707c7c8be6ed195492710d462727f88b5f10bad",
+    "origin": "GitHub main 83d478a982cfb515e7bd90b86a7d502b0965ca57: README.md"
+  },
+  {
+    "path": "historico/repositorio-2026-09-24/REFERENCIA-OPENVIKING-VIKINGMEM-2026-09-23.md",
+    "sha256": "0733864fd9862b08919fc8b60e262d1a76f05977d98d1014534b3e7c5c4577f6",
+    "origin": "GitHub main 83d478a982cfb515e7bd90b86a7d502b0965ca57: REFERENCIA-OPENVIKING-VIKINGMEM-2026-09-23.md"
+  },
+  {
+    "path": "historico/repositorio-2026-09-24/STATUS.md",
+    "sha256": "0b4dc455b7e379ea9c8490a7ca27fc7b13bef1cac4f84dcfb34dbf5e1f176d27",
+    "origin": "GitHub main 83d478a982cfb515e7bd90b86a7d502b0965ca57: STATUS.md"
+  },
+  {
+    "path": "historico/repositorio-2026-09-24/TEAM_WORKFLOW.md",
+    "sha256": "12196ffd58e609c86f2d718291f603ba26bd344d93f663da964e16611e5f20fc",
+    "origin": "GitHub main 83d478a982cfb515e7bd90b86a7d502b0965ca57: TEAM_WORKFLOW.md"
+  },
+  {
+    "path": "historico/repositorio-2026-09-24/VALIDACAO-CONCEPTUAL-E-MITIGACAO.md",
+    "sha256": "dfb0e9be469f2508c45f96097166c7f25e23b3b09c124a363b3b3bde205b49b4",
+    "origin": "GitHub main 83d478a982cfb515e7bd90b86a7d502b0965ca57: VALIDACAO-CONCEPTUAL-E-MITIGACAO.md"
+  },
+  {
+    "path": "historico/repositorio-2026-09-24/historico/ARQUITETURA-OPERACIONAL-v0.1-2026-09-22.md",
+    "sha256": "fe463b6f16af9d7ea719c945890e58cc8bfd9d1027ef5dc468310b6cdb1e5a36",
+    "origin": "GitHub main 83d478a982cfb515e7bd90b86a7d502b0965ca57: historico/ARQUITETURA-OPERACIONAL-v0.1-2026-09-22.md"
+  },
+  {
+    "path": "historico/repositorio-2026-09-24/tasks/F-1-001-INSTALACAO-E-VERIFICACAO.md",
+    "sha256": "d2197b9788eff99109286e60d79f03fdf8d7a47f4ef72f17691933c00b6fcb31",
+    "origin": "GitHub main 83d478a982cfb515e7bd90b86a7d502b0965ca57: tasks/F-1-001-INSTALACAO-E-VERIFICACAO.md"
+  },
+  {
+    "path": "historico/repositorio-2026-09-24/tasks/SPEC-F0-001.md",
+    "sha256": "7db1010d4bcd11fb05e9a24c14d6c7610f73f76c9c75c6e79f8c501c95f13d45",
+    "origin": "GitHub main 83d478a982cfb515e7bd90b86a7d502b0965ca57: tasks/SPEC-F0-001.md"
+  },
+  {
+    "path": "docs/baseline/README-CEREBRO-IMPLEMENTACAO-2026-09-26.md",
+    "sha256": "9f564078f3699948002d992a82f1a01ca19fbbb474066fe4d93ccea3f86ce9a6",
+    "origin": "Library: README-CEREBRO-IMPLEMENTACAO-2026-09-26.md"
+  },
+  {
+    "path": "docs/baseline/CEREBRO_PROMPT_MESTRE_CURSOR_2026-09-26.md",
+    "sha256": "d485ad0b1113e9a369834f3277655323dca9c407e03d5221a525f1ba3f4b6290",
+    "origin": "Library: CEREBRO_PROMPT_MESTRE_CURSOR_2026-09-26.md"
+  },
+  {
+    "path": "docs/baseline/README-CEREBRO-BASELINE-2026-09-26.md",
+    "sha256": "21559bf68939f639850da58daa3505ff9c05310377141d1cf510be15a98d208d",
+    "origin": "Library: README-CEREBRO-BASELINE-2026-09-26.md"
+  },
+  {
+    "path": "implementacao/candidata-2026-09-27/DIAGRAMA.mmd",
+    "sha256": "b376df5c8cfccbcab07d8a61fc2044ad15d87d34237b60662efec0040ef3c575",
+    "origin": "CEREBRO_IMPLEMENTACAO_REVISTO_2026-09-27.zip: CEREBRO_IMPLEMENTACAO/DIAGRAMA.mmd"
+  },
+  {
+    "path": "implementacao/candidata-2026-09-27/README.md",
+    "sha256": "736d3d22f505311558122ddf91e171b44460ff86aa9f3862df7cc1ff34d7224c",
+    "origin": "CEREBRO_IMPLEMENTACAO_REVISTO_2026-09-27.zip: CEREBRO_IMPLEMENTACAO/README.md"
+  },
+  {
+    "path": "implementacao/candidata-2026-09-27/REVISAO_ADVERSARIAL.md",
+    "sha256": "4708e795ac42f0198814143017a26550cb54a823ad4f594f412a3f0d9faa783c",
+    "origin": "CEREBRO_IMPLEMENTACAO_REVISTO_2026-09-27.zip: CEREBRO_IMPLEMENTACAO/REVISAO_ADVERSARIAL.md"
+  },
+  {
+    "path": "implementacao/candidata-2026-09-27/TEST_RESULTS.txt",
+    "sha256": "e1e5152292201be2379599f87c37c27c2f9b6449b00784051963c7ba602cbc27",
+    "origin": "CEREBRO_IMPLEMENTACAO_REVISTO_2026-09-27.zip: CEREBRO_IMPLEMENTACAO/TEST_RESULTS.txt"
+  },
+  {
+    "path": "implementacao/candidata-2026-09-27/cerebro/__init__.py",
+    "sha256": "2b490dcb6e959ba03ed55e65493de2972eb256c34b51b8aa93a0190c59b69c92",
+    "origin": "CEREBRO_IMPLEMENTACAO_REVISTO_2026-09-27.zip: CEREBRO_IMPLEMENTACAO/cerebro/__init__.py"
+  },
+  {
+    "path": "implementacao/candidata-2026-09-27/cerebro/core.py",
+    "sha256": "e6f895fb0b99767277a816495864efa8d5e79aafe613c308fc6385f619b3b73e",
+    "origin": "CEREBRO_IMPLEMENTACAO_REVISTO_2026-09-27.zip: CEREBRO_IMPLEMENTACAO/cerebro/core.py"
+  },
+  {
+    "path": "implementacao/candidata-2026-09-27/pyproject.toml",
+    "sha256": "afa9839c63cc2087d8f257dccac48d2572439f97474f981d3a492047aa3cd671",
+    "origin": "CEREBRO_IMPLEMENTACAO_REVISTO_2026-09-27.zip: CEREBRO_IMPLEMENTACAO/pyproject.toml"
+  },
+  {
+    "path": "implementacao/candidata-2026-09-27/tests/test_adversarial.py",
+    "sha256": "a3ef960035d1ae53c232cf9d949490ae1f8f4f467ef013b9fe27d2e94fdb3c59",
+    "origin": "CEREBRO_IMPLEMENTACAO_REVISTO_2026-09-27.zip: CEREBRO_IMPLEMENTACAO/tests/test_adversarial.py"
+  },
+  {
+    "path": "implementacao/candidata-2026-09-27/tests/test_core.py",
+    "sha256": "2285b329c1d9eb9be5a54d33dc5dac04a1e804976fff01b6e4606e1113af92d5",
+    "origin": "CEREBRO_IMPLEMENTACAO_REVISTO_2026-09-27.zip: CEREBRO_IMPLEMENTACAO/tests/test_core.py"
+  }
+]

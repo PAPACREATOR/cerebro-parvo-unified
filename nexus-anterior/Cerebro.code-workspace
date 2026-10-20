@@ -1,0 +1,21 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "python.defaultInterpreterPath": "${workspaceFolder}/.venv",
+    "python.testing.pytestEnabled": true,
+    "python.testing.unittestEnabled": false,
+    "python.testing.cwd": "${workspaceFolder}/implementacao/candidata-2026-09-27",
+    "python.testing.pytestArgs": [
+      "tests"
+    ]
+  },
+  "extensions": {
+    "recommendations": [
+      "ms-python.python"
+    ]
+  }
+}

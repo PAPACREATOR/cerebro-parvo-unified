@@ -1,0 +1,224 @@
+name: Nexus Integration Stress
+
+on:
+  push:
+    branches: ['lab-open-notebook-avatar-*']
+    paths:
+      - 'nexus/**'
+      - '.github/workflows/nexus-integration-stress.yml'
+  pull_request:
+    paths:
+      - 'nexus/**'
+      - '.github/workflows/nexus-integration-stress.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: nexus-integration-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  windows:
+    name: 100K blocks + MCP + OpenNotebook E2E
+    runs-on: windows-latest
+    timeout-minutes: 20
+    env:
+      PYTHONUTF8: '1'
+      PYTHONIOENCODING: utf-8
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: Install pinned Nexus test dependencies
+        run: python -m pip install -r nexus/requirements-test.txt
+      - name: Block 0 — repository syntax and static audit
+        shell: pwsh
+        run: |
+          python -m pytest nexus/tests/test_repository_syntax_audit.py -q -p no:cacheprovider -o pythonpath=.
+          $errors = @()
+          Get-ChildItem -Path . -Recurse -Filter *.ps1 -File | ForEach-Object {
+            $tokens = $null
+            $parseErrors = $null
+            [void][System.Management.Automation.Language.Parser]::ParseFile($_.FullName, [ref]$tokens, [ref]$parseErrors)
+            if ($parseErrors.Count -gt 0) {
+              $errors += ($_.FullName + ': ' + (($parseErrors | ForEach-Object Message) -join '; '))
+            }
+          }
+          if ($errors.Count -gt 0) { throw ($errors -join [Environment]::NewLine) }
+          Get-ChildItem -Path . -Recurse -Filter *.js -File |
+            Where-Object { $_.FullName -notmatch '[\\/]node_modules[\\/]' } |
+            ForEach-Object {
+              node --check $_.FullName
+              if ($LASTEXITCODE -ne 0) { throw ('JavaScript syntax failed: ' + $_.FullName) }
+            }
+          Write-Output 'REPOSITORY_SYNTAX_AUDIT=PASS'
+      - name: Block A — 100000 deterministic Kernel contracts
+        run: python -m pytest nexus/tests/test_stress_matrix_100k.py -q -p no:cacheprovider -o pythonpath=.
+      - name: Block B — 100000 natural ambiguity cases
+        run: python -m pytest nexus/tests/test_natural_ambiguity_100k.py -q -p no:cacheprovider -o pythonpath=.
+      - name: Block C — real MCP stdio 1000 + real OpenNotebook MCP package
+        run: python -m pytest nexus/tests/test_mcp_client_1000.py nexus/tests/test_open_notebook_mcp_real.py -q -p no:cacheprovider -o pythonpath=.
+      - name: Block D — Kernel to MCP to OpenNotebook boundary to Canonical E2E
+        run: python -m pytest nexus/tests/test_open_notebook_kernel_e2e.py -q -p no:cacheprovider -o pythonpath=.
+      - name: Block E — media installer contract and PowerShell parse
+        shell: pwsh
+        run: |
+          python -m pytest nexus/tests/test_media_tools_installer.py -q -p no:cacheprovider -o pythonpath=.
+          $raw = Get-Content -LiteralPath nexus/windows/install-media-tools.ps1 -Raw
+          [void][scriptblock]::Create($raw)
+          $health = Get-Content -LiteralPath nexus/windows/check-media-tools.ps1 -Raw
+          [void][scriptblock]::Create($health)
+          $sync = Get-Content -LiteralPath nexus/windows/sync-nexus-pc.ps1 -Raw
+          [void][scriptblock]::Create($sync)
+          $codeSync = Get-Content -LiteralPath nexus/windows/sync-nexus-code.ps1 -Raw
+          [void][scriptblock]::Create($codeSync)
+          $prepareCore = Get-Content -LiteralPath nexus/windows/prepare-nexus-core.ps1 -Raw
+          [void][scriptblock]::Create($prepareCore)
+          $bootstrap = Get-Content -LiteralPath nexus/windows/bootstrap-nexus-local.ps1 -Raw
+          [void][scriptblock]::Create($bootstrap)
+          $inventory = Get-Content -LiteralPath nexus/windows/inventory-external-tools.ps1 -Raw
+          [void][scriptblock]::Create($inventory)
+          $plan = Get-Content -LiteralPath nexus/windows/plan-external-provisioning.ps1 -Raw
+          [void][scriptblock]::Create($plan)
+          python -m pytest nexus/tests/test_pc_sync.py nexus/tests/test_code_sync.py nexus/tests/test_code_sync_functional.py nexus/tests/test_prepare_nexus_core.py nexus/tests/test_bootstrap_nexus_local.py nexus/tests/test_external_inventory.py nexus/tests/test_external_provision_plan.py nexus/tests/test_external_inventory_functional.py -q -p no:cacheprovider -o pythonpath=.
+          Write-Output 'MEDIA_INSTALLER_PARSE=PASS'
+          Write-Output 'MEDIA_HEALTH_PARSE=PASS'
+          Write-Output 'PC_SYNC_PARSE=PASS'
+          Write-Output 'CODE_SYNC_PARSE=PASS'
+          Write-Output 'EXTERNAL_INVENTORY_PARSE=PASS'
+          Write-Output 'EXTERNAL_PROVISION_PLAN_PARSE=PASS'
+          Write-Output 'PREPARE_CORE_PARSE=PASS'
+          Write-Output 'LOCAL_BOOTSTRAP_PARSE=PASS'
+      - name: Block F — ACE-Step and Forge bounded local MCP health
+        run: python -m pytest nexus/tests/test_media_tools.py nexus/tests/test_media_tools_mcp.py nexus/tests/test_media_tools_checker.py -q -p no:cacheprovider -o pythonpath=.
+      - name: Block G — complete Nexus regression
+        run: python -m pytest nexus/tests -q -p no:cacheprovider -o pythonpath=. --ignore=nexus/tests/test_product_flows_5000.py --ignore=nexus/tests/test_product_system_50000.py --ignore=nexus/tests/test_product_themes_canonical_200k.py --ignore=nexus/tests/test_public_product_routes_10000.py --ignore=nexus/tests/test_public_product_routes_all_50000.py
+
+  product-flows:
+    name: Product flows — 6x5000 + whole system 50000
+    runs-on: windows-latest
+    timeout-minutes: 30
+    env:
+      PYTHONUTF8: '1'
+      PYTHONIOENCODING: utf-8
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: Install pinned Nexus test dependencies
+        run: python -m pip install -r nexus/requirements-test.txt
+      - name: Six flows — 5000 directional cases each
+        run: python -m pytest nexus/tests/test_product_flows_5000.py -q -p no:cacheprovider -o pythonpath=.
+      - name: Public routes — 10000 per route
+        run: python -m pytest nexus/tests/test_public_product_routes_10000.py -q -p no:cacheprovider -o pythonpath=.
+      - name: Public routes — 50000 all routes
+        run: python -m pytest nexus/tests/test_public_product_routes_all_50000.py -q -p no:cacheprovider -o pythonpath=.
+      - name: Whole system — 50000 deterministic cases
+        run: python -m pytest nexus/tests/test_product_system_50000.py -q -p no:cacheprovider -o pythonpath=.
+
+  product-themes-canonical-200k:
+    name: Product themes + Canonical attacks — 200000
+    runs-on: windows-latest
+    timeout-minutes: 30
+    env:
+      PYTHONUTF8: '1'
+      PYTHONIOENCODING: utf-8
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: Install pinned Nexus test dependencies
+        run: python -m pip install -r nexus/requirements-test.txt
+      - name: 200000 product/theme/Canonical authority cases
+        run: python -m pytest nexus/tests/test_product_themes_canonical_200k.py -q -p no:cacheprovider -o pythonpath=.
+      - name: Report exact scope
+        shell: pwsh
+        run: |
+          Add-Content -LiteralPath $env:GITHUB_STEP_SUMMARY -Value '200000 cases = 10 families x 20000: product flows, themes, source comparison A<->B, OpenNotebook boundary, result authority injection, direct promote attacks, human-decision replay/hash mismatch, Canonical path attacks, unsupported Host routes, Canonical prompt injection. Includes retired Windows-account/password contract.'
+          Write-Output 'PRODUCT_THEMES_CANONICAL_200K=PASS'
+
+  bidirectional-50k:
+    name: 50000 bidirectional — 25000 real MCP calls
+    runs-on: windows-latest
+    timeout-minutes: 25
+    env:
+      PYTHONUTF8: '1'
+      PYTHONIOENCODING: utf-8
+      NEXUS_RUN_50K: '1'
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: Install pinned Nexus test dependencies
+        run: python -m pip install -r nexus/requirements-test.txt
+      - name: 50000 bidirectional cases
+        run: python -m pytest nexus/tests/test_bidirectional_50000.py -q -p no:cacheprovider -o pythonpath=.
+
+  varied-200k:
+    name: 200000 varied — lexical, authority, roundtrip, wiki-flow
+    runs-on: windows-latest
+    timeout-minutes: 30
+    env:
+      PYTHONUTF8: '1'
+      PYTHONIOENCODING: utf-8
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: Install pinned Nexus test dependencies
+        run: python -m pip install -r nexus/requirements-test.txt
+      - name: 200000 varied deterministic cases
+        run: python -m pytest nexus/tests/test_system_varied_200k.py -q -p no:cacheprovider -o pythonpath=.
+
+  wiki-100k-flow:
+    name: Wiki 100000 + Store bridge + flow candidate
+    runs-on: windows-latest
+    timeout-minutes: 25
+    env:
+      PYTHONUTF8: '1'
+      PYTHONIOENCODING: utf-8
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: Install pinned Nexus test dependencies
+        run: python -m pip install -r nexus/requirements-test.txt
+      - name: Wiki bridge and flow proposal contracts
+        run: python -m pytest nexus/lab/wiki/test_kernel_bridge.py nexus/lab/wiki/test_flow_proposal.py -q -p no:cacheprovider -o pythonpath=.
+      - name: Wiki 100000 object study
+        shell: pwsh
+        run: |
+          $out = Join-Path $env:RUNNER_TEMP 'wiki-100k-current'
+          python nexus/lab/wiki/test_web_research_wiki_100k.py --cases 100000 --output $out
+          if ($LASTEXITCODE -ne 0) { throw 'Wiki 100K failed' }
+          $summary = Get-Content (Join-Path $out 'summary.json') -Raw | ConvertFrom-Json
+          if ($summary.status -ne 'PASS' -or $summary.object_cases_passed -ne 100000) {
+            throw 'Wiki 100K summary is not PASS'
+          }
+          Write-Output ("WIKI_100K=PASS objects=" + $summary.object_cases_passed + " elapsed=" + $summary.elapsed_seconds)

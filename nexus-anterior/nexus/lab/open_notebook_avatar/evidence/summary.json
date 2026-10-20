@@ -1,0 +1,106 @@
+{
+  "date": "2026-10-04",
+  "base": "b0b95076c94b4752db8955744e3fe4ed8e4fcb68",
+  "extension": {
+    "passed": 165,
+    "failed": 0,
+    "skipped": 0,
+    "seconds": 11.93,
+    "learned_model": "substituted in boundary tests; real in native acceptance"
+  },
+  "nexus_linux_regression": {
+    "passed": 1319,
+    "failed": 14,
+    "skipped": 7,
+    "seconds": 27.71,
+    "active_source_changed": false,
+    "failures": [
+      {
+        "name": "test_full_http_flow_and_bypasses",
+        "classname": "nexus.tests.test_host",
+        "message": "Failed: {\n  \"state\": {\n    \"run_id\": \"f4713698f69c42c2b766cb003a746ee8\",\n    \"process_id\": \"verify\",\n    \"process_version\": \"1.0.0\",\n    \"title\": \"Texto escrito\",\n    \"status\": \"FAIL\",\n    \"created_at\": \"2026-10-04T20:20:01.099532+00:00\",\n    \"updated_at\": \"2026-10-04T20:20:01.101081+00:00\",\n    \"message\": \"Não foi possível concluir. O pedido foi conservado.\",\n    \"execution_phase\": \"PREPARED\",\n    \"input_sha256\": \"96481ab61d95b4a984d0b2cc803f76215613fb5f41bfeb46e9ce3babbac54313\",\n    \"request_sha256\": \"5e3f42c6ce5eadd15fa94f36f89ea58a3cfcd5d27cf4fb8561a50c83f81535e3\",\n    \"process_sha256\": \"48f28ce6f620b25dda8cb0f0267d61972c61762f534200da05941d051cd3139f\"\n  },\n  \"failure.json\": \"{\\n  \\\"type\\\": \\\"KeyError\\\",\\n  \\\"message\\\": \\\"'SystemRoot'\\\"\\n}\"\n}"
+      },
+      {
+        "name": "test_invalid_tool_output_never_promotes[]",
+        "classname": "nexus.tests.test_host",
+        "message": "AssertionError: assert 'FAIL' == 'BLOCKED'\n  \n  - BLOCKED\n  + FAIL"
+      },
+      {
+        "name": "test_invalid_tool_output_never_promotes[not JSON]",
+        "classname": "nexus.tests.test_host",
+        "message": "AssertionError: assert 'FAIL' == 'BLOCKED'\n  \n  - BLOCKED\n  + FAIL"
+      },
+      {
+        "name": "test_invalid_tool_output_never_promotes[{\"result\":{},\"trace\":{}}]",
+        "classname": "nexus.tests.test_host",
+        "message": "AssertionError: assert 'FAIL' == 'BLOCKED'\n  \n  - BLOCKED\n  + FAIL"
+      },
+      {
+        "name": "test_restart_after_kernel_dies_during_executor_is_recovery_required",
+        "classname": "nexus.tests.test_kernel_crash_contract",
+        "message": "Failed: DID NOT RAISE SystemExit"
+      },
+      {
+        "name": "test_timeout_preserves_source",
+        "classname": "nexus.tests.test_languagetool",
+        "message": "AttributeError: module 'subprocess' has no attribute 'CREATE_NO_WINDOW'"
+      },
+      {
+        "name": "test_tool_failure_rejected",
+        "classname": "nexus.tests.test_languagetool",
+        "message": "AttributeError: module 'subprocess' has no attribute 'CREATE_NO_WINDOW'"
+      },
+      {
+        "name": "test_mcp_real_stdio_discovers_tools_dynamically",
+        "classname": "nexus.tests.test_mcp_tiny_real",
+        "message": "mcp.shared.exceptions.McpError: Connection closed"
+      },
+      {
+        "name": "test_mcp_real_stdio_call_roundtrip",
+        "classname": "nexus.tests.test_mcp_tiny_real",
+        "message": "mcp.shared.exceptions.McpError: Connection closed"
+      },
+      {
+        "name": "test_mcp_missing_tool_is_blocked",
+        "classname": "nexus.tests.test_mcp_tiny_real",
+        "message": "mcp.shared.exceptions.McpError: Connection closed"
+      },
+      {
+        "name": "test_mcp_tool_error_is_blocked",
+        "classname": "nexus.tests.test_mcp_tiny_real",
+        "message": "mcp.shared.exceptions.McpError: Connection closed"
+      },
+      {
+        "name": "test_office_failure",
+        "classname": "nexus.tests.test_office",
+        "message": "AttributeError: module 'subprocess' has no attribute 'CREATE_NO_WINDOW'"
+      },
+      {
+        "name": "test_office_timeout_kills_tree",
+        "classname": "nexus.tests.test_office",
+        "message": "AttributeError: module 'subprocess' has no attribute 'CREATE_NO_WINDOW'"
+      },
+      {
+        "name": "test_real_redundant_workflow",
+        "classname": "nexus.tests.test_workflows",
+        "message": "nexus.contracts.Blocked: PowerShell Windows indisponível."
+      }
+    ]
+  },
+  "not_run": [
+    "user Windows PC installation",
+    "CUDA GPU inference",
+    "official Nexus Kernel integration",
+    "full TTS/podcast generation",
+    "OS sandbox",
+    "power-loss recovery",
+    "quantitative lip-sync quality"
+  ],
+  "resolved_failures": [
+    "av 14.4 source build required unavailable pkg-config; pinned av14.0.1 wheel",
+    "native API import required source-root PYTHONPATH and native dependency environment",
+    "venv interpreter symlink resolved to system Python; preserve executable path",
+    "synthetic fixture collision; unique audio basename",
+    "test suite overlapped worker source edit; stable final source rerun passed all165"
+  ]
+}

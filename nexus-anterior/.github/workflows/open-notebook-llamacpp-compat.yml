@@ -1,0 +1,82 @@
+name: OpenNotebook llama.cpp compatibility
+
+on:
+  pull_request:
+    paths:
+      - 'nexus/windows/install-nexus-complete.ps1'
+      - 'nexus/windows/configure-open-notebook-local.py'
+      - '.github/workflows/open-notebook-llamacpp-compat.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  compatibility:
+    runs-on: windows-latest
+    timeout-minutes: 15
+    env:
+      PYTHONUTF8: '1'
+      PYTHONIOENCODING: utf-8
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: Install pinned uv
+        run: python -m pip install uv==0.9.26
+      - name: Build pinned OpenNotebook without legacy local-runtime packages
+        shell: pwsh
+        run: |
+          $target = Join-Path $env:RUNNER_TEMP 'OpenNotebookCompat'
+          git clone --filter=blob:none https://github.com/lfnovo/open-notebook.git $target
+          if ($LASTEXITCODE -ne 0) { throw 'OPEN_NOTEBOOK_CLONE_FAILED' }
+          git -C $target checkout --detach 315d5255af2a5132aada41c94d5c3c5dc8e837aa
+          if ($LASTEXITCODE -ne 0) { throw 'OPEN_NOTEBOOK_PIN_FAILED' }
+          $legacy = -join ((111,108,108,97,109,97) | ForEach-Object { [char]$_ })
+          $legacyLangchain = 'langchain-' + $legacy
+          uv sync --frozen --no-install-package $legacyLangchain --no-install-package $legacy --project $target
+          if ($LASTEXITCODE -ne 0) { throw 'OPEN_NOTEBOOK_SYNC_WITHOUT_LEGACY_PACKAGES_FAILED' }
+          $env:NEXUS_LEGACY_MODULE = $legacy
+          $env:NEXUS_LEGACY_LANGCHAIN_MODULE = 'langchain_' + $legacy
+          $python = Join-Path $target '.venv\Scripts\python.exe'
+          $probe = @'
+          import importlib.util
+          import os
+          from esperanto import AIFactory
+          from open_notebook.ai.provider_registry import PROVIDERS
+          import open_notebook.ai.models
+          import api.credentials_service
+
+          for name in (os.environ["NEXUS_LEGACY_MODULE"], os.environ["NEXUS_LEGACY_LANGCHAIN_MODULE"]):
+              assert importlib.util.find_spec(name) is None, name
+
+          spec = PROVIDERS["openai_compatible"]
+          assert "language" in spec.modalities
+          assert "embedding" in spec.modalities
+
+          language = AIFactory.create_language(
+              model_name="nexus-qwen3-1.7b",
+              provider="openai-compatible",
+              config={"base_url": "http://127.0.0.1:18081/v1", "api_key": "ARCHIVE_REDACTED_01"},
+          )
+          embedding = AIFactory.create_embedding(
+              model_name="nexus-qwen3-embedding-0.6b",
+              provider="openai-compatible",
+              config={"base_url": "http://127.0.0.1:18082/v1", "api_key": "ARCHIVE_REDACTED_01"},
+          )
+          assert language is not None
+          assert embedding is not None
+          print("OPEN_NOTEBOOK_LLAMACPP_COMPAT=PASS")
+          '@
+          Push-Location $target
+          try {
+            $probe | & $python -
+            if ($LASTEXITCODE -ne 0) { throw 'OPEN_NOTEBOOK_OPENAI_COMPAT_SMOKE_FAILED' }
+          }
+          finally {
+            Pop-Location
+          }

@@ -1,0 +1,122 @@
+{
+  "observed_at_utc": "2026-10-04T15:06:30.730361+00:00",
+  "scope": "GitHub refs fetched; no PC/Drive snapshot verified",
+  "branches": [
+    {
+      "branch": "audit/nexus-windows-ci-20261001",
+      "sha": "8471ceedcbceeab06e80df36b8ee5310f83a220b",
+      "behind_main": 9,
+      "ahead_main": 1,
+      "last_commit": "2026-10-01T13:57:35+01:00 ci: verify Nexus tests on clean Windows runner"
+    },
+    {
+      "branch": "consolidacao-2026-09-27",
+      "sha": "83d478a982cfb515e7bd90b86a7d502b0965ca57",
+      "behind_main": 43,
+      "ahead_main": 0,
+      "last_commit": "2026-09-24T16:59:31+01:00 docs: architecture v0.4 pointer to closed design"
+    },
+    {
+      "branch": "docs/reconciliacao-2026-09-27",
+      "sha": "284d1b98b58ff628b08f4872419fb31a69e4279e",
+      "behind_main": 42,
+      "ahead_main": 0,
+      "last_commit": "2026-09-27T10:56:05+01:00 docs: reconcile Folha M1-M14 baseline, preserve history and recover candidate evidence"
+    },
+    {
+      "branch": "integration-lab-20261004",
+      "sha": "6bbf7fed454e747918a73a38db267972239d7aec",
+      "behind_main": 0,
+      "ahead_main": 17,
+      "last_commit": "2026-10-04T11:22:46+01:00 docs: fechar F014 com 1196 PASS Windows e regressao Linux"
+    },
+    {
+      "branch": "lab-bootstrap-20261004",
+      "sha": "ef6937949081eea5ac152ecc8cd83c2f7e64d685",
+      "behind_main": 0,
+      "ahead_main": 81,
+      "last_commit": "2026-10-04T14:25:21+01:00 docs: record 1222 complete and 16 practical PASS"
+    },
+    {
+      "branch": "lab-conductor-verify-perf-20261004",
+      "sha": "0067ca349b97299925d6d3f1326bd80c2df9b58d",
+      "behind_main": 0,
+      "ahead_main": 97,
+      "last_commit": "2026-10-04T14:55:21+01:00 ci: opt in to verify performance Lab"
+    },
+    {
+      "branch": "lab-e2e-frontdoor-20261004",
+      "sha": "e6b914058194ed9b5110f100dc09cfc0899cba2f",
+      "behind_main": 0,
+      "ahead_main": 115,
+      "last_commit": "2026-10-04T16:04:26+01:00 ci: watch declarative Front Door rules and LanguageTool adapter"
+    },
+    {
+      "branch": "lab-frontdoor-minimal-language-20261004",
+      "sha": "4d91d05e3e0f6ddd91ba56bb883fffb2e7c2e30b",
+      "behind_main": 0,
+      "ahead_main": 108,
+      "last_commit": "2026-10-04T16:03:07+01:00 fix: disambiguate English question and calculation patterns"
+    },
+    {
+      "branch": "lab-spiff-conductor-20261004",
+      "sha": "829764dee6144d05c29fed92bcf6e48829d70ff2",
+      "behind_main": 0,
+      "ahead_main": 88,
+      "last_commit": "2026-10-04T14:39:19+01:00 test: isolate optional Spiff Lab from base Nexus suite"
+    },
+    {
+      "branch": "lab-spiff-conductor-roles-20261004",
+      "sha": "9f1c2b9fbb9577f54ee9830ff63efdfa8ddc1df7",
+      "behind_main": 0,
+      "ahead_main": 100,
+      "last_commit": "2026-10-04T16:00:24+01:00 docs: record measured Conductor flow performance"
+    },
+    {
+      "branch": "lab-wiki-knowledge-20261004",
+      "sha": "b0a82e63eae60fdec66afdee6705246c0d3465ea",
+      "behind_main": 0,
+      "ahead_main": 85,
+      "last_commit": "2026-10-04T15:29:28+01:00 test: implement real wiki 100k study and CI workflow"
+    },
+    {
+      "branch": "main",
+      "sha": "1e9e6127564a9247e562029552f73d56a8b9d3a7",
+      "behind_main": 0,
+      "ahead_main": 0,
+      "last_commit": "2026-10-02T07:51:15+01:00 docs: reviewed Nexus prototype status and remaining gates"
+    },
+    {
+      "branch": "nexus-startup-lock-20261003",
+      "sha": "6bbf7fed454e747918a73a38db267972239d7aec",
+      "behind_main": 0,
+      "ahead_main": 17,
+      "last_commit": "2026-10-04T11:22:46+01:00 docs: fechar F014 com 1196 PASS Windows e regressao Linux"
+    },
+    {
+      "branch": "pc-full-mirror-20261004",
+      "sha": "1e9e6127564a9247e562029552f73d56a8b9d3a7",
+      "behind_main": 0,
+      "ahead_main": 0,
+      "last_commit": "2026-10-02T07:51:15+01:00 docs: reviewed Nexus prototype status and remaining gates"
+    },
+    {
+      "branch": "pc-snapshot-tooling-20261004",
+      "sha": "7cc6a05d358d988c1bcd71486aaee51d3741eaf6",
+      "behind_main": 0,
+      "ahead_main": 19,
+      "last_commit": "2026-10-04T11:30:37+01:00 docs: add PC snapshot manifest template"
+    },
+    {
+      "branch": "work/audit-bidirectional-20261004",
+      "sha": "7921fac7d4901dff7e729879fe637a475289be11",
+      "behind_main": 0,
+      "ahead_main": 63,
+      "last_commit": "2026-10-04T13:47:46+01:00 fix: refuse redirected authoritative state"
+    }
+  ],
+  "local_wiki_commits": [
+    "74f6857",
+    "713d0c0"
+  ]
+}

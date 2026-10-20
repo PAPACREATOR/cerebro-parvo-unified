@@ -1,0 +1,111 @@
+{
+  "version": "1.0",
+  "max_text_chars": 100000,
+  "prefixes": [
+    [
+      "@@",
+      "arquivo"
+    ],
+    [
+      "\"\"",
+      "fontes"
+    ],
+    [
+      "??",
+      "perguntar"
+    ],
+    [
+      "&",
+      "trabalhar"
+    ],
+    [
+      "%",
+      "calcular"
+    ],
+    [
+      "#",
+      "tema"
+    ],
+    [
+      "@",
+      "web"
+    ]
+  ],
+  "clarification_patterns": [
+    "\\b(?:evita(?:r)?|pro[ií]bo|sem|deixa(?:r)?\\s+de)(?:\\s+\\w+){0,2}\\s+(?:guarda(?:r)?|arquiva(?:r)?|salva(?:r)?|verific(?:a|ar|as|ares))\\b",
+    "\\b(?:não|nao|nunca|jamais)(?:\\s+\\w+){0,3}\\s+(?:guard(?:a(?:r|s)?|es)|arquiv(?:a(?:r|s)?|es)|salv(?:a(?:r|s)?|es)|corrig(?:e(?:r|s)?|as)|revê|reve|rever|melhor(?:a(?:r|s)?|es)|verific(?:a|ar|as|ares)|verifiqu(?:e|es))\\b",
+    "\\b(?:não|nao|nunca|jamais)(?:\\s+\\w+){0,3}\\s+(?:calcul(?:a(?:r|s)?|es)|som(?:a(?:r|s)?|es)|pesquis(?:a(?:r|s)?|es)|procur(?:a(?:r|s)?|es)|reescreve(?:r|s)?|explica(?:r|s)?)\\b",
+    "[«“\\\"][^«»“”\\\"]*(?:guarda|corrige|calcula|pesquisa|arquiva|verifica|verificar)[^«»“”\\\"]*(?:[»”\\\"]|$)",
+    "\\b(?:a palavra|a frase|o termo)\\s+(?:guarda|corrige|calcula|pesquisa|arquiva)\\b"
+  ],
+  "natural_rules": {
+    "arquivo": [
+      "\\bguarda(?:r)?\\b",
+      "\\barquiva(?:r)?\\b",
+      "\\bsalva(?:r)?\\b",
+      "\\bguarda isto\\b"
+    ],
+    "web": [
+      "\\bpesquis[ae](?:r)?\\b.*\\b(?:web|internet|online|net)\\b",
+      "\\bprocura(?:r)?\\b.*\\b(?:web|internet|online|net)\\b",
+      "\\bpesquiza(?:r)?\\b.*\\b(?:web|internet|online|net)\\b"
+    ],
+    "fontes": [
+      "\\b(?:encontra|procura|pesquisa|pesquiza)\\b.*\\bfontes?\\b",
+      "\\bquais\\b.*\\bfontes?\\b",
+      "\\bda(?:-me)?\\b.*\\bfontes?\\b"
+    ],
+    "trabalhar": [
+      "\\btrabalha(?:r)?\\b",
+      "\\b(?:reve|revê|rever)\\b",
+      "\\bmelhora(?:r)?\\b",
+      "\\breescreve(?:r)?\\b",
+      "\\bcorrige(?:r)?\\b",
+      "\\bverific(?:a|ar|as|ares)\\b.*\\bintegridade\\b"
+    ],
+    "perguntar": [
+      "\\bexplica(?:r)?\\b",
+      "\\bresponde(?:r)?\\b",
+      "\\bo que (?:e|é)\\b",
+      "\\bquem (?:e|é)\\b",
+      "\\bporqu[eê]\\b",
+      "\\bcomo\\b"
+    ],
+    "calcular": [
+      "\\bcalcula(?:r)?\\b",
+      "\\bfaz(?:er)?\\b.*\\bconta\\b",
+      "\\bquanto (?:e|é)\\b",
+      "\\bsoma(?:r)?\\b"
+    ],
+    "tema": [
+      "(?:^|\\be também\\s+)(?:tema|assunto)\\b",
+      "(?:^|\\be também\\s+)quero falar sobre\\b"
+    ]
+  },
+  "operation_rules": [
+    {
+      "process": "verify",
+      "intent": "trabalhar",
+      "requires_attachment": true,
+      "patterns": [
+        "\\bverific(?:a|ar|as|ares)\\b.*\\bintegridade\\b.*\\b(?:ficheiro|documento|arquivo)\\b"
+      ]
+    },
+    {
+      "process": "convert_pdf",
+      "intent": "trabalhar",
+      "requires_attachment": true,
+      "patterns": [
+        "^converter para pdf$"
+      ]
+    },
+    {
+      "process": "book",
+      "intent": "trabalhar",
+      "requires_attachment": true,
+      "patterns": [
+        "^exportar manuscrito para pdf$"
+      ]
+    }
+  ]
+}

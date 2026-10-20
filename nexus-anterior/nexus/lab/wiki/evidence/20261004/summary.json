@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "object_cases_requested": 100000,
+  "phases": [
+    {
+      "name": "materialize",
+      "status": "PASS",
+      "objects": 100000,
+      "seconds": 13.055628554999998
+    },
+    {
+      "name": "index",
+      "status": "PASS",
+      "relations": 50000,
+      "seconds": 2.431367105999982
+    },
+    {
+      "name": "bidirectional_search",
+      "status": "PASS",
+      "object_cases": 100000,
+      "queries": 50000,
+      "seconds": 0.9989337889999774
+    },
+    {
+      "name": "reopen_rebuild_rename",
+      "status": "PASS",
+      "seconds": 2.2859175990000153,
+      "verified_hashes": 100000
+    },
+    {
+      "name": "adversarial",
+      "status": "PASS",
+      "distinct_scenarios": 6
+    },
+    {
+      "name": "new_process_reuse",
+      "status": "PASS",
+      "recovered_references": 1,
+      "provider_calls": 0
+    }
+  ],
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "python": "3.12.14",
+  "base_commit": "b0a82e63eae60fdec66afdee6705246c0d3465ea",
+  "runner_sha256": "1f1495ebbb99607a58a7cc4d2b9a407ca8e1a0b9114fbe6195178cd3348db7e5",
+  "not_run": [
+    "Windows",
+    "real web/AI",
+    "Nexus integration",
+    "power loss",
+    "historical version editing",
+    "semantic quality",
+    "human gate integration"
+  ],
+  "logical_bytes": {
+    "markdown": 22088890,
+    "index": 33050624
+  },
+  "logical_bytes_per_object": 551.39514,
+  "manifest_sha256": "e9e82b0b574e29cc8055f7fb12ae65a24012019deed53488eb0c4f0d425bdac7",
+  "object_cases_passed": 100000,
+  "elapsed_seconds": 20.113551420999954
+}

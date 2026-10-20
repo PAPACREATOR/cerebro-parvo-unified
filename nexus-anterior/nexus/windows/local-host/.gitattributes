@@ -1,0 +1,12 @@
+# Package metadata, installer and patch use portable LF text.
+*.md text eol=lf
+*.json text eol=lf
+*.ps1 text eol=lf
+.gitattributes text eol=lf
+moneyprinterturbo/*.patch text eol=lf
+moneyprinterturbo/*.patch -whitespace
+moneyprinterturbo/UPSTREAM-LICENSE text eol=lf
+
+# This must be last: preserve hashes even for source scripts ending in .ps1.
+files/** -text -eol
+files/** whitespace=cr-at-eol,-blank-at-eof

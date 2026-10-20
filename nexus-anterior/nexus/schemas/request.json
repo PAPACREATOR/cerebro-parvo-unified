@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "process",
+    "text",
+    "filename",
+    "attachment"
+  ],
+  "properties": {
+    "process": {
+      "enum": [
+        "verify",
+        "interpret",
+        "proofread",
+        "convert_pdf",
+        "video",
+        "podcast",
+        "visual_podcast",
+        "book",
+        "music",
+        "web"
+      ]
+    },
+    "text": {
+      "type": "string",
+      "maxLength": 100000
+    },
+    "filename": {
+      "type": "string",
+      "maxLength": 200
+    },
+    "attachment": {
+      "type": "string",
+      "maxLength": 2796204
+    }
+  }
+}

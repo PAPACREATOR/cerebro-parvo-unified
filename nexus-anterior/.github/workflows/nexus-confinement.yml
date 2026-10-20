@@ -1,0 +1,69 @@
+name: Nexus Windows Confinement Gate
+
+on:
+  pull_request:
+    paths: ['nexus/**', '.github/workflows/nexus-confinement.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: nexus-confinement-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  confinement:
+    name: Confinement and authority (${{ matrix.os }})
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-2022, windows-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 10
+    env:
+      PYTHONUTF8: '1'
+      PYTHONIOENCODING: utf-8
+      NEXUS_CONFINEMENT_EVIDENCE: security-evidence/confinement.json
+      NEXUS_NATIVE_EVIDENCE: security-evidence/native-10000.json
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: Install pinned test dependencies
+        run: python -m pip install -r nexus/requirements.txt -r nexus/requirements-mcp.txt pytest==9.1.1
+      - name: Application authority contracts
+        if: always()
+        run: python -m pytest nexus/tests/test_adversarial.py nexus/tests/test_vaults.py nexus/tests/test_mcp_client.py -q -o pythonpath=. --junitxml=security-evidence/authority.xml
+      - name: Native Windows boundary - 10000 actual filesystem attacks
+        if: always()
+        run: python -m pytest nexus/security_tests/test_native_boundary.py nexus/security_tests/test_windows_hash.py -s -q -o pythonpath=. --junitxml=security-evidence/native-10000.xml
+      - name: 10000 authority inputs - no data mutation or forged approval
+        if: always()
+        run: python -m pytest nexus/security_tests/test_authority_10000.py nexus/security_tests/test_state_concurrency.py -q -o pythonpath=. --junitxml=security-evidence/authority-10000.xml
+      - name: Refuse unvalidated provisioning before any change
+        if: always()
+        run: python -m pytest nexus/security_tests/test_install_gate.py -q -o pythonpath=. --junitxml=security-evidence/install-guard.xml
+      - name: Real Host launch with hostile disposable worker
+        if: always()
+        run: python -m pytest nexus/security_tests/test_confinement_gate.py -q -o pythonpath=. --junitxml=security-evidence/confinement.xml
+      - name: Real confined Host and OpenNotebook return - regression
+        if: always()
+        run: python -m pytest nexus/tests/test_host.py nexus/tests/test_open_notebook_kernel_e2e.py nexus/tests/test_kernel_crash_contract.py nexus/tests/test_reverse_flow.py -q -o pythonpath=. --junitxml=security-evidence/confined-e2e.xml
+      - name: Internal MCP versus direct adapter - native A/B before removal
+        if: always()
+        run: python -m pytest nexus/tests/test_internal_transport_ab.py -q -o pythonpath=. --junitxml=security-evidence/internal-transport-ab.xml
+      - name: Bootstrap authorization and accepted checkout - functional Windows
+        if: always()
+        run: python -m pytest nexus/tests/test_bootstrap_binding_functional.py -q -o pythonpath=. --junitxml=security-evidence/bootstrap-binding.xml
+      - name: Preserve observations even on FAIL
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: windows-confinement-evidence-${{ matrix.os }}
+          path: security-evidence/
+          if-no-files-found: error

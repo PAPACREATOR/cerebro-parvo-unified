@@ -1,0 +1,13 @@
+# Contexto reservado: nao enviar ao Agent, Tab ou referencias @ do Cursor.
+# Isto nao bloqueia acesso por terminal/MCP. Manter aprovacoes manuais.
+fontes/**
+juridico/**
+documentacao/**
+MEMORIA-DE-TRABALHO.md
+**/.env
+**/.env.*
+**/*key*
+**/*secret*
+**/*token*
+runtime/**
+.venv/**

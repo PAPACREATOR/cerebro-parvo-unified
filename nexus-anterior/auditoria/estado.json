@@ -1,0 +1,14 @@
+{
+  "date": "2026-09-27",
+  "provided_suite": {
+    "status": "PASS",
+    "tests": 34,
+    "exit_code": 0,
+    "evidence": "auditoria/testes-fornecidos-2026-09-27.txt"
+  },
+  "imp001_gate": "PARTIAL_NOT_CLOSED",
+  "integration": "NOT_RUN",
+  "crash_recovery_real": "NOT_RUN",
+  "m1_m14_end_to_end": "NOT_RUN",
+  "product_release": "NOT_APPROVED"
+}

@@ -1,0 +1,31 @@
+{
+  "tested_commit": "569c3a1de720ac6e7ed509ea566c1f6b3f02a1bf",
+  "tested_tree": "9251d1aa23f36aacbe13fd8c310a0e15bea10d00",
+  "nexus_base": "0753f573f2dee739a4e43a5e255a4999319cc605",
+  "audit": {
+    "run": 37238792619,
+    "result": "success"
+  },
+  "nexus_windows": {
+    "run": 37238792589,
+    "result": "success",
+    "core_passed": 140,
+    "blocks_passed": 1068,
+    "all_passed": 1350,
+    "all_seconds": 70.46,
+    "practical_passed": 12
+  },
+  "avatar": {
+    "run": 37238792600,
+    "result": "success",
+    "windows_passed": 165,
+    "windows_seconds": 12.12,
+    "ubuntu_passed": 165,
+    "ubuntu_seconds": 9.38,
+    "learned_model": "substituted"
+  },
+  "protected_paths_identical_to_base": true,
+  "user_pc": "NOT RUN",
+  "gpu": "NOT RUN",
+  "kernel_avatar_e2e": "NOT RUN"
+}

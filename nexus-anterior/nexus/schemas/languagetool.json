@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "software",
+    "warnings",
+    "language",
+    "matches"
+  ],
+  "properties": {
+    "software": {
+      "type": "object",
+      "required": [
+        "name",
+        "version"
+      ],
+      "properties": {
+        "name": {
+          "const": "LanguageTool"
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        }
+      }
+    },
+    "warnings": {
+      "type": "object",
+      "required": [
+        "incompleteResults"
+      ],
+      "properties": {
+        "incompleteResults": {
+          "type": "boolean"
+        }
+      }
+    },
+    "language": {
+      "type": "object",
+      "required": [
+        "code"
+      ],
+      "properties": {
+        "code": {
+          "const": "pt-PT"
+        }
+      }
+    },
+    "matches": {
+      "type": "array",
+      "maxItems": 2000,
+      "items": {
+        "type": "object",
+        "required": [
+          "message",
+          "context",
+          "replacements"
+        ],
+        "properties": {
+          "message": {
+            "type": "string",
+            "maxLength": 4000
+          },
+          "context": {
+            "type": "object",
+            "required": [
+              "text"
+            ],
+            "properties": {
+              "text": {
+                "type": "string",
+                "maxLength": 4000
+              }
+            }
+          },
+          "replacements": {
+            "type": "array",
+            "maxItems": 1000,
+            "items": {
+              "type": "object",
+              "required": [
+                "value"
+              ],
+              "properties": {
+                "value": {
+                  "type": "string",
+                  "maxLength": 4000
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

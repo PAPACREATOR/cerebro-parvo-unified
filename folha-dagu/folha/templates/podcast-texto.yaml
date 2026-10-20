@@ -1,0 +1,21 @@
+# nexus-title: Podcast do texto
+# nexus-terms: criar cria gerar gera fazer faz podcast texto audio áudio
+# nexus-match: ^\s*(?:quero\s+)?(?:criar|cria|gerar|gera|fazer|faz)\s+(?:um\s+)?podcast\s+(?:deste\s+|do\s+)?texto\s*:\s*(?<body>\S[\s\S]*)$
+# nexus-attachment: false
+description: Produzir o podcast nativo do Open Notebook a partir de conteúdo fornecido, sem alterar as ferramentas.
+type: chain
+working_dir: __WORK_DIR_JSON__
+shell: [powershell.exe, -NoProfile, -NonInteractive, -ExecutionPolicy, Bypass]
+steps:
+  - id: produzir_podcast
+    run: |
+      $ErrorActionPreference = 'Stop'
+      $request = Get-Content -LiteralPath request.json -Raw -Encoding UTF8 | ConvertFrom-Json
+      . $request.tools_script
+      Invoke-FolhaPodcast $request $request.body
+  - id: conservar_resultado
+    run: |
+      $ErrorActionPreference = 'Stop'
+      $request = Get-Content -LiteralPath request.json -Raw -Encoding UTF8 | ConvertFrom-Json
+      . $request.index_script
+      Publish-FolhaWiki $request

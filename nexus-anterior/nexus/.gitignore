@@ -1,0 +1,10 @@
+runtime/
+*-fts5-index/
+open-notebook.json
+launch-url.txt
+*.gguf
+*.log
+__pycache__/
+languagetool.json
+!schemas/languagetool.json
+libreoffice.json

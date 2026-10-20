@@ -1,0 +1,9 @@
+UTC: 2026-09-27T09:53:48.807413+00:00
+Python: 3.12.14
+Sistema: Linux x86_64
+Diretório relativo: implementacao/candidata-2026-09-27
+Comando: python -m pytest -q --color=no
+Exit code: 0
+
+..................................                                       [100%]
+34 passed in 0.05s

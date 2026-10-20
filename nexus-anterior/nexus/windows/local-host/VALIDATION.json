@@ -1,0 +1,136 @@
+{
+  "schema": "nexus.local-host-package-validation.v1",
+  "date": "2026-10-11",
+  "status": "PASS_SOURCE_PACKAGING_AND_READ_ONLY_VALIDATION",
+  "python_sources_compiled_without_execution": 6,
+  "powershell7": {
+    "scope": "source compile and read-only validation; no imports, service starts or installation",
+    "status": "PASS",
+    "checks": [
+      {
+        "name": "six_python_sources_compile_without_import_or_execution",
+        "status": "PASS"
+      },
+      {
+        "name": "all_eight_source_hashes_match_manifest",
+        "status": "PASS"
+      },
+      {
+        "name": "installer_validation_exit_zero",
+        "status": "PASS"
+      },
+      {
+        "name": "all_eight_installed_sources_identical",
+        "status": "PASS"
+      },
+      {
+        "name": "missing_authorization_rejected",
+        "status": "PASS"
+      },
+      {
+        "name": "different_destination_root_rejected",
+        "status": "PASS"
+      },
+      {
+        "name": "manifest_destination_traversal_rejected",
+        "status": "PASS"
+      },
+      {
+        "name": "tampered_source_hash_rejected",
+        "status": "PASS"
+      }
+    ],
+    "installation_executed": false,
+    "shell": "existing Codex bundled PowerShell 7.6.5; no policy alteration",
+    "native_functional_tests": "NOT RUN by this package audit",
+    "restore_demonstration": "NOT RUN",
+    "initial_windows_powershell_5_file_invocation": "BLOCKED without process option: AuthorizationManager check failed; later read-only test explicitly authorized process-only Bypass, with no persistent policy alteration"
+  },
+  "powershell5": {
+    "scope": "source compile and read-only validation; no imports, service starts or installation",
+    "status": "PASS",
+    "checks": [
+      {
+        "name": "six_python_sources_compile_without_import_or_execution",
+        "status": "PASS"
+      },
+      {
+        "name": "all_eight_source_hashes_match_manifest",
+        "status": "PASS"
+      },
+      {
+        "name": "installer_validation_exit_zero",
+        "status": "PASS"
+      },
+      {
+        "name": "all_eight_installed_sources_identical",
+        "status": "PASS"
+      },
+      {
+        "name": "missing_authorization_rejected",
+        "status": "PASS"
+      },
+      {
+        "name": "different_destination_root_rejected",
+        "status": "PASS"
+      },
+      {
+        "name": "manifest_destination_traversal_rejected",
+        "status": "PASS"
+      },
+      {
+        "name": "tampered_source_hash_rejected",
+        "status": "PASS"
+      }
+    ],
+    "installation_executed": false,
+    "shell": "Windows PowerShell 5; process-only Bypass for reviewed read-only validation",
+    "native_functional_tests": "NOT RUN by this package audit",
+    "restore_demonstration": "NOT RUN",
+    "initial_windows_powershell_5_file_invocation": "BLOCKED without process option: AuthorizationManager check failed; later read-only test explicitly authorized process-only Bypass, with no persistent policy alteration"
+  },
+  "installer_powershell_ast_syntax": "PASS",
+  "money_patch_reverse_check": "PASS; git apply --reverse --check; no application",
+  "source_secrets_review": "eight complete scripts read; no actual private credentials; only existing public local routing markers retained",
+  "source_hashes": "PASS; eight exact installed copies",
+  "git_attributes": [
+    {
+      "path": "nexus/windows/local-host/files/abrir-nexus.py",
+      "git_filter_preserves_bytes": true
+    },
+    {
+      "path": "nexus/windows/local-host/files/Abrir Nexus.cmd",
+      "git_filter_preserves_bytes": true
+    },
+    {
+      "path": "nexus/windows/local-host/files/abrir-zotero.ps1",
+      "git_filter_preserves_bytes": true
+    },
+    {
+      "path": "nexus/windows/local-host/files/configuracao/servicos-ia-local.py",
+      "git_filter_preserves_bytes": true
+    },
+    {
+      "path": "nexus/windows/local-host/files/configuracao/servicos-open-notebook.py",
+      "git_filter_preserves_bytes": true
+    },
+    {
+      "path": "nexus/windows/local-host/files/configuracao/surreal-wsl.py",
+      "git_filter_preserves_bytes": true
+    },
+    {
+      "path": "nexus/windows/local-host/files/configuracao/ponte-piper-local.py",
+      "git_filter_preserves_bytes": true
+    },
+    {
+      "path": "nexus/windows/local-host/files/configuracao/ponte-forge-local.py",
+      "git_filter_preserves_bytes": true
+    }
+  ],
+  "git_index": "NOT STAGED; reviewer must verify staged blob SHA256 after git add",
+  "installation": "NOT RUN",
+  "service_start": "NOT RUN",
+  "backup_restore": "NOT RUN",
+  "functional_native_tests": "NOT RUN by this package audit",
+  "unchanged_active_runtime": true
+}

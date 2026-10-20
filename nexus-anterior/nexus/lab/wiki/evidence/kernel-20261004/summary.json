@@ -1,0 +1,40 @@
+{
+  "status": "PASS_LAB_ONLY",
+  "base_commit": "74f6857",
+  "branch": "lab-wiki-complemento-20261004",
+  "python": "3.12.14",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "suites": {
+    "tests": {
+      "tests": "1098",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "16.545"
+    },
+    "regression": {
+      "tests": "101",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "4.546"
+    }
+  },
+  "matrix_variants": 1024,
+  "regression_exclusions": "2 native Windows cases deliberately deselected",
+  "code_sha256": {
+    "kernel_bridge.py": "d9560b680b1b783acca3aec4effc1142d95944f14c7d26c5f1d8511c9d71a2ef",
+    "context_packet.py": "b82b1c7899a6f088e51cfd90aab3554a2bbace9f4f123fab20283e95362ef6e8",
+    "context_flow.yaml": "781b26a117f91edec49edee37d5167799015ee9fe6479e483b0ae87794b515fe",
+    "test_kernel_bridge.py": "911b643fc0af67c629caae9541cc77d7b460e6698721d9617c39207bae0f190a"
+  },
+  "not_run": [
+    "Windows",
+    "new Folha endpoint",
+    "real AI",
+    "official Host integration",
+    "cross-process concurrency",
+    "power loss"
+  ],
+  "publication": "local commit only; remote push still awaits explicit authorization"
+}

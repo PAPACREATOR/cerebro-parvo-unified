@@ -1,0 +1,62 @@
+......................................................F................. [  6%]
+........................................................................ [ 13%]
+........................................................................ [ 19%]
+........................................................................ [ 26%]
+........................................................................ [ 32%]
+........................................................................ [ 39%]
+........................................................................ [ 45%]
+........................................................................ [ 52%]
+........................................................................ [ 59%]
+........................................................................ [ 65%]
+........................................................................ [ 72%]
+........................................................................ [ 78%]
+........................................................................ [ 85%]
+........................................................................ [ 91%]
+........................................................................ [ 98%]
+.................                                                        [100%]
+=================================== FAILURES ===================================
+__________________ test_real_conductor_failure_paths[invalid] __________________
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-2/test_real_conductor_failure_pa0')
+mode = 'invalid'
+
+    @pytest.mark.parametrize('mode', ['invalid', 'missing', 'timeout'])
+    def test_real_conductor_failure_paths(tmp_path, mode):
+        from nexus.adapters.conductor_runner import execute
+        from ruamel.yaml import YAML
+        config = YAML().load(Path(__file__).with_name('context_flow.yaml'))
+        config['agents'][0]['args'][1] = str(Path(__file__).with_name('context_packet.py'))
+        if mode == 'timeout':
+            config['agents'][0]['args'] = ['-c', 'import time; time.sleep(5)']
+            config['agents'][0]['timeout'] = 1
+        elif mode == 'missing':
+            config['agents'][0]['command'] = str(tmp_path / 'absent-executable')
+        packet = tmp_path / 'packet.json'
+        packet.write_text('{}')
+        workflow = tmp_path / 'failure.yaml'
+        with workflow.open('w') as stream:
+            YAML().dump(config, stream)
+>       with pytest.raises(Exception):
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE Exception
+
+nexus/lab/wiki/test_kernel_bridge.py:208: Failed
+----------------------------- Captured stderr call -----------------------------
+  Script: /tmp/nexus-wiki-venv/bin/python -I 
+/workspace/scratch/2bf3c3b0f1f4/nexus/nexus/lab/wiki/context_packet.py 
+/tmp/pytest-of-root/pytest-2/test_real_conductor_failure_pa0/packet.json
+  Script stderr: Traceback (most recent call last):
+  File "/workspace/scratch/2bf3c3b0f1f4/nexus/nexus/lab/wiki/context_packet.py",
+line 61, in <module>
+    print(json.dumps(summarize(json.loads(raw)), ensure_ascii=False))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/2bf3c3b0f1f4/nexus/nexus/lab/wiki/context_packet.py",
+line 48, in summarize
+    check_packet(packet)
+  File "/workspace/scratch/2bf3c3b0f1f4/nexus/nexus/lab/wiki/context_packet.py",
+line 19, in check_packet
+    raise ValueError('packet fields')
+ValueError: packet fields
+=========================== short test summary info ============================
+FAILED nexus/lab/wiki/test_kernel_bridge.py::test_real_conductor_failure_paths[invalid]
+1 failed, 1096 passed in 16.84s

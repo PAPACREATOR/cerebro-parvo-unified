@@ -1,0 +1,72 @@
+{
+  "schema": "nexus.local-host-sources.v1",
+  "observed_on": "2026-10-11",
+  "destination_root": "C:\\Nexus",
+  "candidate_base": "e3833856ed8ebc8947c4229344bab3be3f54654a",
+  "files": [
+    {
+      "package_path": "files/abrir-nexus.py",
+      "destination": "abrir-nexus.py",
+      "sha256": "f2f476b3b3efffef5f5fdb13b71486887cea554bfe30b2a0768846be66eb76cb",
+      "source_sha256": "f2f476b3b3efffef5f5fdb13b71486887cea554bfe30b2a0768846be66eb76cb",
+      "source": "C:\\Nexus\\abrir-nexus.py",
+      "adaptation": "none; exact reviewed installed source"
+    },
+    {
+      "package_path": "files/Abrir Nexus.cmd",
+      "destination": "Abrir Nexus.cmd",
+      "sha256": "d7b1ea6ab16be226eacf27f8c5615adc5bdbfb5c2c9b29568c65df8a864c3515",
+      "source_sha256": "d7b1ea6ab16be226eacf27f8c5615adc5bdbfb5c2c9b29568c65df8a864c3515",
+      "source": "C:\\Nexus\\Abrir Nexus.cmd",
+      "adaptation": "none; exact reviewed installed source"
+    },
+    {
+      "package_path": "files/abrir-zotero.ps1",
+      "destination": "abrir-zotero.ps1",
+      "sha256": "729fa8bf305cbf03aa91db3c8d8a185a5fb93c2ee3be1193ad69b9d3fe368597",
+      "source_sha256": "729fa8bf305cbf03aa91db3c8d8a185a5fb93c2ee3be1193ad69b9d3fe368597",
+      "source": "C:\\Nexus\\abrir-zotero.ps1",
+      "adaptation": "none; exact reviewed installed source"
+    },
+    {
+      "package_path": "files/configuracao/servicos-ia-local.py",
+      "destination": "configuracao/servicos-ia-local.py",
+      "sha256": "70543b2e24e77cb132b66d2469372f3c775d4435d0f6e965c14dfed603a43f8b",
+      "source_sha256": "70543b2e24e77cb132b66d2469372f3c775d4435d0f6e965c14dfed603a43f8b",
+      "source": "C:\\Nexus\\configuracao\\servicos-ia-local.py",
+      "adaptation": "none; exact reviewed installed source"
+    },
+    {
+      "package_path": "files/configuracao/servicos-open-notebook.py",
+      "destination": "configuracao/servicos-open-notebook.py",
+      "sha256": "0501c8aae8f04e9bebee9f6ded375558806cff0a435e4f538f95a581affb2714",
+      "source_sha256": "0501c8aae8f04e9bebee9f6ded375558806cff0a435e4f538f95a581affb2714",
+      "source": "C:\\Nexus\\configuracao\\servicos-open-notebook.py",
+      "adaptation": "none; exact reviewed installed source"
+    },
+    {
+      "package_path": "files/configuracao/surreal-wsl.py",
+      "destination": "configuracao/surreal-wsl.py",
+      "sha256": "bf42bf1c3507a9889a87e3018cfe2ebd15866c58a3ad6cf3b5fb6aa45a58bd4e",
+      "source_sha256": "bf42bf1c3507a9889a87e3018cfe2ebd15866c58a3ad6cf3b5fb6aa45a58bd4e",
+      "source": "C:\\Nexus\\configuracao\\surreal-wsl.py",
+      "adaptation": "none; exact reviewed installed source"
+    },
+    {
+      "package_path": "files/configuracao/ponte-piper-local.py",
+      "destination": "configuracao/ponte-piper-local.py",
+      "sha256": "ce5bf13585f61eddd74f6cc97b62cadfc9424a7aa01e340bddd4f33cfed1e20b",
+      "source_sha256": "ce5bf13585f61eddd74f6cc97b62cadfc9424a7aa01e340bddd4f33cfed1e20b",
+      "source": "C:\\Nexus\\configuracao\\ponte-piper-local.py",
+      "adaptation": "none; exact reviewed installed source"
+    },
+    {
+      "package_path": "files/configuracao/ponte-forge-local.py",
+      "destination": "configuracao/ponte-forge-local.py",
+      "sha256": "74ba3613c198f4356125a61f5c90b9e5e37135dbe3391ccebcaf5d6f0b5b7684",
+      "source_sha256": "74ba3613c198f4356125a61f5c90b9e5e37135dbe3391ccebcaf5d6f0b5b7684",
+      "source": "C:\\Nexus\\configuracao\\ponte-forge-local.py",
+      "adaptation": "none; exact reviewed installed source"
+    }
+  ]
+}

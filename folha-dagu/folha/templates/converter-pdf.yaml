@@ -1,0 +1,80 @@
+# nexus-title: Converter para PDF
+# nexus-terms: converter converte converta transformar transforma exportar pdf documento ficheiro manuscrito
+# nexus-match: ^\s*(?:&\s*)?(?:quero\s+)?(?:converter|converte|converta|transformar|transforma|exportar)(?:\s+(?:(?:este|o|um)\s+)?(?:documento|ficheiro|manuscrito))?\s+(?:para|em)\s+pdf[.!?]?\s*$
+# nexus-attachment: true
+# nexus-extensions: .docx,.odt,.rtf,.txt,.doc
+description: Verificar o original, converter com LibreOffice e validar o PDF.
+type: chain
+working_dir: __WORK_DIR_JSON__
+shell: [powershell.exe, -NoProfile, -NonInteractive, -ExecutionPolicy, Bypass]
+steps:
+  - id: verificar_original
+    run: |
+      $ErrorActionPreference = 'Stop'
+      $request = Get-Content -LiteralPath request.json -Raw -Encoding UTF8 | ConvertFrom-Json
+      $sha = [Security.Cryptography.SHA256]::Create()
+      try { $hash = [BitConverter]::ToString($sha.ComputeHash([IO.File]::ReadAllBytes($request.input_file))).Replace('-','') } finally { $sha.Dispose() }
+      [IO.File]::WriteAllText((Join-Path (Get-Location).Path 'original.sha256'), $hash)
+  - id: converter_libreoffice
+    run: |
+      $ErrorActionPreference = 'Stop'
+      $request = Get-Content -LiteralPath request.json -Raw -Encoding UTF8 | ConvertFrom-Json
+      $tool = 'C:\Program Files\LibreOffice\program\soffice.com'
+      if (-not (Test-Path -LiteralPath $tool)) { throw 'LibreOffice não encontrado.' }
+      $output = Join-Path (Get-Location).Path 'pdf'
+      New-Item -ItemType Directory -Path $output -Force | Out-Null
+      # Keep the fresh profile path short: LibreOffice has deep internal paths on Windows.
+      $temporaryRoot = [IO.Path]::GetFullPath([IO.Path]::GetTempPath()).TrimEnd('\')
+      $profileDirectory = Join-Path $temporaryRoot ('folha-lo-' + [Guid]::NewGuid().ToString('N'))
+      $profile = [Uri]::new($profileDirectory).AbsoluteUri
+      try {
+        & $tool ('-env:UserInstallation=' + $profile) --headless --nologo --nodefault --norestore --convert-to pdf --outdir $output $request.input_file
+        if ($LASTEXITCODE -ne 0) { throw ('LibreOffice não conseguiu converter o ficheiro. Código: ' + $LASTEXITCODE) }
+      } finally {
+        if (Test-Path -LiteralPath $profileDirectory) {
+          $created = Get-Item -LiteralPath $profileDirectory
+          if ($created.Parent.FullName -eq $temporaryRoot -and $created.Name -match '^folha-lo-[a-f0-9]{32}$' -and -not ($created.Attributes -band [IO.FileAttributes]::ReparsePoint)) {
+            Remove-Item -LiteralPath $created.FullName -Recurse -Force
+          }
+        }
+      }
+  - id: validar_pdf
+    run: |
+      $ErrorActionPreference = 'Stop'
+      $request = Get-Content -LiteralPath request.json -Raw -Encoding UTF8 | ConvertFrom-Json
+      $sha = [Security.Cryptography.SHA256]::Create()
+      try { $current = [BitConverter]::ToString($sha.ComputeHash([IO.File]::ReadAllBytes($request.input_file))).Replace('-','') } finally { $sha.Dispose() }
+      if ($current -ne (Get-Content -LiteralPath original.sha256 -Raw)) { throw 'O original mudou durante a conversão.' }
+      $pdf = Join-Path (Get-Location).Path 'pdf\entrada.pdf'
+      $bytes = [IO.File]::ReadAllBytes($pdf)
+      if ($bytes.Length -lt 8 -or [Text.Encoding]::ASCII.GetString($bytes,0,5) -ne '%PDF-') { throw 'O resultado não é um PDF.' }
+      Copy-Item -LiteralPath $pdf -Destination resultado.pdf
+      $sha = [Security.Cryptography.SHA256]::Create()
+      try { $hash = [BitConverter]::ToString($sha.ComputeHash($bytes)).Replace('-','').ToLowerInvariant() } finally { $sha.Dispose() }
+      Add-Content -LiteralPath $env:DAGU_OUTPUT_FILE -Value ('sha256=' + $hash) -Encoding ASCII
+      Add-Content -LiteralPath $env:DAGU_OUTPUT_FILE -Value ('bytes=' + $bytes.Length) -Encoding ASCII
+    outputs:
+      - name: sha256
+      - name: bytes
+  - id: apresentar_resultado
+    action: template.render
+    with:
+      template: |
+        # PDF criado
+
+        O documento foi convertido pelo LibreOffice. O ficheiro original foi conservado.
+
+        Tamanho do PDF: {{ .bytes }} bytes
+        SHA256: {{ .sha256 }}
+
+        O PDF está disponível no botão Descarregar PDF.
+      data:
+        bytes: ${steps.validar_pdf.outputs.bytes}
+        sha256: ${steps.validar_pdf.outputs.sha256}
+      output: content.md
+  - id: guardar_na_biblioteca
+    run: |
+      $ErrorActionPreference = 'Stop'
+      $request = Get-Content -LiteralPath request.json -Raw -Encoding UTF8 | ConvertFrom-Json
+      . $request.index_script
+      Publish-FolhaWiki $request

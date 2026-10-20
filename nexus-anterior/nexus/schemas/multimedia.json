@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "tipo",
+    "familia",
+    "tribo",
+    "dominio",
+    "lab"
+  ],
+  "properties": {
+    "tipo": {
+      "const": "proposta"
+    },
+    "familia": {
+      "const": "multimedia"
+    },
+    "tribo": {
+      "enum": [
+        "som",
+        "imagem"
+      ]
+    },
+    "dominio": {
+      "const": "creative"
+    },
+    "lab": {
+      "const": "windows"
+    }
+  }
+}

@@ -1,0 +1,2437 @@
+[
+  {
+    "path": "nexus-anterior/.cursorignore",
+    "original_sha256": "f344ad61741d845c8169876db8d0b742c59df8f520306f6f574d287432b751f7",
+    "archive_sha256": "f344ad61741d845c8169876db8d0b742c59df8f520306f6f574d287432b751f7"
+  },
+  {
+    "path": "nexus-anterior/.github/ISSUE_TEMPLATE/microprocesso.yml",
+    "original_sha256": "322715d4d2336e7541a9eff999e83d317b8b7a5014f131c95b18b36388e55f39",
+    "archive_sha256": "322715d4d2336e7541a9eff999e83d317b8b7a5014f131c95b18b36388e55f39"
+  },
+  {
+    "path": "nexus-anterior/.github/PULL_REQUEST_TEMPLATE.md",
+    "original_sha256": "27b7de9b6e073c06999d892e60cf3cf38d92b622bf557caf2484f304dc1e97ac",
+    "archive_sha256": "27b7de9b6e073c06999d892e60cf3cf38d92b622bf557caf2484f304dc1e97ac"
+  },
+  {
+    "path": "nexus-anterior/.github/PULL_REQUEST_TEMPLATE/imp-review.md",
+    "original_sha256": "02de447362d19968fa59050c9250df76a8ee4f098e67d3aba32e6b18dd466f4b",
+    "archive_sha256": "02de447362d19968fa59050c9250df76a8ee4f098e67d3aba32e6b18dd466f4b"
+  },
+  {
+    "path": "nexus-anterior/.github/dependabot.yml",
+    "original_sha256": "68544db1eb1aa8217ebec1f00d25a029e0784718aa4579df1497918716481790",
+    "archive_sha256": "68544db1eb1aa8217ebec1f00d25a029e0784718aa4579df1497918716481790"
+  },
+  {
+    "path": "nexus-anterior/.github/workflows/auditoria.yml",
+    "original_sha256": "cfd278ca7246dd2163dd4a4085f0501d9b7fab0fb20713d9a819c6c1043c99c6",
+    "archive_sha256": "cfd278ca7246dd2163dd4a4085f0501d9b7fab0fb20713d9a819c6c1043c99c6"
+  },
+  {
+    "path": "nexus-anterior/.github/workflows/codeql-analysis.yml",
+    "original_sha256": "85057d4185cb00a0f84991d9f41a6be24babc4f3662f2c1edb7a28e177d2d92c",
+    "archive_sha256": "85057d4185cb00a0f84991d9f41a6be24babc4f3662f2c1edb7a28e177d2d92c"
+  },
+  {
+    "path": "nexus-anterior/.github/workflows/frontdoor-lab.yml",
+    "original_sha256": "c3ae8e3bee5f3beb1238629bd55d781d1445c07427448f5b2a32490341f79491",
+    "archive_sha256": "c3ae8e3bee5f3beb1238629bd55d781d1445c07427448f5b2a32490341f79491"
+  },
+  {
+    "path": "nexus-anterior/.github/workflows/libreoffice-writer-real.yml",
+    "original_sha256": "57238b28242b2d547394e0f7e91029457425b7c1a39a5316b4928a51a9eadd1d",
+    "archive_sha256": "57238b28242b2d547394e0f7e91029457425b7c1a39a5316b4928a51a9eadd1d"
+  },
+  {
+    "path": "nexus-anterior/.github/workflows/nexus-confinement.yml",
+    "original_sha256": "32dd6313acc9571bdce4af8ddac4e0ac50f41a683932f6dc71b1e8f225c1924f",
+    "archive_sha256": "32dd6313acc9571bdce4af8ddac4e0ac50f41a683932f6dc71b1e8f225c1924f"
+  },
+  {
+    "path": "nexus-anterior/.github/workflows/nexus-gateway.yml",
+    "original_sha256": "1b0fa2ee316fe33eeb7e96f847547ef20f175b6adc43ecc980d3d3a3ef179bd6",
+    "archive_sha256": "1b0fa2ee316fe33eeb7e96f847547ef20f175b6adc43ecc980d3d3a3ef179bd6"
+  },
+  {
+    "path": "nexus-anterior/.github/workflows/nexus-generic-router.yml",
+    "original_sha256": "4132bd9de31a728a3bd34aafc44aabc9112150a051d064db94ad53e173450341",
+    "archive_sha256": "4132bd9de31a728a3bd34aafc44aabc9112150a051d064db94ad53e173450341"
+  },
+  {
+    "path": "nexus-anterior/.github/workflows/nexus-integration-stress.yml",
+    "original_sha256": "3c773a9325e0b1e4351ea8f7b14741dfbead82292dd21c4a301d5cac81e4773c",
+    "archive_sha256": "3c773a9325e0b1e4351ea8f7b14741dfbead82292dd21c4a301d5cac81e4773c"
+  },
+  {
+    "path": "nexus-anterior/.github/workflows/nexus-transactional-crash.yml",
+    "original_sha256": "6804bbea1a7dfd894bd22f597c89394f96b6936fe7c70104f9e7e149ea8d166d",
+    "archive_sha256": "6804bbea1a7dfd894bd22f597c89394f96b6936fe7c70104f9e7e149ea8d166d"
+  },
+  {
+    "path": "nexus-anterior/.github/workflows/nexus-windows-acceptance.yml",
+    "original_sha256": "9ce37d3a863932b39d3a0120e8e92ebda10b65fe986a6018b7eafa794003a520",
+    "archive_sha256": "9ce37d3a863932b39d3a0120e8e92ebda10b65fe986a6018b7eafa794003a520"
+  },
+  {
+    "path": "nexus-anterior/.github/workflows/nexus-windows.yml",
+    "original_sha256": "a262221e1f13c5faa49b6143657a06a7d7d566df661699a32428b19147dd7516",
+    "archive_sha256": "3c70208dc1b58d659be18685ecbca127278a0634288fc06ddf19fba1f8d295e2"
+  },
+  {
+    "path": "nexus-anterior/.github/workflows/open-notebook-avatar.yml",
+    "original_sha256": "7b8f935269b3a0753cb67f675114af44bb8dde28793205d42af340084c207e18",
+    "archive_sha256": "7b8f935269b3a0753cb67f675114af44bb8dde28793205d42af340084c207e18"
+  },
+  {
+    "path": "nexus-anterior/.github/workflows/open-notebook-llamacpp-compat.yml",
+    "original_sha256": "23043c36e72158d90a727b36efaee6cfd4a4aae360233ecfc78961e2c8cf18c5",
+    "archive_sha256": "c80ff4acc6d208aaaab23b90afe20cba2495c2ae62b6703d4eb23df807a49469"
+  },
+  {
+    "path": "nexus-anterior/.github/workflows/wiki-100k.yml",
+    "original_sha256": "1964d47a8ed06a79550e5be3ec6c8f04fa16745176f7ec57baf5f978fbb2701c",
+    "archive_sha256": "1964d47a8ed06a79550e5be3ec6c8f04fa16745176f7ec57baf5f978fbb2701c"
+  },
+  {
+    "path": "nexus-anterior/.github/workflows/wiki-windows-validation.yml",
+    "original_sha256": "9a67937aed44d0c4089832264a00e364bd0305c759f251f73f0c8592068d996e",
+    "archive_sha256": "9a67937aed44d0c4089832264a00e364bd0305c759f251f73f0c8592068d996e"
+  },
+  {
+    "path": "nexus-anterior/.gitignore",
+    "original_sha256": "05a9e5c715f607838d31938139fca9a8340b1a78dbc0a0d03b8a41d9bd13d8db",
+    "archive_sha256": "05a9e5c715f607838d31938139fca9a8340b1a78dbc0a0d03b8a41d9bd13d8db"
+  },
+  {
+    "path": "nexus-anterior/AGENTS.md",
+    "original_sha256": "a2f7fddf67c23a80186ca210942365148f352e19007f66410d6ce59ba4c3d82c",
+    "archive_sha256": "a2f7fddf67c23a80186ca210942365148f352e19007f66410d6ce59ba4c3d82c"
+  },
+  {
+    "path": "nexus-anterior/CEREBRO_ARCHITECTURE.md",
+    "original_sha256": "0562cc7c27bea6278c71a472daf2ac6a833fa199d91ae7296c988b57d7988903",
+    "archive_sha256": "0562cc7c27bea6278c71a472daf2ac6a833fa199d91ae7296c988b57d7988903"
+  },
+  {
+    "path": "nexus-anterior/CEREBRO_CONSTITUTION.md",
+    "original_sha256": "5222c479d7e82b35d7d460abe515822143d2f76a9049dcf54f4be5b2a7d490e8",
+    "archive_sha256": "5222c479d7e82b35d7d460abe515822143d2f76a9049dcf54f4be5b2a7d490e8"
+  },
+  {
+    "path": "nexus-anterior/CHANGELOG.md",
+    "original_sha256": "f84202c96cd58e0eca3e0f7b24840c7da15996142d9ab07f4fbd22d0c6ce3837",
+    "archive_sha256": "f84202c96cd58e0eca3e0f7b24840c7da15996142d9ab07f4fbd22d0c6ce3837"
+  },
+  {
+    "path": "nexus-anterior/CODE_OF_CONDUCT.md",
+    "original_sha256": "4ceec79cb209042687e5f360f2d846609142e3a522dd9d3ce2b6aa2d5f957486",
+    "archive_sha256": "4ceec79cb209042687e5f360f2d846609142e3a522dd9d3ce2b6aa2d5f957486"
+  },
+  {
+    "path": "nexus-anterior/COMMERCIAL-LICENSING.md",
+    "original_sha256": "469cd9fd3b4c63fe0d522a89e7f44a0477ac8f66f9630a7d7c05ca5306d76d69",
+    "archive_sha256": "469cd9fd3b4c63fe0d522a89e7f44a0477ac8f66f9630a7d7c05ca5306d76d69"
+  },
+  {
+    "path": "nexus-anterior/COMPATIBILITY-MATRIX.md",
+    "original_sha256": "25d74165e927006a9546876aadd8218257dafbcc5e78f82e33a4324bba89ecd5",
+    "archive_sha256": "25d74165e927006a9546876aadd8218257dafbcc5e78f82e33a4324bba89ecd5"
+  },
+  {
+    "path": "nexus-anterior/CONTRIBUTING.md",
+    "original_sha256": "5e81e93c93b297f8058f7df4d4ddd98f67c8440a61d35f6662a3ce2cd1f0da1d",
+    "archive_sha256": "5e81e93c93b297f8058f7df4d4ddd98f67c8440a61d35f6662a3ce2cd1f0da1d"
+  },
+  {
+    "path": "nexus-anterior/CONTRIBUTOR_LICENSE_AGREEMENT.md",
+    "original_sha256": "99acc5d082f298fda052b8df813a9313814dc9d9a77620bd5901d5c3a9feb6e3",
+    "archive_sha256": "99acc5d082f298fda052b8df813a9313814dc9d9a77620bd5901d5c3a9feb6e3"
+  },
+  {
+    "path": "nexus-anterior/Cerebro.code-workspace",
+    "original_sha256": "8d09ee06f787e93890dbf32196839b6755d42b5eddaf3147d76c5a115765732b",
+    "archive_sha256": "8d09ee06f787e93890dbf32196839b6755d42b5eddaf3147d76c5a115765732b"
+  },
+  {
+    "path": "nexus-anterior/DECISIONS.md",
+    "original_sha256": "41ae7db3ae28a9e4d1f27260150c7f8635410c96a48584e1a6f489feea98bfb9",
+    "archive_sha256": "41ae7db3ae28a9e4d1f27260150c7f8635410c96a48584e1a6f489feea98bfb9"
+  },
+  {
+    "path": "nexus-anterior/IMPLEMENTATION_PLAN.md",
+    "original_sha256": "9991a37bcc34dacf992254b799804f557a6971a405b6b8e28e623ecaa91b498a",
+    "archive_sha256": "9991a37bcc34dacf992254b799804f557a6971a405b6b8e28e623ecaa91b498a"
+  },
+  {
+    "path": "nexus-anterior/INSTALLATION_PLAN.md",
+    "original_sha256": "357f13229c813638261b6a8a3f3b09a238933225bbf47b66d778d2e96abdc67e",
+    "archive_sha256": "357f13229c813638261b6a8a3f3b09a238933225bbf47b66d778d2e96abdc67e"
+  },
+  {
+    "path": "nexus-anterior/LEGO-LOCK.md",
+    "original_sha256": "3704d104784c856e504134b964090409faf09a18f92dad36043518ef67bec021",
+    "archive_sha256": "3704d104784c856e504134b964090409faf09a18f92dad36043518ef67bec021"
+  },
+  {
+    "path": "nexus-anterior/LICENSE",
+    "original_sha256": "92727ea11e3ae36962e56127626df3c5d0637b9546904cff68aa807fe51c9e1f",
+    "archive_sha256": "92727ea11e3ae36962e56127626df3c5d0637b9546904cff68aa807fe51c9e1f"
+  },
+  {
+    "path": "nexus-anterior/README.md",
+    "original_sha256": "4a03c61ee1a7e1f96d76daca911d7e7057550c665ca9327dc12026845ed6de9b",
+    "archive_sha256": "4a03c61ee1a7e1f96d76daca911d7e7057550c665ca9327dc12026845ed6de9b"
+  },
+  {
+    "path": "nexus-anterior/SECURITY.md",
+    "original_sha256": "a901a7c03a2cacfd2eec96ae5b31516d012442ab192f8b7df22bfb73408ae80a",
+    "archive_sha256": "a901a7c03a2cacfd2eec96ae5b31516d012442ab192f8b7df22bfb73408ae80a"
+  },
+  {
+    "path": "nexus-anterior/STATUS.md",
+    "original_sha256": "21a98b596790829b4454745cd5e8c835e51fe0cde8e05933692b0381305b7ded",
+    "archive_sha256": "21a98b596790829b4454745cd5e8c835e51fe0cde8e05933692b0381305b7ded"
+  },
+  {
+    "path": "nexus-anterior/TEAM_WORKFLOW.md",
+    "original_sha256": "f78b01c24ff00e10703a03d682286104f60f064ab7b2255a6455eb886eccbc4c",
+    "archive_sha256": "f78b01c24ff00e10703a03d682286104f60f064ab7b2255a6455eb886eccbc4c"
+  },
+  {
+    "path": "nexus-anterior/TESTAR-BLOCOS.bat",
+    "original_sha256": "7ac5e0930a70d81e3ff6408800321c43bef6d6032d18d71a9a95bd347bd6a9db",
+    "archive_sha256": "7ac5e0930a70d81e3ff6408800321c43bef6d6032d18d71a9a95bd347bd6a9db"
+  },
+  {
+    "path": "nexus-anterior/TESTAR-NEXUS-COMPLETO.bat",
+    "original_sha256": "f35e2bae45fe70781799cbfc247a333915fb994681d0e329ec307c0047cbdc2a",
+    "archive_sha256": "f35e2bae45fe70781799cbfc247a333915fb994681d0e329ec307c0047cbdc2a"
+  },
+  {
+    "path": "nexus-anterior/TESTAR-NUCLEO.bat",
+    "original_sha256": "194393c96443539e3f9ce550a2d1237b410d3e2393ee2db08916c1ec21c4aeb4",
+    "archive_sha256": "194393c96443539e3f9ce550a2d1237b410d3e2393ee2db08916c1ec21c4aeb4"
+  },
+  {
+    "path": "nexus-anterior/TESTAR-PRATICO.bat",
+    "original_sha256": "8e4394191bf005248de519fa8f936e242da1dc22540dfc6061e9f1ddad103f12",
+    "archive_sha256": "8e4394191bf005248de519fa8f936e242da1dc22540dfc6061e9f1ddad103f12"
+  },
+  {
+    "path": "nexus-anterior/THIRD_PARTY_NOTICES.md",
+    "original_sha256": "66242a5208bb3708254fe7c01b6262826fc2a988943853bd7307f352d94735a7",
+    "archive_sha256": "66242a5208bb3708254fe7c01b6262826fc2a988943853bd7307f352d94735a7"
+  },
+  {
+    "path": "nexus-anterior/auditoria/CHANGELOG-AUDIT.md",
+    "original_sha256": "f20e67c789ca11991b72fa5e53a897f28919d0a85f09e908c78102b1d7c19cfe",
+    "archive_sha256": "f20e67c789ca11991b72fa5e53a897f28919d0a85f09e908c78102b1d7c19cfe"
+  },
+  {
+    "path": "nexus-anterior/auditoria/RESULTADOS.md",
+    "original_sha256": "0691224b140d26acac8e2e66322ad14fa36fed037004cf81c93fdc45e3181b94",
+    "archive_sha256": "0691224b140d26acac8e2e66322ad14fa36fed037004cf81c93fdc45e3181b94"
+  },
+  {
+    "path": "nexus-anterior/auditoria/TEST_MATRIX.md",
+    "original_sha256": "06f6442ef08ed2c26e555ef3112de64f057995898272b155fcb532d41fe59f2b",
+    "archive_sha256": "06f6442ef08ed2c26e555ef3112de64f057995898272b155fcb532d41fe59f2b"
+  },
+  {
+    "path": "nexus-anterior/auditoria/WORK_STATE.md",
+    "original_sha256": "472e3751539e9ff63f9f3d4ea63d3b8dbc7ea00dd4fdd034ea8fb6d10d1c6714",
+    "archive_sha256": "472e3751539e9ff63f9f3d4ea63d3b8dbc7ea00dd4fdd034ea8fb6d10d1c6714"
+  },
+  {
+    "path": "nexus-anterior/auditoria/estado.json",
+    "original_sha256": "31eabe397b26386f536cec9d9e3d888bf0aec7e07f0ad7f6f7ad71b18500886b",
+    "archive_sha256": "31eabe397b26386f536cec9d9e3d888bf0aec7e07f0ad7f6f7ad71b18500886b"
+  },
+  {
+    "path": "nexus-anterior/auditoria/manifesto-preservacao.json",
+    "original_sha256": "45dc4e72cb42af0b15db607d3ff1a561a527b8a75b8cdd367728e1f0448bd7c4",
+    "archive_sha256": "45dc4e72cb42af0b15db607d3ff1a561a527b8a75b8cdd367728e1f0448bd7c4"
+  },
+  {
+    "path": "nexus-anterior/auditoria/testes-fornecidos-2026-09-27.txt",
+    "original_sha256": "db2f9315b40a534738b69adf9746958dfbdcc9e6f0fc9b03f428642b6a2d418a",
+    "archive_sha256": "db2f9315b40a534738b69adf9746958dfbdcc9e6f0fc9b03f428642b6a2d418a"
+  },
+  {
+    "path": "nexus-anterior/docs/ARQUITETURA-OPERACIONAL-ADAPTATIVA.md",
+    "original_sha256": "cdca990b3c527ee52e1a799ab1484372ab7113f2b801a6edfc83c205a4eeca93",
+    "archive_sha256": "cdca990b3c527ee52e1a799ab1484372ab7113f2b801a6edfc83c205a4eeca93"
+  },
+  {
+    "path": "nexus-anterior/docs/CONTRATOS-IMP.md",
+    "original_sha256": "c986fc9f953a1131e0a21efd4cc5676dc751129ec3a0c84bf0320eea51b9051c",
+    "archive_sha256": "c986fc9f953a1131e0a21efd4cc5676dc751129ec3a0c84bf0320eea51b9051c"
+  },
+  {
+    "path": "nexus-anterior/docs/FONTES.md",
+    "original_sha256": "2722e1e35a56a39020e1baf23646cde349f7889cf92305fb25725815a14afe1d",
+    "archive_sha256": "2722e1e35a56a39020e1baf23646cde349f7889cf92305fb25725815a14afe1d"
+  },
+  {
+    "path": "nexus-anterior/docs/GENEALOGIA.md",
+    "original_sha256": "23abf806199dbf5dbde54279b8e6a1436343ccd241e6d06d2366558eeb13dcb3",
+    "archive_sha256": "23abf806199dbf5dbde54279b8e6a1436343ccd241e6d06d2366558eeb13dcb3"
+  },
+  {
+    "path": "nexus-anterior/docs/INVENTARIO-HISTORICO.md",
+    "original_sha256": "d641dcd546ba5e48c23b4196a89c476e8accd0a35284ee7b9945991ee57f0ee1",
+    "archive_sha256": "d641dcd546ba5e48c23b4196a89c476e8accd0a35284ee7b9945991ee57f0ee1"
+  },
+  {
+    "path": "nexus-anterior/docs/LICENCIAMENTO-PENDENTE.md",
+    "original_sha256": "5e0a864b3f41b85726051cf1aa774c3c384d56e3db350cc66c32631da3b77974",
+    "archive_sha256": "5e0a864b3f41b85726051cf1aa774c3c384d56e3db350cc66c32631da3b77974"
+  },
+  {
+    "path": "nexus-anterior/docs/MATRIZ-CONFORMIDADE.md",
+    "original_sha256": "c6f7fa81f1ecd798320a53a07e2dfb1c401b2dd6f2c14efdb7de0d14dc6ae6b8",
+    "archive_sha256": "c6f7fa81f1ecd798320a53a07e2dfb1c401b2dd6f2c14efdb7de0d14dc6ae6b8"
+  },
+  {
+    "path": "nexus-anterior/docs/PENDENCIAS.md",
+    "original_sha256": "b16fe716b8d725d92b525c52eb26c70305787c28546782302803fa31ab2293bc",
+    "archive_sha256": "b16fe716b8d725d92b525c52eb26c70305787c28546782302803fa31ab2293bc"
+  },
+  {
+    "path": "nexus-anterior/docs/PROJETO-FINAL-AUDITADO-2026-09-28.md",
+    "original_sha256": "318a6bf36be921363160e405d1189bdb088911505e33411818ce714b9e534b75",
+    "archive_sha256": "318a6bf36be921363160e405d1189bdb088911505e33411818ce714b9e534b75"
+  },
+  {
+    "path": "nexus-anterior/docs/RECONCILIACAO.md",
+    "original_sha256": "f75a74bf48ec61fa34f2dab5e0ab2f82669946adfb0ec811d5cba98d73965489",
+    "archive_sha256": "f75a74bf48ec61fa34f2dab5e0ab2f82669946adfb0ec811d5cba98d73965489"
+  },
+  {
+    "path": "nexus-anterior/docs/VS-CODE.md",
+    "original_sha256": "2b8cee12fa1d38f658e1e4a6e1315b00e98b7748e04791bbaa094e3f91e7efb1",
+    "archive_sha256": "2b8cee12fa1d38f658e1e4a6e1315b00e98b7748e04791bbaa094e3f91e7efb1"
+  },
+  {
+    "path": "nexus-anterior/docs/baseline/CEREBRO_PROMPT_MESTRE_CURSOR_2026-09-26.md",
+    "original_sha256": "d485ad0b1113e9a369834f3277655323dca9c407e03d5221a525f1ba3f4b6290",
+    "archive_sha256": "d485ad0b1113e9a369834f3277655323dca9c407e03d5221a525f1ba3f4b6290"
+  },
+  {
+    "path": "nexus-anterior/docs/baseline/README-CEREBRO-BASELINE-2026-09-26.md",
+    "original_sha256": "21559bf68939f639850da58daa3505ff9c05310377141d1cf510be15a98d208d",
+    "archive_sha256": "21559bf68939f639850da58daa3505ff9c05310377141d1cf510be15a98d208d"
+  },
+  {
+    "path": "nexus-anterior/docs/baseline/README-CEREBRO-IMPLEMENTACAO-2026-09-26.md",
+    "original_sha256": "9f564078f3699948002d992a82f1a01ca19fbbb474066fe4d93ccea3f86ce9a6",
+    "archive_sha256": "9f564078f3699948002d992a82f1a01ca19fbbb474066fe4d93ccea3f86ce9a6"
+  },
+  {
+    "path": "nexus-anterior/ferramentas/verificar_documentacao.py",
+    "original_sha256": "0d1839d6c27d6c615bad2f8b87c50a49a5f719e2ebcea475c6032a5bf9828ad1",
+    "archive_sha256": "0d1839d6c27d6c615bad2f8b87c50a49a5f719e2ebcea475c6032a5bf9828ad1"
+  },
+  {
+    "path": "nexus-anterior/historico/evolucao-2026-10-04/AUDITORIA-E-PLANO.md",
+    "original_sha256": "8f51b602dacc05f59b97e4d1cd2c4853a661ce8da62a5e0da7ff8d42bf3ae552",
+    "archive_sha256": "8f51b602dacc05f59b97e4d1cd2c4853a661ce8da62a5e0da7ff8d42bf3ae552"
+  },
+  {
+    "path": "nexus-anterior/historico/evolucao-2026-10-04/AUDITORIA-ESTADO-REAL.md",
+    "original_sha256": "23d50588090e01d7bb78b11e4c8c62eae982d36f2e393c6c5f9f2f1b8406d711",
+    "archive_sha256": "23d50588090e01d7bb78b11e4c8c62eae982d36f2e393c6c5f9f2f1b8406d711"
+  },
+  {
+    "path": "nexus-anterior/historico/evolucao-2026-10-04/CONTINUIDADE-2026-10-04.md",
+    "original_sha256": "4366e589f7b2df39002fc128daa568f351993fb29bf7e3374319f8a6b82bbf1f",
+    "archive_sha256": "4366e589f7b2df39002fc128daa568f351993fb29bf7e3374319f8a6b82bbf1f"
+  },
+  {
+    "path": "nexus-anterior/historico/evolucao-2026-10-04/DIVISAO-TAREFAS-2026-10-04.md",
+    "original_sha256": "e7e11fb36323a4ef7d27910cb2a55cf16a37d8680f1080b181ff40fce6cff182",
+    "archive_sha256": "e7e11fb36323a4ef7d27910cb2a55cf16a37d8680f1080b181ff40fce6cff182"
+  },
+  {
+    "path": "nexus-anterior/historico/evolucao-2026-10-04/ESTADO-TRABALHO.md",
+    "original_sha256": "f483d50947b8674e695585619254bc628a62317e362987eab80dd8c1028de495",
+    "archive_sha256": "f483d50947b8674e695585619254bc628a62317e362987eab80dd8c1028de495"
+  },
+  {
+    "path": "nexus-anterior/historico/evolucao-2026-10-04/EXECUTION-BOARD-2026-10-04.md",
+    "original_sha256": "570ce9f4f9639ec6d8c71febbc314a90e217ece7b2462cc622982e2fc54fcc42",
+    "archive_sha256": "570ce9f4f9639ec6d8c71febbc314a90e217ece7b2462cc622982e2fc54fcc42"
+  },
+  {
+    "path": "nexus-anterior/historico/evolucao-2026-10-04/FASE-LINGUAGEM-PARSER-ELIZA-MARKDOWN-2026-10-04.md",
+    "original_sha256": "bb882fd5de5a9c41b62fee5e63dc922c4520e0c326d5a995a0771d2044a89308",
+    "archive_sha256": "bb882fd5de5a9c41b62fee5e63dc922c4520e0c326d5a995a0771d2044a89308"
+  },
+  {
+    "path": "nexus-anterior/historico/evolucao-2026-10-04/FILA-TRABALHO-2026-10-04.md",
+    "original_sha256": "3db01dd91b9a4d485770ae22965da0c0da4b10599e7611bb8e9f27aaf95088bb",
+    "archive_sha256": "3db01dd91b9a4d485770ae22965da0c0da4b10599e7611bb8e9f27aaf95088bb"
+  },
+  {
+    "path": "nexus-anterior/historico/evolucao-2026-10-04/HANDOFF-CODEX-NEXUS-LAB-2026-10-04.md",
+    "original_sha256": "45430e2f2fcf3a896d52fa3ca501b79353c4e808fc30617860116988fe2ff6d7",
+    "archive_sha256": "45430e2f2fcf3a896d52fa3ca501b79353c4e808fc30617860116988fe2ff6d7"
+  },
+  {
+    "path": "nexus-anterior/historico/evolucao-2026-10-04/MATRIZ-AUDITORIA-WORK-2026-10-04.md",
+    "original_sha256": "f3f173bacc2682b4c31b72df8fe45ce60796542c981a0a737e2c0306ec81d919",
+    "archive_sha256": "f3f173bacc2682b4c31b72df8fe45ce60796542c981a0a737e2c0306ec81d919"
+  },
+  {
+    "path": "nexus-anterior/historico/evolucao-2026-10-04/ORGANIZACAO-E-FASES.md",
+    "original_sha256": "7567fbbc6fef1f3b183c01edfcc41a317fdb53c5159617bb2905bfd9f615f5fa",
+    "archive_sha256": "7567fbbc6fef1f3b183c01edfcc41a317fdb53c5159617bb2905bfd9f615f5fa"
+  },
+  {
+    "path": "nexus-anterior/historico/evolucao-2026-10-04/PLANO-SPIFF-CONDUCTOR-5000-2026-10-04.md",
+    "original_sha256": "2c50aa84e86d9f132fa94062e391b45e275a077ce6fffc12ccfbfbbedfaa892d",
+    "archive_sha256": "2c50aa84e86d9f132fa94062e391b45e275a077ce6fffc12ccfbfbbedfaa892d"
+  },
+  {
+    "path": "nexus-anterior/historico/evolucao-2026-10-04/PLANO-TESTES-FRONTDOOR-10000-2026-10-04.md",
+    "original_sha256": "d738c229b91b4552bf6f2ee0ba3cf985423e1afee848bf80d7f1dbb5055c517a",
+    "archive_sha256": "d738c229b91b4552bf6f2ee0ba3cf985423e1afee848bf80d7f1dbb5055c517a"
+  },
+  {
+    "path": "nexus-anterior/historico/evolucao-2026-10-04/PROMOCAO-LAB-PARA-VERSAO-OFICIAL.md",
+    "original_sha256": "3bde9b0e8cc6378347264f9a1e35ab42a7da7cc739cf52abd494f1c3825ca759",
+    "archive_sha256": "3bde9b0e8cc6378347264f9a1e35ab42a7da7cc739cf52abd494f1c3825ca759"
+  },
+  {
+    "path": "nexus-anterior/historico/evolucao-2026-10-04/QUADRO-MESTRE-CONVERGENCIA-2026-10-04.md",
+    "original_sha256": "381424a310323e643c3470c49db1e13d198e41381d99c807e4ad8a293a1d88ba",
+    "archive_sha256": "381424a310323e643c3470c49db1e13d198e41381d99c807e4ad8a293a1d88ba"
+  },
+  {
+    "path": "nexus-anterior/historico/evolucao-2026-10-04/README.md",
+    "original_sha256": "1f448ca0dce8b8d0f5777098c5e164d65f5522b14a91355a6c2defe1f621ef6d",
+    "archive_sha256": "1f448ca0dce8b8d0f5777098c5e164d65f5522b14a91355a6c2defe1f621ef6d"
+  },
+  {
+    "path": "nexus-anterior/historico/evolucao-2026-10-04/RECUPERACAO-E-MATRIZ.md",
+    "original_sha256": "ad42ec70dd052eb9034240d68b0fc0490729103648cfc635abf3c4da9ca94ce1",
+    "archive_sha256": "ad42ec70dd052eb9034240d68b0fc0490729103648cfc635abf3c4da9ca94ce1"
+  },
+  {
+    "path": "nexus-anterior/historico/evolucao-2026-10-04/SYNC-EQUIPA-2026-10-04.json",
+    "original_sha256": "4bc0e53e7b30ce6b534db06db5c0c250ba8f386f306691051b8b010153969a83",
+    "archive_sha256": "4bc0e53e7b30ce6b534db06db5c0c250ba8f386f306691051b8b010153969a83"
+  },
+  {
+    "path": "nexus-anterior/historico/evolucao-2026-10-04/SYNC-EQUIPA-2026-10-04.md",
+    "original_sha256": "b52a42d9cfe7f9cfaa64d14ab847f65a1a280f44c93faa9bf4ce35c772ef02d0",
+    "archive_sha256": "b52a42d9cfe7f9cfaa64d14ab847f65a1a280f44c93faa9bf4ce35c772ef02d0"
+  },
+  {
+    "path": "nexus-anterior/historico/repositorio-2026-09-24/.cursorignore",
+    "original_sha256": "d929ecb1522377a30e868a1d00b8ae0cae72ce40eb10a7a3d1799dbcfacd9e75",
+    "archive_sha256": "d929ecb1522377a30e868a1d00b8ae0cae72ce40eb10a7a3d1799dbcfacd9e75"
+  },
+  {
+    "path": "nexus-anterior/historico/repositorio-2026-09-24/.gitignore",
+    "original_sha256": "2fca3c7f06b7cc883cd1f3ff76dec0a5ed8458c9827cc05930e9c28f9d35a86d",
+    "archive_sha256": "2fca3c7f06b7cc883cd1f3ff76dec0a5ed8458c9827cc05930e9c28f9d35a86d"
+  },
+  {
+    "path": "nexus-anterior/historico/repositorio-2026-09-24/AGENTS.md",
+    "original_sha256": "ce3de510f5fecd73fd6e8f9ee83bcd84af97f55d725c88886ad9cc68a86636c7",
+    "archive_sha256": "ce3de510f5fecd73fd6e8f9ee83bcd84af97f55d725c88886ad9cc68a86636c7"
+  },
+  {
+    "path": "nexus-anterior/historico/repositorio-2026-09-24/ARQUITETURA-ATUAL-2026-09-24.md",
+    "original_sha256": "af41050abeedbb00e886e1debe66b67f7b1d7571296d5cfd33566e1c7f3bf334",
+    "archive_sha256": "af41050abeedbb00e886e1debe66b67f7b1d7571296d5cfd33566e1c7f3bf334"
+  },
+  {
+    "path": "nexus-anterior/historico/repositorio-2026-09-24/ARQUITETURA-CORRIGIDA-2026-09-22.md",
+    "original_sha256": "dcc723c4db06caa96663344afa7a0be985cd34a56d981b712ac597b1fa4d5070",
+    "archive_sha256": "dcc723c4db06caa96663344afa7a0be985cd34a56d981b712ac597b1fa4d5070"
+  },
+  {
+    "path": "nexus-anterior/historico/repositorio-2026-09-24/AUDITORIA-ARQUITETURA-LEGO-2026-09-22.md",
+    "original_sha256": "abb3a236947f06ad4f6f6e332239e6e34d776cb19d86c08cc99661e1a083c4c4",
+    "archive_sha256": "abb3a236947f06ad4f6f6e332239e6e34d776cb19d86c08cc99661e1a083c4c4"
+  },
+  {
+    "path": "nexus-anterior/historico/repositorio-2026-09-24/AUDITORIA-DOCUMENTAL-P4.md",
+    "original_sha256": "e71fa11d70903857e196c1654a4426028a1e6c7ceec41fd102814e8e059ef569",
+    "archive_sha256": "e71fa11d70903857e196c1654a4426028a1e6c7ceec41fd102814e8e059ef569"
+  },
+  {
+    "path": "nexus-anterior/historico/repositorio-2026-09-24/CEREBRO_ARCHITECTURE.md",
+    "original_sha256": "35c8195219d455f2b285907904e89cd52a51d861b36f83219f2524e9218d4f4c",
+    "archive_sha256": "35c8195219d455f2b285907904e89cd52a51d861b36f83219f2524e9218d4f4c"
+  },
+  {
+    "path": "nexus-anterior/historico/repositorio-2026-09-24/CEREBRO_CONSTITUTION.md",
+    "original_sha256": "25ace3fc8bfd8299caf1b6b193df642f199955e01138d679b74fe9848c0339a3",
+    "archive_sha256": "25ace3fc8bfd8299caf1b6b193df642f199955e01138d679b74fe9848c0339a3"
+  },
+  {
+    "path": "nexus-anterior/historico/repositorio-2026-09-24/CHANGELOG.md",
+    "original_sha256": "02087038fa8dd3810fdd448c7b86751421bc33bc323be17a1afe4ff1185ad6c8",
+    "archive_sha256": "02087038fa8dd3810fdd448c7b86751421bc33bc323be17a1afe4ff1185ad6c8"
+  },
+  {
+    "path": "nexus-anterior/historico/repositorio-2026-09-24/COMPARACAO-ARQUITETURAS-COGNITIVAS-DETERMINISTICAS-2026-09-23.md",
+    "original_sha256": "b6279a334d0358a17505edce3a4eab8ad2874d3e18d1a1af056258173298bb83",
+    "archive_sha256": "b6279a334d0358a17505edce3a4eab8ad2874d3e18d1a1af056258173298bb83"
+  },
+  {
+    "path": "nexus-anterior/historico/repositorio-2026-09-24/COMPARACAO-RESEARCHVAULT-WILL-2026-09-22.md",
+    "original_sha256": "89a42607bbaccee72a70fc6835d59040ddf0f8664eb9caa4851b2ead46de7cdc",
+    "archive_sha256": "89a42607bbaccee72a70fc6835d59040ddf0f8664eb9caa4851b2ead46de7cdc"
+  },
+  {
+    "path": "nexus-anterior/historico/repositorio-2026-09-24/COMPARACAO-WILL-E-PROBABILIDADES.md",
+    "original_sha256": "199b1f03bccc706d105310992e9fe5517f856f14dda6c47060520f94f3ee7b7f",
+    "archive_sha256": "199b1f03bccc706d105310992e9fe5517f856f14dda6c47060520f94f3ee7b7f"
+  },
+  {
+    "path": "nexus-anterior/historico/repositorio-2026-09-24/COMPATIBILITY-MATRIX.md",
+    "original_sha256": "111636e17e77c7f218a615a83229f217a6efc95aec17d97d1d51e688fd34fc45",
+    "archive_sha256": "111636e17e77c7f218a615a83229f217a6efc95aec17d97d1d51e688fd34fc45"
+  },
+  {
+    "path": "nexus-anterior/historico/repositorio-2026-09-24/DECISIONS.md",
+    "original_sha256": "ed0a672413e8b8491a6ff8c84c7d38942c60f9460b18d172d1bb4e6db0bc3ca0",
+    "archive_sha256": "ed0a672413e8b8491a6ff8c84c7d38942c60f9460b18d172d1bb4e6db0bc3ca0"
+  },
+  {
+    "path": "nexus-anterior/historico/repositorio-2026-09-24/FECHO-FASE-CONCEPTUAL-PROBABILIDADE-VALIDACAO-2026-09-23.md",
+    "original_sha256": "e8b459c27be1707dfdc3f166fb41bbdf730e114fe3d50f1746a428585d6a6432",
+    "archive_sha256": "e8b459c27be1707dfdc3f166fb41bbdf730e114fe3d50f1746a428585d6a6432"
+  },
+  {
+    "path": "nexus-anterior/historico/repositorio-2026-09-24/FERRAMENTAS-GRATUITAS-E-EQUIPA.md",
+    "original_sha256": "b7f523e1b84fd102665ba714d59d615f0e63606bf21d38a72844a835fe30d8c5",
+    "archive_sha256": "b7f523e1b84fd102665ba714d59d615f0e63606bf21d38a72844a835fe30d8c5"
+  },
+  {
+    "path": "nexus-anterior/historico/repositorio-2026-09-24/IMPLEMENTATION_PLAN.md",
+    "original_sha256": "9ee9399acd9dd391cc51105a7db90a0c78bfce05adce06b0fca39b939539b99c",
+    "archive_sha256": "9ee9399acd9dd391cc51105a7db90a0c78bfce05adce06b0fca39b939539b99c"
+  },
+  {
+    "path": "nexus-anterior/historico/repositorio-2026-09-24/INSTALLATION_PLAN.md",
+    "original_sha256": "d5cb3dff02568cf41a537ad80ab72425690b635d2d3dbd041770990b0e7c3d7c",
+    "archive_sha256": "d5cb3dff02568cf41a537ad80ab72425690b635d2d3dbd041770990b0e7c3d7c"
+  },
+  {
+    "path": "nexus-anterior/historico/repositorio-2026-09-24/LEGO-LOCK.md",
+    "original_sha256": "c5b0d6347f45dcf03bebb8d4d30ecc661dbeba8d33b9863f9cca3374b6a03786",
+    "archive_sha256": "c5b0d6347f45dcf03bebb8d4d30ecc661dbeba8d33b9863f9cca3374b6a03786"
+  },
+  {
+    "path": "nexus-anterior/historico/repositorio-2026-09-24/MAPA-DE-VERSOES-COFRES-ACTIVEPIECES.md",
+    "original_sha256": "8cd070cecac72ca0de04dceb394acbc555a657f7d80a1d1671faee78d6a3d758",
+    "archive_sha256": "8cd070cecac72ca0de04dceb394acbc555a657f7d80a1d1671faee78d6a3d758"
+  },
+  {
+    "path": "nexus-anterior/historico/repositorio-2026-09-24/MIGRACAO-ARQUITETURAL-2026-09-24.md",
+    "original_sha256": "0fef190fed511cd4ff452228c201d7764a44bf22e30a38fbe5a07bde9a8eab88",
+    "archive_sha256": "0fef190fed511cd4ff452228c201d7764a44bf22e30a38fbe5a07bde9a8eab88"
+  },
+  {
+    "path": "nexus-anterior/historico/repositorio-2026-09-24/NOTA-COGNITIVA-MEMORIAS-COMPARADORES-LINGUAGEM-NATURAL-2026-09-23.md",
+    "original_sha256": "6c0630d5987676bbb4ef63400857ecbd70bcde82fa72872ade2a2bfc760bafe1",
+    "archive_sha256": "6c0630d5987676bbb4ef63400857ecbd70bcde82fa72872ade2a2bfc760bafe1"
+  },
+  {
+    "path": "nexus-anterior/historico/repositorio-2026-09-24/NOTA-ESCALADA-RESOLUCAO-LLM-WEB-2026-09-23.md",
+    "original_sha256": "75033ed030f885f7d8f0e7d58dd7b19e1398676193f152a3487569be5491c93e",
+    "archive_sha256": "75033ed030f885f7d8f0e7d58dd7b19e1398676193f152a3487569be5491c93e"
+  },
+  {
+    "path": "nexus-anterior/historico/repositorio-2026-09-24/PESQUISA-SANDBOX-WINDOWS-APPContainer-LPAC-2026-09-23.md",
+    "original_sha256": "3a1b6f9db0c458cf8a4810517c296da950850f52653a4dcdf2fdf0b333f678d2",
+    "archive_sha256": "3a1b6f9db0c458cf8a4810517c296da950850f52653a4dcdf2fdf0b333f678d2"
+  },
+  {
+    "path": "nexus-anterior/historico/repositorio-2026-09-24/PLANO-DE-TAREFAS-POR-FASE.md",
+    "original_sha256": "831c0baae9b5cdaa5004027a93af7af08b3793be5bc4c8ac5605472c7b71ab28",
+    "archive_sha256": "831c0baae9b5cdaa5004027a93af7af08b3793be5bc4c8ac5605472c7b71ab28"
+  },
+  {
+    "path": "nexus-anterior/historico/repositorio-2026-09-24/PROTOCOLO-GEMINI-CONTEXTO-MINIMO.md",
+    "original_sha256": "bef65b93bc20c92b703732e0d6b9d0423c2ca58b5220659aee88a5c448ccbed2",
+    "archive_sha256": "bef65b93bc20c92b703732e0d6b9d0423c2ca58b5220659aee88a5c448ccbed2"
+  },
+  {
+    "path": "nexus-anterior/historico/repositorio-2026-09-24/README.md",
+    "original_sha256": "658f341961e9eab68cd34fbd6707c7c8be6ed195492710d462727f88b5f10bad",
+    "archive_sha256": "658f341961e9eab68cd34fbd6707c7c8be6ed195492710d462727f88b5f10bad"
+  },
+  {
+    "path": "nexus-anterior/historico/repositorio-2026-09-24/REFERENCIA-OPENVIKING-VIKINGMEM-2026-09-23.md",
+    "original_sha256": "0733864fd9862b08919fc8b60e262d1a76f05977d98d1014534b3e7c5c4577f6",
+    "archive_sha256": "0733864fd9862b08919fc8b60e262d1a76f05977d98d1014534b3e7c5c4577f6"
+  },
+  {
+    "path": "nexus-anterior/historico/repositorio-2026-09-24/STATUS.md",
+    "original_sha256": "0b4dc455b7e379ea9c8490a7ca27fc7b13bef1cac4f84dcfb34dbf5e1f176d27",
+    "archive_sha256": "0b4dc455b7e379ea9c8490a7ca27fc7b13bef1cac4f84dcfb34dbf5e1f176d27"
+  },
+  {
+    "path": "nexus-anterior/historico/repositorio-2026-09-24/TEAM_WORKFLOW.md",
+    "original_sha256": "12196ffd58e609c86f2d718291f603ba26bd344d93f663da964e16611e5f20fc",
+    "archive_sha256": "12196ffd58e609c86f2d718291f603ba26bd344d93f663da964e16611e5f20fc"
+  },
+  {
+    "path": "nexus-anterior/historico/repositorio-2026-09-24/VALIDACAO-CONCEPTUAL-E-MITIGACAO.md",
+    "original_sha256": "dfb0e9be469f2508c45f96097166c7f25e23b3b09c124a363b3b3bde205b49b4",
+    "archive_sha256": "dfb0e9be469f2508c45f96097166c7f25e23b3b09c124a363b3b3bde205b49b4"
+  },
+  {
+    "path": "nexus-anterior/historico/repositorio-2026-09-24/historico/ARQUITETURA-OPERACIONAL-v0.1-2026-09-22.md",
+    "original_sha256": "fe463b6f16af9d7ea719c945890e58cc8bfd9d1027ef5dc468310b6cdb1e5a36",
+    "archive_sha256": "fe463b6f16af9d7ea719c945890e58cc8bfd9d1027ef5dc468310b6cdb1e5a36"
+  },
+  {
+    "path": "nexus-anterior/historico/repositorio-2026-09-24/tasks/F-1-001-INSTALACAO-E-VERIFICACAO.md",
+    "original_sha256": "d2197b9788eff99109286e60d79f03fdf8d7a47f4ef72f17691933c00b6fcb31",
+    "archive_sha256": "d2197b9788eff99109286e60d79f03fdf8d7a47f4ef72f17691933c00b6fcb31"
+  },
+  {
+    "path": "nexus-anterior/historico/repositorio-2026-09-24/tasks/SPEC-F0-001.md",
+    "original_sha256": "7db1010d4bcd11fb05e9a24c14d6c7610f73f76c9c75c6e79f8c501c95f13d45",
+    "archive_sha256": "7db1010d4bcd11fb05e9a24c14d6c7610f73f76c9c75c6e79f8c501c95f13d45"
+  },
+  {
+    "path": "nexus-anterior/implementacao/README.md",
+    "original_sha256": "2659393c5e14e8b7c9956f22b5aea4b728eda912d883cadd567d82c3ac736e0a",
+    "archive_sha256": "2659393c5e14e8b7c9956f22b5aea4b728eda912d883cadd567d82c3ac736e0a"
+  },
+  {
+    "path": "nexus-anterior/implementacao/ativa-2026-09-28/README.md",
+    "original_sha256": "0adcc5accc3a13db54de7f25877b8205556a9b8c9985c44c833d699e6ad84c2e",
+    "archive_sha256": "0adcc5accc3a13db54de7f25877b8205556a9b8c9985c44c833d699e6ad84c2e"
+  },
+  {
+    "path": "nexus-anterior/implementacao/ativa-2026-09-28/cerebro/__init__.py",
+    "original_sha256": "2b490dcb6e959ba03ed55e65493de2972eb256c34b51b8aa93a0190c59b69c92",
+    "archive_sha256": "2b490dcb6e959ba03ed55e65493de2972eb256c34b51b8aa93a0190c59b69c92"
+  },
+  {
+    "path": "nexus-anterior/implementacao/ativa-2026-09-28/cerebro/core.py",
+    "original_sha256": "e6f895fb0b99767277a816495864efa8d5e79aafe613c308fc6385f619b3b73e",
+    "archive_sha256": "1c1df6c55c18da4719cfcffbdd00336859a931192c01ab77047bfbcf4356d1f0"
+  },
+  {
+    "path": "nexus-anterior/implementacao/ativa-2026-09-28/cerebro/persistence.py",
+    "original_sha256": "5a017fee1d04806b30a92dbc2379731f696f6bcc23e9361692149b927249d6fe",
+    "archive_sha256": "5a017fee1d04806b30a92dbc2379731f696f6bcc23e9361692149b927249d6fe"
+  },
+  {
+    "path": "nexus-anterior/implementacao/ativa-2026-09-28/pyproject.toml",
+    "original_sha256": "b00eb21878dab60d85e23b12ba6187cc9f25f7c9e86f450854b18e8427feb721",
+    "archive_sha256": "b00eb21878dab60d85e23b12ba6187cc9f25f7c9e86f450854b18e8427feb721"
+  },
+  {
+    "path": "nexus-anterior/implementacao/ativa-2026-09-28/tests/test_persistence.py",
+    "original_sha256": "d2dbf2e434fa30ecd223ed7e2744060914e070c8bf806d9cffc0681d62691d5b",
+    "archive_sha256": "d2dbf2e434fa30ecd223ed7e2744060914e070c8bf806d9cffc0681d62691d5b"
+  },
+  {
+    "path": "nexus-anterior/implementacao/candidata-2026-09-27/DIAGRAMA.mmd",
+    "original_sha256": "b376df5c8cfccbcab07d8a61fc2044ad15d87d34237b60662efec0040ef3c575",
+    "archive_sha256": "b376df5c8cfccbcab07d8a61fc2044ad15d87d34237b60662efec0040ef3c575"
+  },
+  {
+    "path": "nexus-anterior/implementacao/candidata-2026-09-27/README.md",
+    "original_sha256": "736d3d22f505311558122ddf91e171b44460ff86aa9f3862df7cc1ff34d7224c",
+    "archive_sha256": "736d3d22f505311558122ddf91e171b44460ff86aa9f3862df7cc1ff34d7224c"
+  },
+  {
+    "path": "nexus-anterior/implementacao/candidata-2026-09-27/REVISAO_ADVERSARIAL.md",
+    "original_sha256": "4708e795ac42f0198814143017a26550cb54a823ad4f594f412a3f0d9faa783c",
+    "archive_sha256": "4708e795ac42f0198814143017a26550cb54a823ad4f594f412a3f0d9faa783c"
+  },
+  {
+    "path": "nexus-anterior/implementacao/candidata-2026-09-27/TEST_RESULTS.txt",
+    "original_sha256": "e1e5152292201be2379599f87c37c27c2f9b6449b00784051963c7ba602cbc27",
+    "archive_sha256": "e1e5152292201be2379599f87c37c27c2f9b6449b00784051963c7ba602cbc27"
+  },
+  {
+    "path": "nexus-anterior/implementacao/candidata-2026-09-27/cerebro/__init__.py",
+    "original_sha256": "2b490dcb6e959ba03ed55e65493de2972eb256c34b51b8aa93a0190c59b69c92",
+    "archive_sha256": "2b490dcb6e959ba03ed55e65493de2972eb256c34b51b8aa93a0190c59b69c92"
+  },
+  {
+    "path": "nexus-anterior/implementacao/candidata-2026-09-27/cerebro/core.py",
+    "original_sha256": "e6f895fb0b99767277a816495864efa8d5e79aafe613c308fc6385f619b3b73e",
+    "archive_sha256": "1c1df6c55c18da4719cfcffbdd00336859a931192c01ab77047bfbcf4356d1f0"
+  },
+  {
+    "path": "nexus-anterior/implementacao/candidata-2026-09-27/pyproject.toml",
+    "original_sha256": "afa9839c63cc2087d8f257dccac48d2572439f97474f981d3a492047aa3cd671",
+    "archive_sha256": "afa9839c63cc2087d8f257dccac48d2572439f97474f981d3a492047aa3cd671"
+  },
+  {
+    "path": "nexus-anterior/implementacao/candidata-2026-09-27/tests/test_adversarial.py",
+    "original_sha256": "a3ef960035d1ae53c232cf9d949490ae1f8f4f467ef013b9fe27d2e94fdb3c59",
+    "archive_sha256": "a3ef960035d1ae53c232cf9d949490ae1f8f4f467ef013b9fe27d2e94fdb3c59"
+  },
+  {
+    "path": "nexus-anterior/implementacao/candidata-2026-09-27/tests/test_core.py",
+    "original_sha256": "2285b329c1d9eb9be5a54d33dc5dac04a1e804976fff01b6e4606e1113af92d5",
+    "archive_sha256": "2285b329c1d9eb9be5a54d33dc5dac04a1e804976fff01b6e4606e1113af92d5"
+  },
+  {
+    "path": "nexus-anterior/nexus/.gitattributes",
+    "original_sha256": "a79691a93b46e49ce460c26ef22afcc03d6eca1e63bf2edbc20e96159510f6c9",
+    "archive_sha256": "a79691a93b46e49ce460c26ef22afcc03d6eca1e63bf2edbc20e96159510f6c9"
+  },
+  {
+    "path": "nexus-anterior/nexus/.gitignore",
+    "original_sha256": "038ebd125f1a8bc41ecbd211beb88abba5c30fadd4190a324a4586263416b3ea",
+    "archive_sha256": "038ebd125f1a8bc41ecbd211beb88abba5c30fadd4190a324a4586263416b3ea"
+  },
+  {
+    "path": "nexus-anterior/nexus/README.md",
+    "original_sha256": "4f430f8725bb6c296ac9abe313cd94b421f5f585996cdab145f9945daaeb5bab",
+    "archive_sha256": "4f430f8725bb6c296ac9abe313cd94b421f5f585996cdab145f9945daaeb5bab"
+  },
+  {
+    "path": "nexus-anterior/nexus/__init__.py",
+    "original_sha256": "b4f468051a062293cce504af2e229613a15f3d98ef90a6f9430d8e357e9f9591",
+    "archive_sha256": "b4f468051a062293cce504af2e229613a15f3d98ef90a6f9430d8e357e9f9591"
+  },
+  {
+    "path": "nexus-anterior/nexus/adapters/constitutional.py",
+    "original_sha256": "1943aaece17916221d598ce8551e00b0d1a959e47c2d5b38aff7b4282029c026",
+    "archive_sha256": "1943aaece17916221d598ce8551e00b0d1a959e47c2d5b38aff7b4282029c026"
+  },
+  {
+    "path": "nexus-anterior/nexus/adapters/languagetool.py",
+    "original_sha256": "6f2b56292fb05ae5717da84ad5f570b5394cc377af989614d35cbf2bf4f2b311",
+    "archive_sha256": "6f2b56292fb05ae5717da84ad5f570b5394cc377af989614d35cbf2bf4f2b311"
+  },
+  {
+    "path": "nexus-anterior/nexus/adapters/media_tools.py",
+    "original_sha256": "d4eedf365080c7eb4018097bc660606e3904d0de4784782265949af8a60f2e80",
+    "archive_sha256": "d4eedf365080c7eb4018097bc660606e3904d0de4784782265949af8a60f2e80"
+  },
+  {
+    "path": "nexus-anterior/nexus/adapters/notebook.py",
+    "original_sha256": "0bb65f8a1eeb6749f01e144271df7c8982a44141aa77c5678c6c9b88c80ed19d",
+    "archive_sha256": "0bb65f8a1eeb6749f01e144271df7c8982a44141aa77c5678c6c9b88c80ed19d"
+  },
+  {
+    "path": "nexus-anterior/nexus/adapters/office.py",
+    "original_sha256": "75e9d58152b9b2929ea056d0934207922afbf4dfdba290b38c99c629a5ef06c5",
+    "archive_sha256": "75e9d58152b9b2929ea056d0934207922afbf4dfdba290b38c99c629a5ef06c5"
+  },
+  {
+    "path": "nexus-anterior/nexus/adapters/product_routes.py",
+    "original_sha256": "3df52c97f13bb5f3417c283f7c8cc86e203f1bf255cc4aa6db97d638aba17acd",
+    "archive_sha256": "3df52c97f13bb5f3417c283f7c8cc86e203f1bf255cc4aa6db97d638aba17acd"
+  },
+  {
+    "path": "nexus-anterior/nexus/adapters/runner.py",
+    "original_sha256": "0f028d87b73e1a2f04342bcbd5d769ff24fe275187cd566c86f13e1fb6248282",
+    "archive_sha256": "0f028d87b73e1a2f04342bcbd5d769ff24fe275187cd566c86f13e1fb6248282"
+  },
+  {
+    "path": "nexus-anterior/nexus/adapters/tools.py",
+    "original_sha256": "db6c0feb6beb658565a02e4feb1dea4f2c138a4a8d23cd8f27ccf3435af28de5",
+    "archive_sha256": "db6c0feb6beb658565a02e4feb1dea4f2c138a4a8d23cd8f27ccf3435af28de5"
+  },
+  {
+    "path": "nexus-anterior/nexus/adapters/vendor/sandy/LICENSE",
+    "original_sha256": "71ab2a2ba35053be1bc7370f83080bab7643812351e377c8eb3fdd2ee9f34fce",
+    "archive_sha256": "71ab2a2ba35053be1bc7370f83080bab7643812351e377c8eb3fdd2ee9f34fce"
+  },
+  {
+    "path": "nexus-anterior/nexus/adapters/vendor/sandy/libreoffice-demo.py",
+    "original_sha256": "01f01109e3672251a2ea4b910d53acf2f6ef1f681ca4354da85ba522a8a43fd6",
+    "archive_sha256": "01f01109e3672251a2ea4b910d53acf2f6ef1f681ca4354da85ba522a8a43fd6"
+  },
+  {
+    "path": "nexus-anterior/nexus/adapters/vendor/sandy/libreoffice.toml",
+    "original_sha256": "ba2b6eed03218996e12387899229587914731609b0805bcbbef5f5ca054bb7ec",
+    "archive_sha256": "ba2b6eed03218996e12387899229587914731609b0805bcbbef5f5ca054bb7ec"
+  },
+  {
+    "path": "nexus-anterior/nexus/adapters/verify_direct.py",
+    "original_sha256": "0ed136dafad0bbccec348cb4a92d8f2153e688cee112d244fdea3f6905b6b74c",
+    "archive_sha256": "0ed136dafad0bbccec348cb4a92d8f2153e688cee112d244fdea3f6905b6b74c"
+  },
+  {
+    "path": "nexus-anterior/nexus/adapters/writer_sandy.py",
+    "original_sha256": "67e05ff8828e9da5dac877553d1d544cc064918e0ad8b72350c420006a12d246",
+    "archive_sha256": "67e05ff8828e9da5dac877553d1d544cc064918e0ad8b72350c420006a12d246"
+  },
+  {
+    "path": "nexus-anterior/nexus/app.py",
+    "original_sha256": "63fa0bbdf437c191c661bbe887a14287b7663be764646eb4e19665c71e3fec23",
+    "archive_sha256": "63fa0bbdf437c191c661bbe887a14287b7663be764646eb4e19665c71e3fec23"
+  },
+  {
+    "path": "nexus-anterior/nexus/approval_binding.py",
+    "original_sha256": "93b7fe307d23d06904dec4c32e9843f30d125c1feb876fc5b9fcfd20c35b25d6",
+    "archive_sha256": "93b7fe307d23d06904dec4c32e9843f30d125c1feb876fc5b9fcfd20c35b25d6"
+  },
+  {
+    "path": "nexus-anterior/nexus/capability_router.py",
+    "original_sha256": "d2cff288eec316b5c25afa472f5568d8dfdc9072055df79d745124217c7061c4",
+    "archive_sha256": "d2cff288eec316b5c25afa472f5568d8dfdc9072055df79d745124217c7061c4"
+  },
+  {
+    "path": "nexus-anterior/nexus/contracts.py",
+    "original_sha256": "cd1830c968c757cdad738957dce54672cb70faf33cc11602b6d68d69df50bc65",
+    "archive_sha256": "cd1830c968c757cdad738957dce54672cb70faf33cc11602b6d68d69df50bc65"
+  },
+  {
+    "path": "nexus-anterior/nexus/docs/AVATAR-CI-2026-10-04.json",
+    "original_sha256": "0f3fa55993eb06870bb9c4babe996fb14837454d0ead27eba1a8632079ed1c4d",
+    "archive_sha256": "0f3fa55993eb06870bb9c4babe996fb14837454d0ead27eba1a8632079ed1c4d"
+  },
+  {
+    "path": "nexus-anterior/nexus/docs/AVATAR-SYNC-CI-2026-10-04.json",
+    "original_sha256": "fc47f6d076f9bcec6e3929c82d8e04f88435330cfff7e876ebfdec1bd23b9da3",
+    "archive_sha256": "fc47f6d076f9bcec6e3929c82d8e04f88435330cfff7e876ebfdec1bd23b9da3"
+  },
+  {
+    "path": "nexus-anterior/nexus/docs/CAPABILITY-WRITER-EDITORIAL.md",
+    "original_sha256": "4d23ee0ab1677d686cdf129df1d22b4c54bba78a595911f3116a04036483f194",
+    "archive_sha256": "4d23ee0ab1677d686cdf129df1d22b4c54bba78a595911f3116a04036483f194"
+  },
+  {
+    "path": "nexus-anterior/nexus/docs/COMPARACAO-SIR-THADDEUS-FOLHA-2026-10-10.md",
+    "original_sha256": "20fe2185f18ce22c1131c02f70385a656491c96ff0115546ec605522530b9f76",
+    "archive_sha256": "20fe2185f18ce22c1131c02f70385a656491c96ff0115546ec605522530b9f76"
+  },
+  {
+    "path": "nexus-anterior/nexus/docs/COMPLEMENTO-WIKI-INFORMACAO-GERADA-2026-10-04.md",
+    "original_sha256": "392d9d333f6c52e4a82cd55bb49a9bf7b0603566e44fb9c2db3876a1462d049d",
+    "archive_sha256": "392d9d333f6c52e4a82cd55bb49a9bf7b0603566e44fb9c2db3876a1462d049d"
+  },
+  {
+    "path": "nexus-anterior/nexus/docs/CONTRATO-ISOLAMENTO-2026-10-05.md",
+    "original_sha256": "5bdb1e601469ab2f130c92f6cb6c2f616c243aeb90bbb09b372cffe1550ced9f",
+    "archive_sha256": "5bdb1e601469ab2f130c92f6cb6c2f616c243aeb90bbb09b372cffe1550ced9f"
+  },
+  {
+    "path": "nexus-anterior/nexus/docs/CONTRATO-LAB-WIKI-KERNEL-FLOWS.md",
+    "original_sha256": "db33171f092127eb555b718baa60f6c7cad1858acf85c62a186fdbcbfaca1cb2",
+    "archive_sha256": "db33171f092127eb555b718baa60f6c7cad1858acf85c62a186fdbcbfaca1cb2"
+  },
+  {
+    "path": "nexus-anterior/nexus/docs/CONTRATO-RELATORIOS-MICROPROCESSO.md",
+    "original_sha256": "12baa50e2823666d83f9603a60674a5904a05dd7faeee14dfa790d7d520527c5",
+    "archive_sha256": "12baa50e2823666d83f9603a60674a5904a05dd7faeee14dfa790d7d520527c5"
+  },
+  {
+    "path": "nexus-anterior/nexus/docs/ESTADO-CONSOLIDACAO-2026-10-11.md",
+    "original_sha256": "c1cbf468dc2a31a34b9322d0460da24ed7395a0c46de252fb33e8584fb5e915a",
+    "archive_sha256": "c1cbf468dc2a31a34b9322d0460da24ed7395a0c46de252fb33e8584fb5e915a"
+  },
+  {
+    "path": "nexus-anterior/nexus/docs/ESTUDO-LIGACAO-WIKI-KERNEL-FLOWS-2026-10-04.md",
+    "original_sha256": "1034d1c67b3141174b2b82ba0ca94fd5c6ca38bd4c4887e8fe2cd2c2da675125",
+    "archive_sha256": "1034d1c67b3141174b2b82ba0ca94fd5c6ca38bd4c4887e8fe2cd2c2da675125"
+  },
+  {
+    "path": "nexus-anterior/nexus/docs/F001.md",
+    "original_sha256": "bec0f6faf854f54d1d0d7ead2d96ca61ed1cb25ffddf210e80cc6557c244a0c0",
+    "archive_sha256": "bec0f6faf854f54d1d0d7ead2d96ca61ed1cb25ffddf210e80cc6557c244a0c0"
+  },
+  {
+    "path": "nexus-anterior/nexus/docs/F002.md",
+    "original_sha256": "8bcdcce55790afb9e9ea03771853e77a13051887e84b5ecd8e1209955137ac75",
+    "archive_sha256": "8bcdcce55790afb9e9ea03771853e77a13051887e84b5ecd8e1209955137ac75"
+  },
+  {
+    "path": "nexus-anterior/nexus/docs/F003.md",
+    "original_sha256": "307042e5f8861e166db5334b2916281deff5f8ccd3cbf05eb74b2a9b32682ad4",
+    "archive_sha256": "307042e5f8861e166db5334b2916281deff5f8ccd3cbf05eb74b2a9b32682ad4"
+  },
+  {
+    "path": "nexus-anterior/nexus/docs/F004.md",
+    "original_sha256": "3f4fa31cc0212014cbbb221712b47ee486bd3ceccd53c0f58e0d3bb127023217",
+    "archive_sha256": "3f4fa31cc0212014cbbb221712b47ee486bd3ceccd53c0f58e0d3bb127023217"
+  },
+  {
+    "path": "nexus-anterior/nexus/docs/F005-COGNICAO.md",
+    "original_sha256": "9b8284fb579a385f79541139691bdfa999e6772514045fc268beadea78a31367",
+    "archive_sha256": "9b8284fb579a385f79541139691bdfa999e6772514045fc268beadea78a31367"
+  },
+  {
+    "path": "nexus-anterior/nexus/docs/F006-LANGUAGETOOL.md",
+    "original_sha256": "cc3746a1f23e2919da34a97195ce4fcb797ca25c6d439c640d6db976a47f2624",
+    "archive_sha256": "cc3746a1f23e2919da34a97195ce4fcb797ca25c6d439c640d6db976a47f2624"
+  },
+  {
+    "path": "nexus-anterior/nexus/docs/F007-LIBREOFFICE.md",
+    "original_sha256": "d26ae3311d6f10db6edef59b9feb0ef2bf1bd817d86f931f25d2d7974616edf1",
+    "archive_sha256": "d26ae3311d6f10db6edef59b9feb0ef2bf1bd817d86f931f25d2d7974616edf1"
+  },
+  {
+    "path": "nexus-anterior/nexus/docs/F008-ISOLAMENTO-WINDOWS.md",
+    "original_sha256": "a8b0f9e941321badcf3cbde81a149571e8d67c52b4199b005b1302d252924f11",
+    "archive_sha256": "a8b0f9e941321badcf3cbde81a149571e8d67c52b4199b005b1302d252924f11"
+  },
+  {
+    "path": "nexus-anterior/nexus/docs/F009-OBJETOS-MARKDOWN.md",
+    "original_sha256": "0156d74fb8d03137f36bc7d94dce07711613cbccf80d2637dc92a86120902ac7",
+    "archive_sha256": "0156d74fb8d03137f36bc7d94dce07711613cbccf80d2637dc92a86120902ac7"
+  },
+  {
+    "path": "nexus-anterior/nexus/docs/F010-PROMPT-LITERAL.md",
+    "original_sha256": "6004b326261c8b4a3c351723ce328652869d24fc167f7c1b1237dddaad895573",
+    "archive_sha256": "6004b326261c8b4a3c351723ce328652869d24fc167f7c1b1237dddaad895573"
+  },
+  {
+    "path": "nexus-anterior/nexus/docs/F011-ARRANQUE-UNICO.md",
+    "original_sha256": "a1afbab59b081faf39e5fa23c49c5257ae2521f4de0d3856bc20194ede30770e",
+    "archive_sha256": "a1afbab59b081faf39e5fa23c49c5257ae2521f4de0d3856bc20194ede30770e"
+  },
+  {
+    "path": "nexus-anterior/nexus/docs/F012-HASH-WINDOWS-ISOLADO.md",
+    "original_sha256": "242f34a131cd91d7318dab63463a5ceb6f316a41a9ed9dfa2dc462345cd9959d",
+    "archive_sha256": "242f34a131cd91d7318dab63463a5ceb6f316a41a9ed9dfa2dc462345cd9959d"
+  },
+  {
+    "path": "nexus-anterior/nexus/docs/F013-PROVENIENCIA-INVERSA.md",
+    "original_sha256": "aa0728ecd4827a375c1df518df573136e12e93a0d09bb7f7e10c48055bf0bd08",
+    "archive_sha256": "aa0728ecd4827a375c1df518df573136e12e93a0d09bb7f7e10c48055bf0bd08"
+  },
+  {
+    "path": "nexus-anterior/nexus/docs/FLUXO-GENERICO-FERRAMENTAS-2026-10-10.md",
+    "original_sha256": "958bd0b15b50ed01d14bf1e48a971c7519f0c8334a1bbe4d644881909f29732e",
+    "archive_sha256": "958bd0b15b50ed01d14bf1e48a971c7519f0c8334a1bbe4d644881909f29732e"
+  },
+  {
+    "path": "nexus-anterior/nexus/docs/FUNDACAO-REVISTA-2026-10-01.md",
+    "original_sha256": "0d95c4d0ad46fe48f5523a8d2d94a7c55e4e679e553c39b95004e11fd1c2a96b",
+    "archive_sha256": "0d95c4d0ad46fe48f5523a8d2d94a7c55e4e679e553c39b95004e11fd1c2a96b"
+  },
+  {
+    "path": "nexus-anterior/nexus/docs/IA-CAMPOS-EVIDENCE.json",
+    "original_sha256": "c928ce7555675908adc230b59ff379e0a3cd8758f918479b70d85ffe60629d94",
+    "archive_sha256": "c928ce7555675908adc230b59ff379e0a3cd8758f918479b70d85ffe60629d94"
+  },
+  {
+    "path": "nexus-anterior/nexus/docs/INTEGRACAO-SERVER-FTS5-2026-10-11.md",
+    "original_sha256": "ae40ba0c7664415b75b338910090c407b11739b0687d636c5dac0a6633bd8ed3",
+    "archive_sha256": "ae40ba0c7664415b75b338910090c407b11739b0687d636c5dac0a6633bd8ed3"
+  },
+  {
+    "path": "nexus-anterior/nexus/docs/LAB-WIKI-KNOWLEDGE-2026-10-04.md",
+    "original_sha256": "59f510475675d0770264a105e32784b65e7de225aa679a8b71c5f07fe747d3c3",
+    "archive_sha256": "59f510475675d0770264a105e32784b65e7de225aa679a8b71c5f07fe747d3c3"
+  },
+  {
+    "path": "nexus-anterior/nexus/docs/MERCADO-2026-10-04.md",
+    "original_sha256": "a8f7301817dfe568228fd15c729c689cac86dd91f4d846b073c4802fa1871a0d",
+    "archive_sha256": "a8f7301817dfe568228fd15c729c689cac86dd91f4d846b073c4802fa1871a0d"
+  },
+  {
+    "path": "nexus-anterior/nexus/docs/PONTO-DE-SITUACAO.md",
+    "original_sha256": "f26286d41d59f3940a6524772cb767ab3987efa69828885f8447cd5117a24577",
+    "archive_sha256": "f26286d41d59f3940a6524772cb767ab3987efa69828885f8447cd5117a24577"
+  },
+  {
+    "path": "nexus-anterior/nexus/docs/PROTECTED-PROVISIONING-CONTRACT.md",
+    "original_sha256": "f416859e2c3483acd9254dc1d52c239aa54c2dcfc55c22418dc2048b2bf33cdd",
+    "archive_sha256": "f416859e2c3483acd9254dc1d52c239aa54c2dcfc55c22418dc2048b2bf33cdd"
+  },
+  {
+    "path": "nexus-anterior/nexus/docs/PUBLICACAO-2026-10-01.md",
+    "original_sha256": "25486006bc706bbc5bda3d320fe35650fa4871c56e7e660c0c3c4c538153b43c",
+    "archive_sha256": "25486006bc706bbc5bda3d320fe35650fa4871c56e7e660c0c3c4c538153b43c"
+  },
+  {
+    "path": "nexus-anterior/nexus/docs/REGRA-PYTHON-MINIMO-FRONTDOOR-2026-10-04.md",
+    "original_sha256": "6e5dc19705738c2f9e7f8e4d6b0e4f27dee87892ba096342b2014a1b91b0d4b6",
+    "archive_sha256": "6e5dc19705738c2f9e7f8e4d6b0e4f27dee87892ba096342b2014a1b91b0d4b6"
+  },
+  {
+    "path": "nexus-anterior/nexus/docs/RELATORIO-APRENDIZAGEM-RECOVERY-2026-10-04.md",
+    "original_sha256": "86124ecf8e45ab4fcf4d99ea9a40ed753119a42233bff88ee51a77275ed529aa",
+    "archive_sha256": "86124ecf8e45ab4fcf4d99ea9a40ed753119a42233bff88ee51a77275ed529aa"
+  },
+  {
+    "path": "nexus-anterior/nexus/docs/RELATORIO-AVATAR-2026-10-04.md",
+    "original_sha256": "b5ce3bba67bb648cbbbfe382f0937a7ca030803f768fff5719af5f05b43bc597",
+    "archive_sha256": "b5ce3bba67bb648cbbbfe382f0937a7ca030803f768fff5719af5f05b43bc597"
+  },
+  {
+    "path": "nexus-anterior/nexus/docs/RELATORIO-FINAL-WIKI-100K.md",
+    "original_sha256": "d99972a7bf30c1e380a98f527f7da0bb3f7a4fccb11c34143e5446a436ba2e70",
+    "archive_sha256": "d99972a7bf30c1e380a98f527f7da0bb3f7a4fccb11c34143e5446a436ba2e70"
+  },
+  {
+    "path": "nexus-anterior/nexus/docs/RELATORIO-KERNEL-SPIFF-CONDUCTOR-FASE1-2026-10-04.md",
+    "original_sha256": "3bec868adb52b1afbffc1e86425954d737783fbd43b2711f8c5ebc3cab7cbadb",
+    "archive_sha256": "3bec868adb52b1afbffc1e86425954d737783fbd43b2711f8c5ebc3cab7cbadb"
+  },
+  {
+    "path": "nexus-anterior/nexus/docs/RELATORIO-LAB-TESTES-POR-FASES-2026-10-04.md",
+    "original_sha256": "7355b7939fe9b26173a8605c5fcff9e9666d8101c22911abc59fb0636c9cbe51",
+    "archive_sha256": "7355b7939fe9b26173a8605c5fcff9e9666d8101c22911abc59fb0636c9cbe51"
+  },
+  {
+    "path": "nexus-anterior/nexus/docs/RELATORIO-PERFORMANCE-CONDUCTOR-2026-10-04.md",
+    "original_sha256": "d1e9dad4917eb9115f87f37320fe43f8e9ff8b0a56452bdc6bf425d88dea6fe1",
+    "archive_sha256": "d1e9dad4917eb9115f87f37320fe43f8e9ff8b0a56452bdc6bf425d88dea6fe1"
+  },
+  {
+    "path": "nexus-anterior/nexus/docs/RELATORIO-STRESS-100K-2026-10-04.md",
+    "original_sha256": "611ce90c5cf41a009d61b3269aadcc3b3f9d45c2469db25fce59e0076d3fe77a",
+    "archive_sha256": "611ce90c5cf41a009d61b3269aadcc3b3f9d45c2469db25fce59e0076d3fe77a"
+  },
+  {
+    "path": "nexus-anterior/nexus/docs/REVISAO-CONTRATOS-WIKI.md",
+    "original_sha256": "f4ca5fb078cad75dcad1e310b9b917c47a96d74ea1ea16d2ca189b24c16d9fda",
+    "archive_sha256": "f4ca5fb078cad75dcad1e310b9b917c47a96d74ea1ea16d2ca189b24c16d9fda"
+  },
+  {
+    "path": "nexus-anterior/nexus/docs/REVISAO-NUCLEO-2026-10-01.md",
+    "original_sha256": "beb195ad477bb56f1f89a353ad37f96777a45b696a86504a55e1178769ee9a03",
+    "archive_sha256": "beb195ad477bb56f1f89a353ad37f96777a45b696a86504a55e1178769ee9a03"
+  },
+  {
+    "path": "nexus-anterior/nexus/docs/SCHEMAS-E-WINDOWS.md",
+    "original_sha256": "4fe587a5d4718983864969620ce48915693194bbd76100068b99fb2a0617f6bd",
+    "archive_sha256": "4fe587a5d4718983864969620ce48915693194bbd76100068b99fb2a0617f6bd"
+  },
+  {
+    "path": "nexus-anterior/nexus/docs/TESTES-ADVERSARIAIS.md",
+    "original_sha256": "28b72cf8d84923de821904b9c8a76848393364c45fb38ad14a8d1b466be46164",
+    "archive_sha256": "28b72cf8d84923de821904b9c8a76848393364c45fb38ad14a8d1b466be46164"
+  },
+  {
+    "path": "nexus-anterior/nexus/docs/WIKI-INSTALACAO.md",
+    "original_sha256": "9eee4df81eb2ec943379a5f6564067b75433304d8a434d05cd4aa0c938369e1d",
+    "archive_sha256": "9eee4df81eb2ec943379a5f6564067b75433304d8a434d05cd4aa0c938369e1d"
+  },
+  {
+    "path": "nexus-anterior/nexus/docs/WINDOWS-ACCEPTANCE-ISOLATED.md",
+    "original_sha256": "a0f308f561c8d32279e90d62cc8d36b8b87695f0aab6867bfd7c901327f9c736",
+    "archive_sha256": "a0f308f561c8d32279e90d62cc8d36b8b87695f0aab6867bfd7c901327f9c736"
+  },
+  {
+    "path": "nexus-anterior/nexus/docs/WINDOWS-STACK-COMPATIBILITY-2026-10-07.md",
+    "original_sha256": "6664b29a63d5e1a1737dccb53219b302fbc99e2f8e6b54a4556d067d113347da",
+    "archive_sha256": "6664b29a63d5e1a1737dccb53219b302fbc99e2f8e6b54a4556d067d113347da"
+  },
+  {
+    "path": "nexus-anterior/nexus/docs/WINDOWS-TWO-FOLDERS-EVIDENCE.json",
+    "original_sha256": "0c8d81c5ae958f0884087b02e3842a0455237e110232e8fc3eee304828e39bcf",
+    "archive_sha256": "0c8d81c5ae958f0884087b02e3842a0455237e110232e8fc3eee304828e39bcf"
+  },
+  {
+    "path": "nexus-anterior/nexus/docs/product-flows-20261006.md",
+    "original_sha256": "1d44bc38eda3d0383a6250d9c45e8102daf2ae6af638ef759959817f3d6c30e2",
+    "archive_sha256": "1d44bc38eda3d0383a6250d9c45e8102daf2ae6af638ef759959817f3d6c30e2"
+  },
+  {
+    "path": "nexus-anterior/nexus/families/multimedia/imagem.md",
+    "original_sha256": "4a321cdc18751a5d3e1dec770908aa5d992e17126e5569bbfd9045a2dc4583de",
+    "archive_sha256": "4a321cdc18751a5d3e1dec770908aa5d992e17126e5569bbfd9045a2dc4583de"
+  },
+  {
+    "path": "nexus-anterior/nexus/families/multimedia/som.md",
+    "original_sha256": "d31057a867080291d183e9cde486b6079e686403cf7869ed749d0f005e770462",
+    "archive_sha256": "d31057a867080291d183e9cde486b6079e686403cf7869ed749d0f005e770462"
+  },
+  {
+    "path": "nexus-anterior/nexus/frontdoor.py",
+    "original_sha256": "6e31f0033a70dfb369eb83bb9b8e775196103237b1f539544e5c4f079dedbaf5",
+    "archive_sha256": "6e31f0033a70dfb369eb83bb9b8e775196103237b1f539544e5c4f079dedbaf5"
+  },
+  {
+    "path": "nexus-anterior/nexus/frontdoor_rules.json",
+    "original_sha256": "590417f2f37bd81162d4acb69ffb2997cd5596bed733fe0156940625b1859e06",
+    "archive_sha256": "590417f2f37bd81162d4acb69ffb2997cd5596bed733fe0156940625b1859e06"
+  },
+  {
+    "path": "nexus-anterior/nexus/host.py",
+    "original_sha256": "e74cba142e39c2e770816ff448d70f9a214a420dfc989259716044cd16da9559",
+    "archive_sha256": "e74cba142e39c2e770816ff448d70f9a214a420dfc989259716044cd16da9559"
+  },
+  {
+    "path": "nexus-anterior/nexus/instance.py",
+    "original_sha256": "a97ef1449ab8a2fe66dc0bcf79fe64dca93ae1b7a43bbfa296caeb90229120ac",
+    "archive_sha256": "a97ef1449ab8a2fe66dc0bcf79fe64dca93ae1b7a43bbfa296caeb90229120ac"
+  },
+  {
+    "path": "nexus-anterior/nexus/integrity.json",
+    "original_sha256": "345413a7036c8c0747b325ba19b386e1588367c6399fbd58f84274c3d2e26a42",
+    "archive_sha256": "345413a7036c8c0747b325ba19b386e1588367c6399fbd58f84274c3d2e26a42"
+  },
+  {
+    "path": "nexus-anterior/nexus/lab/open_notebook_avatar/.gitignore",
+    "original_sha256": "d17600d717042c45f76ced332fba65f02a996c07c3974396f1c4ecc89370fd06",
+    "archive_sha256": "d17600d717042c45f76ced332fba65f02a996c07c3974396f1c4ecc89370fd06"
+  },
+  {
+    "path": "nexus-anterior/nexus/lab/open_notebook_avatar/README.md",
+    "original_sha256": "b3bbd72743ea70e0dda98aa2f2c356604f1bb97600871a01fd86b574cda80c54",
+    "archive_sha256": "b3bbd72743ea70e0dda98aa2f2c356604f1bb97600871a01fd86b574cda80c54"
+  },
+  {
+    "path": "nexus-anterior/nexus/lab/open_notebook_avatar/evidence/avatar-tests.xml",
+    "original_sha256": "c72d8b706d3ac8b6a936df336e652c1a371eab42141173792320798a63f9fc6f",
+    "archive_sha256": "137584c95df934c525df5587045da58367a0fe5df709e9404c32793699efd404"
+  },
+  {
+    "path": "nexus-anterior/nexus/lab/open_notebook_avatar/evidence/native-longer.json",
+    "original_sha256": "e894024495e3541c95137c529ddd97eca65320c4c29a316073a1ebd0092a305d",
+    "archive_sha256": "e894024495e3541c95137c529ddd97eca65320c4c29a316073a1ebd0092a305d"
+  },
+  {
+    "path": "nexus-anterior/nexus/lab/open_notebook_avatar/evidence/native-offline.json",
+    "original_sha256": "3458cd6861a5c64e9d3ec90cccdf94a5890faec401daf51877655292f33418ff",
+    "archive_sha256": "3458cd6861a5c64e9d3ec90cccdf94a5890faec401daf51877655292f33418ff"
+  },
+  {
+    "path": "nexus-anterior/nexus/lab/open_notebook_avatar/evidence/summary.json",
+    "original_sha256": "ef89e263e51201d6d97b7872f1a888a7dcf7659330c83d0c6d2194477e0d3140",
+    "archive_sha256": "ef89e263e51201d6d97b7872f1a888a7dcf7659330c83d0c6d2194477e0d3140"
+  },
+  {
+    "path": "nexus-anterior/nexus/lab/open_notebook_avatar/install-windows.ps1",
+    "original_sha256": "dcf3e387729655ee6fd4a8d47ef2ec78108b1d2fabd135108b4b795661b63090",
+    "archive_sha256": "dcf3e387729655ee6fd4a8d47ef2ec78108b1d2fabd135108b4b795661b63090"
+  },
+  {
+    "path": "nexus-anterior/nexus/lab/open_notebook_avatar/install_router.py",
+    "original_sha256": "61c2fe6461fbc8896972d5c5f7dd6ddae64d01afc01559daa6480e4d62224b2d",
+    "archive_sha256": "61c2fe6461fbc8896972d5c5f7dd6ddae64d01afc01559daa6480e4d62224b2d"
+  },
+  {
+    "path": "nexus-anterior/nexus/lab/open_notebook_avatar/notebook_avatar/__init__.py",
+    "original_sha256": "1fa358da3ec2d79c7c5ec6f589357191b3e41afdd16e5e927be8e36dbab123e5",
+    "archive_sha256": "1fa358da3ec2d79c7c5ec6f589357191b3e41afdd16e5e927be8e36dbab123e5"
+  },
+  {
+    "path": "nexus-anterior/nexus/lab/open_notebook_avatar/notebook_avatar/mcp_server.py",
+    "original_sha256": "a8f71a26a914c68adfb741a0f82a8f242ea035457ce0a964215de9ac5d13e8f2",
+    "archive_sha256": "a8f71a26a914c68adfb741a0f82a8f242ea035457ce0a964215de9ac5d13e8f2"
+  },
+  {
+    "path": "nexus-anterior/nexus/lab/open_notebook_avatar/notebook_avatar/router.py",
+    "original_sha256": "d22e2ec52dabd2d7b511aecbc81ea6a345592681a9b1f015b7a5da866eff4f33",
+    "archive_sha256": "d22e2ec52dabd2d7b511aecbc81ea6a345592681a9b1f015b7a5da866eff4f33"
+  },
+  {
+    "path": "nexus-anterior/nexus/lab/open_notebook_avatar/notebook_avatar/service.py",
+    "original_sha256": "cd2c2994de6223ae36da013ef10e9f58857bda08fb2a567bde4dae298cd108cd",
+    "archive_sha256": "cd2c2994de6223ae36da013ef10e9f58857bda08fb2a567bde4dae298cd108cd"
+  },
+  {
+    "path": "nexus-anterior/nexus/lab/open_notebook_avatar/notebook_avatar/worker.py",
+    "original_sha256": "14d9d690fb29c9e57aa11777e165c6afac3f9991c367ea3306d7240075c65d7e",
+    "archive_sha256": "14d9d690fb29c9e57aa11777e165c6afac3f9991c367ea3306d7240075c65d7e"
+  },
+  {
+    "path": "nexus-anterior/nexus/lab/open_notebook_avatar/provision_models.py",
+    "original_sha256": "d2774f998e87d5ef6090f721d36a295d3392df418375c6ead17fdbb1bb621864",
+    "archive_sha256": "d2774f998e87d5ef6090f721d36a295d3392df418375c6ead17fdbb1bb621864"
+  },
+  {
+    "path": "nexus-anterior/nexus/lab/open_notebook_avatar/pyproject.toml",
+    "original_sha256": "427ce630ecfa727cbfe716f84fd6544a91329db063b16e4ce025434ca9398790",
+    "archive_sha256": "427ce630ecfa727cbfe716f84fd6544a91329db063b16e4ce025434ca9398790"
+  },
+  {
+    "path": "nexus-anterior/nexus/lab/open_notebook_avatar/requirements-worker.txt",
+    "original_sha256": "2c15f21e841b9097eca3aacb8b45934287e22f1892828224dcd705698bb3afdb",
+    "archive_sha256": "2c15f21e841b9097eca3aacb8b45934287e22f1892828224dcd705698bb3afdb"
+  },
+  {
+    "path": "nexus-anterior/nexus/lab/open_notebook_avatar/tests/conftest.py",
+    "original_sha256": "41637df7d4b0e0c91fd71abd80555023cb3ad4135147b0c04425d15760e3d382",
+    "archive_sha256": "41637df7d4b0e0c91fd71abd80555023cb3ad4135147b0c04425d15760e3d382"
+  },
+  {
+    "path": "nexus-anterior/nexus/lab/open_notebook_avatar/tests/run_native_e2e.py",
+    "original_sha256": "4f34fdc7021381a18b4ad5add9ceec8ea39f3bc32e7ca91501545521b7793106",
+    "archive_sha256": "c40b04da3d43a0453a7aba51e1ef1e259c226a8a3a6bf490ebd1fdd0e60c7620"
+  },
+  {
+    "path": "nexus-anterior/nexus/lab/open_notebook_avatar/tests/test_avatar.py",
+    "original_sha256": "c9a2c2d33d7f1c15e288b4c9d75394dad57ad770c923cf225dc933ff83404f1c",
+    "archive_sha256": "c9a2c2d33d7f1c15e288b4c9d75394dad57ad770c923cf225dc933ff83404f1c"
+  },
+  {
+    "path": "nexus-anterior/nexus/lab/open_notebook_avatar/tests/test_native_contracts.py",
+    "original_sha256": "3825e250c44d50509c8eb9edd4a2bb75af8b23d224b63136211976ddb27ed3fe",
+    "archive_sha256": "41b3b56ea2a179fc497701d8a0c08414d6a3abff98ab3260a1e18f8528c43329"
+  },
+  {
+    "path": "nexus-anterior/nexus/lab/wiki/README.md",
+    "original_sha256": "74f5e573945cf4b29c7d64f6888706b70d8dbd7f5fa463f6a5c60f3a6a759366",
+    "archive_sha256": "74f5e573945cf4b29c7d64f6888706b70d8dbd7f5fa463f6a5c60f3a6a759366"
+  },
+  {
+    "path": "nexus-anterior/nexus/lab/wiki/TESTAR-WIKI-100K.bat",
+    "original_sha256": "3df4814f0efb0a9072146a0a049db377db613585e21cfb79cabc5ea060df8bc0",
+    "archive_sha256": "3df4814f0efb0a9072146a0a049db377db613585e21cfb79cabc5ea060df8bc0"
+  },
+  {
+    "path": "nexus-anterior/nexus/lab/wiki/context_packet.py",
+    "original_sha256": "b82b1c7899a6f088e51cfd90aab3554a2bbace9f4f123fab20283e95362ef6e8",
+    "archive_sha256": "b82b1c7899a6f088e51cfd90aab3554a2bbace9f4f123fab20283e95362ef6e8"
+  },
+  {
+    "path": "nexus-anterior/nexus/lab/wiki/evidence/20261004/summary.json",
+    "original_sha256": "74b9adc67df18ce8cb9a918587b02df6e742155a2486a368ed944ce0320b0bff",
+    "archive_sha256": "74b9adc67df18ce8cb9a918587b02df6e742155a2486a368ed944ce0320b0bff"
+  },
+  {
+    "path": "nexus-anterior/nexus/lab/wiki/evidence/kernel-20261004/environment.txt",
+    "original_sha256": "d9fccceb7305232b2609f1b434bd5f2232f48a22568b2c3107674c2515fba384",
+    "archive_sha256": "d9fccceb7305232b2609f1b434bd5f2232f48a22568b2c3107674c2515fba384"
+  },
+  {
+    "path": "nexus-anterior/nexus/lab/wiki/evidence/kernel-20261004/initial-failure.txt",
+    "original_sha256": "a62a3530ff4bf219af9f4250efcd67d9cb10285c86142be6a7baafe8e58cdb8b",
+    "archive_sha256": "a62a3530ff4bf219af9f4250efcd67d9cb10285c86142be6a7baafe8e58cdb8b"
+  },
+  {
+    "path": "nexus-anterior/nexus/lab/wiki/evidence/kernel-20261004/initial-failure.xml",
+    "original_sha256": "f242bf1a36e424ff8941cdad4186d9240a9b5c461a9597efcc44804dcb04c0dc",
+    "archive_sha256": "f242bf1a36e424ff8941cdad4186d9240a9b5c461a9597efcc44804dcb04c0dc"
+  },
+  {
+    "path": "nexus-anterior/nexus/lab/wiki/evidence/kernel-20261004/regression.txt",
+    "original_sha256": "800ebbbc7b0eec24ff79c94100594af4136051fcad7382da038c13d7d6f68de0",
+    "archive_sha256": "800ebbbc7b0eec24ff79c94100594af4136051fcad7382da038c13d7d6f68de0"
+  },
+  {
+    "path": "nexus-anterior/nexus/lab/wiki/evidence/kernel-20261004/regression.xml",
+    "original_sha256": "8178ee745c95d5c1da80ccfee4ff11c6103746e02656b84d3b3e8cf8314dbaaa",
+    "archive_sha256": "8178ee745c95d5c1da80ccfee4ff11c6103746e02656b84d3b3e8cf8314dbaaa"
+  },
+  {
+    "path": "nexus-anterior/nexus/lab/wiki/evidence/kernel-20261004/summary.json",
+    "original_sha256": "06c07db1840c14f3a0e6e936c5ac1a7950b05517260f2ea3a158c3587e092f1e",
+    "archive_sha256": "06c07db1840c14f3a0e6e936c5ac1a7950b05517260f2ea3a158c3587e092f1e"
+  },
+  {
+    "path": "nexus-anterior/nexus/lab/wiki/evidence/kernel-20261004/tests.txt",
+    "original_sha256": "7072b7f49c579375403c398532f2c0fafda5e409d69d97bd612df28f9c24fdb2",
+    "archive_sha256": "7072b7f49c579375403c398532f2c0fafda5e409d69d97bd612df28f9c24fdb2"
+  },
+  {
+    "path": "nexus-anterior/nexus/lab/wiki/evidence/kernel-20261004/tests.xml",
+    "original_sha256": "b2585458f27b6ccc5cc01013bf8e8e8ab88053fe59910eb840e3f6893cf8441f",
+    "archive_sha256": "b2585458f27b6ccc5cc01013bf8e8e8ab88053fe59910eb840e3f6893cf8441f"
+  },
+  {
+    "path": "nexus-anterior/nexus/lab/wiki/flow_proposal.py",
+    "original_sha256": "e20e1bd13431b8d35520fc2d37d8d017f0472fce49976c31d614d202cc4de73f",
+    "archive_sha256": "e20e1bd13431b8d35520fc2d37d8d017f0472fce49976c31d614d202cc4de73f"
+  },
+  {
+    "path": "nexus-anterior/nexus/lab/wiki/kernel_bridge.py",
+    "original_sha256": "d9560b680b1b783acca3aec4effc1142d95944f14c7d26c5f1d8511c9d71a2ef",
+    "archive_sha256": "d9560b680b1b783acca3aec4effc1142d95944f14c7d26c5f1d8511c9d71a2ef"
+  },
+  {
+    "path": "nexus-anterior/nexus/lab/wiki/requirements.txt",
+    "original_sha256": "dae9f799ea84b929aab462a2301fdf8559643fe896ddc8d71b0e5d8aac97f196",
+    "archive_sha256": "dae9f799ea84b929aab462a2301fdf8559643fe896ddc8d71b0e5d8aac97f196"
+  },
+  {
+    "path": "nexus-anterior/nexus/lab/wiki/test_flow_proposal.py",
+    "original_sha256": "6c69a450856fc50bd25d3686e7cc026eb6ff55469a40371b4f4990c87e5d174d",
+    "archive_sha256": "6c69a450856fc50bd25d3686e7cc026eb6ff55469a40371b4f4990c87e5d174d"
+  },
+  {
+    "path": "nexus-anterior/nexus/lab/wiki/test_kernel_bridge.py",
+    "original_sha256": "d595b3688575433e8cb74f7ae9e03af88f5826738c3c6788421a664f79de4ea6",
+    "archive_sha256": "b96e58d396501fba74befe2489b12af5ddefbf9166e4807406b61cff44d08d9b"
+  },
+  {
+    "path": "nexus-anterior/nexus/lab/wiki/test_web_research_wiki_100k.py",
+    "original_sha256": "1f1495ebbb99607a58a7cc4d2b9a407ca8e1a0b9114fbe6195178cd3348db7e5",
+    "archive_sha256": "1f1495ebbb99607a58a7cc4d2b9a407ca8e1a0b9114fbe6195178cd3348db7e5"
+  },
+  {
+    "path": "nexus-anterior/nexus/laws/CONSTITUTION.md",
+    "original_sha256": "8c7cd4cf913a96b6e814dc5866d6ccd2482f046b0a0bfa47187ea93f2f132eb8",
+    "archive_sha256": "8c7cd4cf913a96b6e814dc5866d6ccd2482f046b0a0bfa47187ea93f2f132eb8"
+  },
+  {
+    "path": "nexus-anterior/nexus/laws/policy.json",
+    "original_sha256": "ed7a8de09564d30cf6e97bb0c99b19815ca213c91fe28efb637e8a5584858cb1",
+    "archive_sha256": "ed7a8de09564d30cf6e97bb0c99b19815ca213c91fe28efb637e8a5584858cb1"
+  },
+  {
+    "path": "nexus-anterior/nexus/mcp_client.py",
+    "original_sha256": "5b5a80353e768842bb3c684117f1d5d876d20069ac8c0dd1ea5061be23615f9b",
+    "archive_sha256": "5b5a80353e768842bb3c684117f1d5d876d20069ac8c0dd1ea5061be23615f9b"
+  },
+  {
+    "path": "nexus-anterior/nexus/mcp_tools_server.py",
+    "original_sha256": "5578b9ecef32a1e47cb8f1b27b6f74d52229a2f4f48dae33a7783d351e1a31e6",
+    "archive_sha256": "5578b9ecef32a1e47cb8f1b27b6f74d52229a2f4f48dae33a7783d351e1a31e6"
+  },
+  {
+    "path": "nexus-anterior/nexus/native_mcp.py",
+    "original_sha256": "c55c0497697f61469b6bde21e0a279847db7cb4bfd84f39a1c94ecbfacc090ac",
+    "archive_sha256": "c55c0497697f61469b6bde21e0a279847db7cb4bfd84f39a1c94ecbfacc090ac"
+  },
+  {
+    "path": "nexus-anterior/nexus/natural_bridge.py",
+    "original_sha256": "a14f66cce02f9cf43788dee2c735f2aefc111e91dfa3d7271597d278b01dfc8d",
+    "archive_sha256": "a14f66cce02f9cf43788dee2c735f2aefc111e91dfa3d7271597d278b01dfc8d"
+  },
+  {
+    "path": "nexus-anterior/nexus/prompts/interpret-v2.md",
+    "original_sha256": "768623e690da5e7d72f474ee381bea1951b914b25ace97fd81045ced02cba0d2",
+    "archive_sha256": "768623e690da5e7d72f474ee381bea1951b914b25ace97fd81045ced02cba0d2"
+  },
+  {
+    "path": "nexus-anterior/nexus/requirements-mcp.txt",
+    "original_sha256": "894cf1606060b0b251358edd12ba73c58eb09cdb4455db2a7715600be5818064",
+    "archive_sha256": "894cf1606060b0b251358edd12ba73c58eb09cdb4455db2a7715600be5818064"
+  },
+  {
+    "path": "nexus-anterior/nexus/requirements-test.txt",
+    "original_sha256": "8f3f662fc11d7d4299fdf9bfb2bd08fdbc67b5bc7208a978bb7db545a2af38c9",
+    "archive_sha256": "8f3f662fc11d7d4299fdf9bfb2bd08fdbc67b5bc7208a978bb7db545a2af38c9"
+  },
+  {
+    "path": "nexus-anterior/nexus/requirements.txt",
+    "original_sha256": "756cc9e506ae4ee1a6f6c0507088b5cfc0dc8ba350fb2d2d46f1ffa72033adb6",
+    "archive_sha256": "756cc9e506ae4ee1a6f6c0507088b5cfc0dc8ba350fb2d2d46f1ffa72033adb6"
+  },
+  {
+    "path": "nexus-anterior/nexus/schemas/cognitive.json",
+    "original_sha256": "e38903b40c416c14f09877f1bae1ec0beadab8c90c228b7b62641856b429edc3",
+    "archive_sha256": "e38903b40c416c14f09877f1bae1ec0beadab8c90c228b7b62641856b429edc3"
+  },
+  {
+    "path": "nexus-anterior/nexus/schemas/frontdoor_rules.json",
+    "original_sha256": "f717d8274d6e3fbec2c8901d405a88d0a4e243c17ef11604358a0bd29f2f1494",
+    "archive_sha256": "f717d8274d6e3fbec2c8901d405a88d0a4e243c17ef11604358a0bd29f2f1494"
+  },
+  {
+    "path": "nexus-anterior/nexus/schemas/languagetool.json",
+    "original_sha256": "f3310c0f0d70e86ab80aa22f8deb5331ddb5ccd49bae84be0926010d2ec27afa",
+    "archive_sha256": "f3310c0f0d70e86ab80aa22f8deb5331ddb5ccd49bae84be0926010d2ec27afa"
+  },
+  {
+    "path": "nexus-anterior/nexus/schemas/multimedia.json",
+    "original_sha256": "ea20b02da3c33557d42475c84e111f98a1f7048708af0e434dde4aca53154e01",
+    "archive_sha256": "ea20b02da3c33557d42475c84e111f98a1f7048708af0e434dde4aca53154e01"
+  },
+  {
+    "path": "nexus-anterior/nexus/schemas/request.json",
+    "original_sha256": "5d28d505af087814fe276f630d7e36732ea8f5fe724f8d0e890a33d017b7fa32",
+    "archive_sha256": "5d28d505af087814fe276f630d7e36732ea8f5fe724f8d0e890a33d017b7fa32"
+  },
+  {
+    "path": "nexus-anterior/nexus/schemas/result.json",
+    "original_sha256": "50f49a1b214d3a8f9584c53a9de9c3b52cece39b20e96ee1031858d13bf84315",
+    "archive_sha256": "50f49a1b214d3a8f9584c53a9de9c3b52cece39b20e96ee1031858d13bf84315"
+  },
+  {
+    "path": "nexus-anterior/nexus/security_tests/confinement_probe.py",
+    "original_sha256": "844a8424aa5ebd3a62e27a5e213b10981908bb4cc93e8f16d3e9779691ed3ffa",
+    "archive_sha256": "844a8424aa5ebd3a62e27a5e213b10981908bb4cc93e8f16d3e9779691ed3ffa"
+  },
+  {
+    "path": "nexus-anterior/nexus/security_tests/test_authority_10000.py",
+    "original_sha256": "a4e74696539b6171a8cddf079702d6ca0240dd24bbb83db9de205e7d713f904b",
+    "archive_sha256": "a4e74696539b6171a8cddf079702d6ca0240dd24bbb83db9de205e7d713f904b"
+  },
+  {
+    "path": "nexus-anterior/nexus/security_tests/test_confinement_gate.py",
+    "original_sha256": "056ff4ef703a3c38fac03f41d5440cc7a05cc206cbe72a63a4fa7c0fbce46557",
+    "archive_sha256": "056ff4ef703a3c38fac03f41d5440cc7a05cc206cbe72a63a4fa7c0fbce46557"
+  },
+  {
+    "path": "nexus-anterior/nexus/security_tests/test_documentary_bridge.py",
+    "original_sha256": "0101774174cf1e493372728ca31c735fb5f70665ee71143531fe43d8b87ebfc2",
+    "archive_sha256": "0101774174cf1e493372728ca31c735fb5f70665ee71143531fe43d8b87ebfc2"
+  },
+  {
+    "path": "nexus-anterior/nexus/security_tests/test_install_gate.py",
+    "original_sha256": "a3d7b6e2a6915da07525494d739c310a7df53706d94b0adf43a73a2dae2e673b",
+    "archive_sha256": "a3d7b6e2a6915da07525494d739c310a7df53706d94b0adf43a73a2dae2e673b"
+  },
+  {
+    "path": "nexus-anterior/nexus/security_tests/test_moneyprinter_config_gate.py",
+    "original_sha256": "4dcaa9aa628523c5b340dee139404ca971194f765169f65b8f23fe70525af612",
+    "archive_sha256": "4dcaa9aa628523c5b340dee139404ca971194f765169f65b8f23fe70525af612"
+  },
+  {
+    "path": "nexus-anterior/nexus/security_tests/test_native_boundary.py",
+    "original_sha256": "987021492333d54c546db9320dce06e71ea26c807fcc58d9a8ce266ea9cbbbe0",
+    "archive_sha256": "987021492333d54c546db9320dce06e71ea26c807fcc58d9a8ce266ea9cbbbe0"
+  },
+  {
+    "path": "nexus-anterior/nexus/security_tests/test_state_concurrency.py",
+    "original_sha256": "f74152375b6c9dff6ceebdd34062e43525902685a392861ecb42aa9dec24c2d0",
+    "archive_sha256": "f74152375b6c9dff6ceebdd34062e43525902685a392861ecb42aa9dec24c2d0"
+  },
+  {
+    "path": "nexus-anterior/nexus/security_tests/test_windows_hash.py",
+    "original_sha256": "b233186e411b7634f8f2738c9f81947121851ac3023646a0b70fedd4dfa4be80",
+    "archive_sha256": "b233186e411b7634f8f2738c9f81947121851ac3023646a0b70fedd4dfa4be80"
+  },
+  {
+    "path": "nexus-anterior/nexus/store.py",
+    "original_sha256": "b3bcea546b2bf6ce97ba5ac574601a2526ace9a432b058c46ff2c5ee11057ba5",
+    "archive_sha256": "b3bcea546b2bf6ce97ba5ac574601a2526ace9a432b058c46ff2c5ee11057ba5"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/_loopback_fixture.py",
+    "original_sha256": "3c74bacee4e59def2d93b7fee7da5a98f1253e40dc18c8490b2d1e83d99c787d",
+    "archive_sha256": "3c74bacee4e59def2d93b7fee7da5a98f1253e40dc18c8490b2d1e83d99c787d"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/_mcp_baseline.py",
+    "original_sha256": "169ab22eb94de38fe61a3ccc6f05b2a3b4049f388830dcbb2e6df2213d481835",
+    "archive_sha256": "169ab22eb94de38fe61a3ccc6f05b2a3b4049f388830dcbb2e6df2213d481835"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/fixtures/mcp_test_server.py",
+    "original_sha256": "ae0631a0c7e8c6eee5593b75654bce4fca60d023660144e37120942ad0ca3be2",
+    "archive_sha256": "ae0631a0c7e8c6eee5593b75654bce4fca60d023660144e37120942ad0ca3be2"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/fixtures/writer-fixed-test.ott",
+    "original_sha256": "379df147e4b7019c197f572bc07491404782ecd0abfc615886cd1c9350399d3f",
+    "archive_sha256": "379df147e4b7019c197f572bc07491404782ecd0abfc615886cd1c9350399d3f"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/folha_browser.cjs",
+    "original_sha256": "6f1fe46e7fc6d46ba38c14a905c55b8289c02e6cbe95d7d63a36145dd09da007",
+    "archive_sha256": "6f1fe46e7fc6d46ba38c14a905c55b8289c02e6cbe95d7d63a36145dd09da007"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/folha_inline_proofread_smoke.cjs",
+    "original_sha256": "508655da5188b586aae395bebc3c28445f7fbe2fd89853db115359f15afa0d91",
+    "archive_sha256": "508655da5188b586aae395bebc3c28445f7fbe2fd89853db115359f15afa0d91"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/folha_revision_smoke.cjs",
+    "original_sha256": "c26d528bddc0978669226caeae484e4c90b06a2af3af0eb29f82e47c35e82232",
+    "archive_sha256": "c26d528bddc0978669226caeae484e4c90b06a2af3af0eb29f82e47c35e82232"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/folha_search_smoke.cjs",
+    "original_sha256": "438002942e60c8b86c0adc0ee765902995cf8677c3ee7ead3ab040b64d9dd452",
+    "archive_sha256": "438002942e60c8b86c0adc0ee765902995cf8677c3ee7ead3ab040b64d9dd452"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/folha_workspace_smoke.cjs",
+    "original_sha256": "c34174d63934b244ef297f64a1904938b02cc0beb9e1936b2ff4f3adafad7968",
+    "archive_sha256": "c34174d63934b244ef297f64a1904938b02cc0beb9e1936b2ff4f3adafad7968"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/gateway_failure.test.cjs",
+    "original_sha256": "3728665fb95acc77363e236aaf6b25a1f8bfcb988c9d239c045bf36c4d431583",
+    "archive_sha256": "3728665fb95acc77363e236aaf6b25a1f8bfcb988c9d239c045bf36c4d431583"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/gateway_transport.test.cjs",
+    "original_sha256": "260c2372f5bb1cec9eb1ceb21b23e4212be5a0a43e19f8df5f1e31374576d8da",
+    "archive_sha256": "bc03307dc7f08d0a651620abc626e1660861fa39e136ec66fec453905564d5c7"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/install-writer-ci.ps1",
+    "original_sha256": "1898d56ef7e76177292baa1e129723768c291e510841dd81ba9a8d9b015fb7df",
+    "archive_sha256": "1898d56ef7e76177292baa1e129723768c291e510841dd81ba9a8d9b015fb7df"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/keyboard_shortcuts_smoke.cjs",
+    "original_sha256": "fc58472699d1b7138c258e38cb3fa492e24ecda50cfb4e6e0504a1d1f674c723",
+    "archive_sha256": "fc58472699d1b7138c258e38cb3fa492e24ecda50cfb4e6e0504a1d1f674c723"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_adversarial.py",
+    "original_sha256": "47ceaa0f4ff76d267fc25657e28ca866bef3c9753546c5e89f2e44585d81acf3",
+    "archive_sha256": "47ceaa0f4ff76d267fc25657e28ca866bef3c9753546c5e89f2e44585d81acf3"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_bidirectional_50000.py",
+    "original_sha256": "4d19b918daf0d87c3e098e8f58bc4c6a130a6394c0b5c7e575851395d1f4822a",
+    "archive_sha256": "4d19b918daf0d87c3e098e8f58bc4c6a130a6394c0b5c7e575851395d1f4822a"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_bootstrap_binding_functional.py",
+    "original_sha256": "7f63c78471276f56667a9e927ff9feb71e85aff2beedfef725176c0f9f995465",
+    "archive_sha256": "7f63c78471276f56667a9e927ff9feb71e85aff2beedfef725176c0f9f995465"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_bootstrap_nexus_local.py",
+    "original_sha256": "a1a4910d00e1fb4f649d2998add30a73688514a4bef2ce170f97fd8bd9902b28",
+    "archive_sha256": "ec013d346c7229bea7de0f57014dcd093760200c23fdc138bceeba8e429a73ac"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_canonical_crash_real.py",
+    "original_sha256": "9d69247b199d277c3a08d0e8e90a2110534a7250c622a1bd95594aadc3e7e255",
+    "archive_sha256": "9d69247b199d277c3a08d0e8e90a2110534a7250c622a1bd95594aadc3e7e255"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_check_nexus_practical_targets.py",
+    "original_sha256": "ea7c7db9bfc4459d750c7527494e33f6dd24f9eaf90f4ed37105739e644f9a6d",
+    "archive_sha256": "ea7c7db9bfc4459d750c7527494e33f6dd24f9eaf90f4ed37105739e644f9a6d"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_code_sync.py",
+    "original_sha256": "6742a61c56dbaa008bfa7cd3fd5ca4b5196dabb23cabac3b51df89a3e26f554d",
+    "archive_sha256": "31618db4c1bb3b1e985ee906761991d7a50ab9eacf839192cba2ca47cb0540ec"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_code_sync_functional.py",
+    "original_sha256": "a29cdc2f23da859c20456afd6b13743f1e1a72c32f588973528710b7dec6545e",
+    "archive_sha256": "a29cdc2f23da859c20456afd6b13743f1e1a72c32f588973528710b7dec6545e"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_constitutional_parser_step1.py",
+    "original_sha256": "5cdb524c09febe25c9639fd8766ee0d9985bc4c3210efbcab03ef3e0e951dadc",
+    "archive_sha256": "5cdb524c09febe25c9639fd8766ee0d9985bc4c3210efbcab03ef3e0e951dadc"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_convergence_consistency.py",
+    "original_sha256": "1c587877648d98708e59828490fa8395ad84bcf697eb58e948382ac4d3b601d0",
+    "archive_sha256": "1c587877648d98708e59828490fa8395ad84bcf697eb58e948382ac4d3b601d0"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_documentation_current_state.py",
+    "original_sha256": "4baaea7dc2a8175695973186c29882f1feb365e8bfb59d05baa38f668bb1dc31",
+    "archive_sha256": "4baaea7dc2a8175695973186c29882f1feb365e8bfb59d05baa38f668bb1dc31"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_external_inventory.py",
+    "original_sha256": "2415cb4c96bee4042edb294d612ea91ade8a6641feb601d352813483122d923d",
+    "archive_sha256": "ba4ed6d4263a557eb68759776118df45eb2198c968661e7befa97d98146b4621"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_external_inventory_functional.py",
+    "original_sha256": "bd875f5ac85703b594b31d4dad050b83394ac064af066b0b6903df7bd9f80c92",
+    "archive_sha256": "bd875f5ac85703b594b31d4dad050b83394ac064af066b0b6903df7bd9f80c92"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_external_provision_plan.py",
+    "original_sha256": "5690ab5c6c1b2680417ad5277dd8264407f26f65186d8fb883dfbe2ca6725e3d",
+    "archive_sha256": "a9797cf16db0b4e09ece5c1ea7794e87f9ff31dc27078561afb20273694d138e"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_final_bats.py",
+    "original_sha256": "3bd2998a93f56288a47eb0633ce58b5ebac8ad43c997b1db542689c1083f7951",
+    "archive_sha256": "d49b0f052e462234ad561f080c7f3bb144eb98f6e0ed4dc667480e7950295d73"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_final_candidate_guards.py",
+    "original_sha256": "812a8191af502d35f463fd110c5e56767c60daa23e4a884dfc4f162a04819043",
+    "archive_sha256": "812a8191af502d35f463fd110c5e56767c60daa23e4a884dfc4f162a04819043"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_folha_interpret.py",
+    "original_sha256": "97f587751f5b73af5091e33c372b7f4de78b3271c364ec029f7f64c77b6baefe",
+    "archive_sha256": "97f587751f5b73af5091e33c372b7f4de78b3271c364ec029f7f64c77b6baefe"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_folha_writer_preexecution.py",
+    "original_sha256": "4991bfe565ae0f85c5c52887d47cc4b1fd859b01ba68421ca68f0a822b362862",
+    "archive_sha256": "68f5b0c9609cb6c60c38e5b2bf168e9dec9e9fff23cda40fd0810bdf6a6ccfbe"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_frontdoor_adversarial.py",
+    "original_sha256": "6d8d760937e3d44218d645f73e7a2746db4b0903a51671d2a1df8a0cbbe45986",
+    "archive_sha256": "6d8d760937e3d44218d645f73e7a2746db4b0903a51671d2a1df8a0cbbe45986"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_frontdoor_boundaries.py",
+    "original_sha256": "4374c7d532c951501007de7b3ae72940bcda1d91de8021de10d633e9038a713d",
+    "archive_sha256": "4374c7d532c951501007de7b3ae72940bcda1d91de8021de10d633e9038a713d"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_frontdoor_host_boundary.py",
+    "original_sha256": "d792b4d3443bf779336546107026b5ac887730b925b9d5b84ddf192041141d16",
+    "archive_sha256": "d792b4d3443bf779336546107026b5ac887730b925b9d5b84ddf192041141d16"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_frontdoor_languagetool_shadow.py",
+    "original_sha256": "b7ca130e88927c18e96eab2b02af8baa8793350821992fbb63bf8c8cfaad8bba",
+    "archive_sha256": "b7ca130e88927c18e96eab2b02af8baa8793350821992fbb63bf8c8cfaad8bba"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_frontdoor_natural.py",
+    "original_sha256": "0cdb57cbbd13bb59d3a1525cdd74552aa6082f3e3d6bf3423d9336eb152efe76",
+    "archive_sha256": "0cdb57cbbd13bb59d3a1525cdd74552aa6082f3e3d6bf3423d9336eb152efe76"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_frontdoor_preexecution_gate.py",
+    "original_sha256": "2d7d94a7eb9493e357d9ba993015eb14d72cdd75c9b7f06bc69c70dba268c160",
+    "archive_sha256": "5178fe29eed0880659da5ccfdfa1171c91e7764d441ab70c66c5f5e8824107f4"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_frontdoor_prefixes.py",
+    "original_sha256": "735df2e5fdffad5777f45aaa1a1aef447e0f9055d5fd29cb7647b1f2fdd36caa",
+    "archive_sha256": "735df2e5fdffad5777f45aaa1a1aef447e0f9055d5fd29cb7647b1f2fdd36caa"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_frontdoor_refusals.py",
+    "original_sha256": "b12ed15333a5f831470bf6ac63d82a95fe8d03255bbdb0a276cbc6512031e560",
+    "archive_sha256": "b12ed15333a5f831470bf6ac63d82a95fe8d03255bbdb0a276cbc6512031e560"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_gateway_real_host.py",
+    "original_sha256": "9d2560319ee8b8ab761606757146a5706293a7b90ba268f9685cc3231fc8c79c",
+    "archive_sha256": "fb045b121ed21b0e73983ceee9aa077581e7663a05f47c9524bf5727edeb121b"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_generic_capability_router.py",
+    "original_sha256": "0b136b639ac05039eaa9e3e6c40bdf3a781fd3b14d266c87672ab0a687f8e61a",
+    "archive_sha256": "0b136b639ac05039eaa9e3e6c40bdf3a781fd3b14d266c87672ab0a687f8e61a"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_generic_folha_gate.py",
+    "original_sha256": "114565953c1cc7154d33aa9be45332d86741a88db17e9af5c55e5a094e61bb08",
+    "archive_sha256": "114565953c1cc7154d33aa9be45332d86741a88db17e9af5c55e5a094e61bb08"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_host.py",
+    "original_sha256": "485ff241a3383181f06e91fbbe6050d8ff13bef65eddaf131af7b45e8f95906f",
+    "archive_sha256": "485ff241a3383181f06e91fbbe6050d8ff13bef65eddaf131af7b45e8f95906f"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_inline_proofread.py",
+    "original_sha256": "14d1ef0885fe462b98ab0815226396aa544c83fc4b19354a69d086cdb7225ace",
+    "archive_sha256": "14d1ef0885fe462b98ab0815226396aa544c83fc4b19354a69d086cdb7225ace"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_internal_transport_ab.py",
+    "original_sha256": "05231d6a984c4a56ba07fd0f311d6edaa76660e0d9e23fdecee5ffb669af4897",
+    "archive_sha256": "79fdc87817e2253ecada0eaf9d83f92b0ce2869d86fce3ec97610b0463170948"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_kernel_crash_contract.py",
+    "original_sha256": "9adb1f2a11d1af408fc9475988ac8f0d48945a9f111aecc9fb859f60b748be06",
+    "archive_sha256": "9adb1f2a11d1af408fc9475988ac8f0d48945a9f111aecc9fb859f60b748be06"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_kernel_review.py",
+    "original_sha256": "de2558c71867943aaefcc347f882b5fc805eae06270cc9c35ad2104b7afc747b",
+    "archive_sha256": "de2558c71867943aaefcc347f882b5fc805eae06270cc9c35ad2104b7afc747b"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_lab_practical_boundaries.py",
+    "original_sha256": "d026c505cff4907639b95f5e5bdd2833300c67bf6e19856815e8ae8476794ecb",
+    "archive_sha256": "1b54c8913c73dc7633fa665a5da0ee16308ae8f37278d7f4d2ecb16c93733009"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_languagetool.py",
+    "original_sha256": "bb4eb4502491de3df4b81570e9d804302993047eeef0e76b8e7ee58d9ec0bd99",
+    "archive_sha256": "bb4eb4502491de3df4b81570e9d804302993047eeef0e76b8e7ee58d9ec0bd99"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_launcher_binding.py",
+    "original_sha256": "53411e4cf519afa8c5586a5c38f3cc1de1970e56d308e4bb1acc350dc879952e",
+    "archive_sha256": "53411e4cf519afa8c5586a5c38f3cc1de1970e56d308e4bb1acc350dc879952e"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_llamacpp_openai_boundary_10000.py",
+    "original_sha256": "70c5625534fcf7dd207d3d343f3ae33f9ae0d5da673f04e7731ecd55783b79ca",
+    "archive_sha256": "70c5625534fcf7dd207d3d343f3ae33f9ae0d5da673f04e7731ecd55783b79ca"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_logic_authority_100k.py",
+    "original_sha256": "e7a5a2d63ad8278b8aac2a133cb4415c94a283f2919e1aa98fb1f69430647c4c",
+    "archive_sha256": "e7a5a2d63ad8278b8aac2a133cb4415c94a283f2919e1aa98fb1f69430647c4c"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_mcp_client.py",
+    "original_sha256": "772dcd46b15774cde89984096905649ae1b89ff8415a83693b059359a1e37f92",
+    "archive_sha256": "7dcb14b903a7544b64fc3752c9b4985d146f61b46ff09c33369a7f89e6cd6f4b"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_mcp_client_1000.py",
+    "original_sha256": "0aeb58d50cba9e940df6f175e2d337f32760198d6e91d95dd39d1005eb41f33c",
+    "archive_sha256": "0aeb58d50cba9e940df6f175e2d337f32760198d6e91d95dd39d1005eb41f33c"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_media_tools.py",
+    "original_sha256": "14267be1faab2856547ee180f278624af73943f6e775328d882de9a213283cb6",
+    "archive_sha256": "14267be1faab2856547ee180f278624af73943f6e775328d882de9a213283cb6"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_media_tools_checker.py",
+    "original_sha256": "d6d5eec91456ad4b49917eab572fd1825e6e132da941b2a42450db4c875879b8",
+    "archive_sha256": "1e174f95b9c8d30d4c2a89f3828dc14a1c5dd6349e3f353a2f5a941d24422f4f"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_media_tools_installer.py",
+    "original_sha256": "bfc52f2e68c277ff03f57633496d79fe40e150247c4d81a8180c50068c20016d",
+    "archive_sha256": "bfc52f2e68c277ff03f57633496d79fe40e150247c4d81a8180c50068c20016d"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_media_tools_mcp.py",
+    "original_sha256": "5e2ac568aed663cf1c470748a5102648d97110fdfa7909f15f3cc3a28b2d5287",
+    "archive_sha256": "5e2ac568aed663cf1c470748a5102648d97110fdfa7909f15f3cc3a28b2d5287"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_memory_search_http.py",
+    "original_sha256": "687ae1ad4d6f538bd3c5c24fce862bdab7eaa02e9c27e47c480045e78f04a05a",
+    "archive_sha256": "687ae1ad4d6f538bd3c5c24fce862bdab7eaa02e9c27e47c480045e78f04a05a"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_multimedia.py",
+    "original_sha256": "4243521e35cf5906b00c9d51ea54b726a6693dcaae4a08342657eee6c17750b3",
+    "archive_sha256": "4243521e35cf5906b00c9d51ea54b726a6693dcaae4a08342657eee6c17750b3"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_native_writer_route_real.py",
+    "original_sha256": "d6eb1b8cc3049b773b3e2f3c924ba8265a8469b3fd1e3fbd70d941e654032d7a",
+    "archive_sha256": "a424f3b089c3bc0a35f51dc18b8f94bd7f25d3690012180e9794bbd03c7ccee6"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_natural_ambiguity_100k.py",
+    "original_sha256": "f20a28db4b08e97e07f18aa92a807293aa8fabdc30a465bf096f7b1a9fe125ba",
+    "archive_sha256": "f20a28db4b08e97e07f18aa92a807293aa8fabdc30a465bf096f7b1a9fe125ba"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_natural_bridge_20k.py",
+    "original_sha256": "f7ca6cff5ad9a9a0d6eea46e60217e1e79e935647c4298d9a06173eab8d05c5f",
+    "archive_sha256": "f7ca6cff5ad9a9a0d6eea46e60217e1e79e935647c4298d9a06173eab8d05c5f"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_no_forbidden_legacy_runtime.py",
+    "original_sha256": "c77d9f1241100d9d4b02b55747cfe02d6d4bee4d413947e8a3aa2a630515335f",
+    "archive_sha256": "80d0b069258a84665f5308b7b4b556677fc22e41bc0a0d626f6e5ad5799bd645"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_notebook.py",
+    "original_sha256": "5d1430a32db62f382736fd8c683b24d5e34cc4547eec6059220c9e1a9b9114fd",
+    "archive_sha256": "5d1430a32db62f382736fd8c683b24d5e34cc4547eec6059220c9e1a9b9114fd"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_office.py",
+    "original_sha256": "fab7d764f8f2d3ab69639183928f05c2b5f5770d140713224a22f91f317f8565",
+    "archive_sha256": "fab7d764f8f2d3ab69639183928f05c2b5f5770d140713224a22f91f317f8565"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_open_notebook_kernel_e2e.py",
+    "original_sha256": "590a88e6e8b389c8fca6189cc939e38cbc555827bff81c8468d7b298145e9f35",
+    "archive_sha256": "465f004fbbce2d9c9343b71c993a11ca3feabf1bd2ea00448712f2316920e742"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_open_notebook_mcp_real.py",
+    "original_sha256": "76d88dee89a3db3ab0284be0eb28b4e4256f66f3fed5517441ab843bfe0021fd",
+    "archive_sha256": "7962dfce1619114b26089d9b0dbea9727ecd8099602b8f86dafbf7f71cb39995"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_paths_100k.py",
+    "original_sha256": "c70ed979ff686a42b9de88acabffa7f8636457e0ad49bd6fac32300301afde16",
+    "archive_sha256": "c70ed979ff686a42b9de88acabffa7f8636457e0ad49bd6fac32300301afde16"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_pc_sync.py",
+    "original_sha256": "ac3cefe18ce2621b2c7d5ae33330a66b267138eb448ed020ada24803364781b0",
+    "archive_sha256": "ac3cefe18ce2621b2c7d5ae33330a66b267138eb448ed020ada24803364781b0"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_prepare_nexus_core.py",
+    "original_sha256": "1c959ee8d0c35b9d51b0b0b33a7d97fd4697cdbf1d3b861e779bd94c6e9a49aa",
+    "archive_sha256": "1c959ee8d0c35b9d51b0b0b33a7d97fd4697cdbf1d3b861e779bd94c6e9a49aa"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_product_flows_5000.py",
+    "original_sha256": "437a66baac502528c35a150bf6e5e99a926c3491b9edfdeb0757d7d05ba60cd3",
+    "archive_sha256": "437a66baac502528c35a150bf6e5e99a926c3491b9edfdeb0757d7d05ba60cd3"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_product_system_50000.py",
+    "original_sha256": "d3d3f4c98db2bd0c20762b2750d27c1378b02f77172c8fc96fffaf2594eddc93",
+    "archive_sha256": "d3d3f4c98db2bd0c20762b2750d27c1378b02f77172c8fc96fffaf2594eddc93"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_product_themes_canonical_200k.py",
+    "original_sha256": "fcdf868527dc7fce6f80a702c056de3873bdd2c62d4a310c8ad849326b210b44",
+    "archive_sha256": "a28b98f705b672b79ac74a5868d9cf8c44ddcc78a12fe02cdec40b85210e47c5"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_public_product_routes_10000.py",
+    "original_sha256": "f6a8e4cf26da20323373d5cb608324e96b2572f8f5820af4fbe977bee5337fa7",
+    "archive_sha256": "f6a8e4cf26da20323373d5cb608324e96b2572f8f5820af4fbe977bee5337fa7"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_public_product_routes_all_50000.py",
+    "original_sha256": "82f22a1b4a7dece6cb6d2f10fb02556216381a7a451d1c9e3e09ed0dd56eaac8",
+    "archive_sha256": "82f22a1b4a7dece6cb6d2f10fb02556216381a7a451d1c9e3e09ed0dd56eaac8"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_public_product_routes_mcp.py",
+    "original_sha256": "d92f1f61f45bec38acec6b95912148bd873a0ec1fd85ee9dbd5689af440a2fbd",
+    "archive_sha256": "d92f1f61f45bec38acec6b95912148bd873a0ec1fd85ee9dbd5689af440a2fbd"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_repository_syntax_audit.py",
+    "original_sha256": "51fe477e6c6d043a7fca4973995133259d4d4d2b5e4fe7abadaf07e7468d84b3",
+    "archive_sha256": "05671973c5f64c6c61f417ff2d471c2f7ddbada008004678983a3492fb43971e"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_reverse_flow.py",
+    "original_sha256": "65241506d268f6af5b20c5433200aad98cffa57a4c7fb125c1a2f6b1fe593db6",
+    "archive_sha256": "d7897c7439b04ecbd7318dc73fe156f84387cb2d35c3f60f9641e78ce853383a"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_runtime_dependency_ownership.py",
+    "original_sha256": "e52521627497ca0c110deefd0b008aa012425707884bd01ef7949523a2dcf1a9",
+    "archive_sha256": "256d26db4e401ac3d103520e2ee3e47997ad7d87fe74b6c962599a6e2457df01"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_schema_consistency.py",
+    "original_sha256": "2834d0298b3986feb8d2ca4afbc7396192ac6682bcbf9ce06c96db3855c73703",
+    "archive_sha256": "2834d0298b3986feb8d2ca4afbc7396192ac6682bcbf9ce06c96db3855c73703"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_single_runtime_boundary.py",
+    "original_sha256": "d1ffc709aaf2bdf2d80dae1e0dad9aead18d6b133d7b86683ef8ae6f9da8fd3a",
+    "archive_sha256": "5bdfa8beb6e80fad58fd9ffdc08a395502cc15d33f8d002a41d4156ed38a8a64"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_startup.py",
+    "original_sha256": "686d013d6515d90c125c2464c2790b87e3dc3811cdfe8bd89205411c1e598ed6",
+    "archive_sha256": "686d013d6515d90c125c2464c2790b87e3dc3811cdfe8bd89205411c1e598ed6"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_store.py",
+    "original_sha256": "50d06b81d02829d0911cd976cadbb60cfe79b79601b98dfb72b2f04a1099021d",
+    "archive_sha256": "50d06b81d02829d0911cd976cadbb60cfe79b79601b98dfb72b2f04a1099021d"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_store_create_crash_real.py",
+    "original_sha256": "bcc1c36567d5f0e8630ecdec26a92e31cae9a9cbcbad56fb0425b25d0139959f",
+    "archive_sha256": "bcc1c36567d5f0e8630ecdec26a92e31cae9a9cbcbad56fb0425b25d0139959f"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_stress_matrix_100k.py",
+    "original_sha256": "5638b6547e701b33940f7a787196d1080a11325e8a22ca54cb1d03a2f20cdef7",
+    "archive_sha256": "5638b6547e701b33940f7a787196d1080a11325e8a22ca54cb1d03a2f20cdef7"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_system_varied_200k.py",
+    "original_sha256": "40075c8cc2f849eef4ade180d7977810ecfbcc455f923aa5d320d643f06b4585",
+    "archive_sha256": "881c09593537d923de16636da1e8e0343a4f0ca7c3bfbfaa3b855c23ecb950bf"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_tiny_classifier_local.py",
+    "original_sha256": "faabfec31391c1fd897ea80f1e8c4de8644dbc2236be8b1fbde0e3d4a9df56e4",
+    "archive_sha256": "faabfec31391c1fd897ea80f1e8c4de8644dbc2236be8b1fbde0e3d4a9df56e4"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_vaults.py",
+    "original_sha256": "1c1d9f7e72e4d990e1d6690bb41a5964e2d91dfb6ef826d25a0cc5a490418edf",
+    "archive_sha256": "1c1d9f7e72e4d990e1d6690bb41a5964e2d91dfb6ef826d25a0cc5a490418edf"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_windows_complete_installer.py",
+    "original_sha256": "0d1bbfeacdbf1ea4f3068a2497a1a197c314ef1831530fc709d57983be677fa6",
+    "archive_sha256": "2f735cf4ed143eef17bb8823ce4f924159017b066e5439fe942cf40f33e76099"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_windows_hash_environment.py",
+    "original_sha256": "d7783fef8cd133eba3c6751a73e8febccfdbd0c58799fbb7a228743faf5c45d3",
+    "archive_sha256": "d7783fef8cd133eba3c6751a73e8febccfdbd0c58799fbb7a228743faf5c45d3"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_windows_installer_runtime_fallback.py",
+    "original_sha256": "5de7e57c63b6cc7258e872466ef380c1ac4e2f947ba5b1ea64b21e7dfedc6229",
+    "archive_sha256": "5de7e57c63b6cc7258e872466ef380c1ac4e2f947ba5b1ea64b21e7dfedc6229"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_windows_stack_structural_300k.py",
+    "original_sha256": "278feb903d3b231ff0289b186c64e2ddd8368bfae4d81d3678c0ed72cc156485",
+    "archive_sha256": "278feb903d3b231ff0289b186c64e2ddd8368bfae4d81d3678c0ed72cc156485"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_workflows.py",
+    "original_sha256": "8dc78d3c5d47a2689475e34884e718dc74c14f28ed5769ccfc9bee4757b1aff3",
+    "archive_sha256": "8dc78d3c5d47a2689475e34884e718dc74c14f28ed5769ccfc9bee4757b1aff3"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_writer_real_libreoffice.py",
+    "original_sha256": "3d96349643ddb897e6faf466e30ef05e87c7fb24a008642407a5464b2c543ac6",
+    "archive_sha256": "3d96349643ddb897e6faf466e30ef05e87c7fb24a008642407a5464b2c543ac6"
+  },
+  {
+    "path": "nexus-anterior/nexus/tests/test_writer_tree_identity.py",
+    "original_sha256": "b3bf80a10787a3c7ca4ab4679dc2825edefe9e4ed778df77eeebf6090236363f",
+    "archive_sha256": "b3bf80a10787a3c7ca4ab4679dc2825edefe9e4ed778df77eeebf6090236363f"
+  },
+  {
+    "path": "nexus-anterior/nexus/tiny_classifier.py",
+    "original_sha256": "5556e609f5bb9941712cc9e01bbd4704cee20a575b4b4831101ce4379203412b",
+    "archive_sha256": "5556e609f5bb9941712cc9e01bbd4704cee20a575b4b4831101ce4379203412b"
+  },
+  {
+    "path": "nexus-anterior/nexus/ui/app.js",
+    "original_sha256": "8d47180398c87a39bbf704629b5b2ab66d0a13dd878aae9c7e828fa99d39f2bf",
+    "archive_sha256": "8d47180398c87a39bbf704629b5b2ab66d0a13dd878aae9c7e828fa99d39f2bf"
+  },
+  {
+    "path": "nexus-anterior/nexus/ui/index.html",
+    "original_sha256": "ccb4ef6aa477ddafd67d63abbfb90f4907764aaa29542bdcfdc3569089d8b719",
+    "archive_sha256": "ccb4ef6aa477ddafd67d63abbfb90f4907764aaa29542bdcfdc3569089d8b719"
+  },
+  {
+    "path": "nexus-anterior/nexus/ui/style.css",
+    "original_sha256": "83b97021d7115c40bb92bbb07e70d2f5b16b6aa99c07ddfe8c94e870138f1469",
+    "archive_sha256": "83b97021d7115c40bb92bbb07e70d2f5b16b6aa99c07ddfe8c94e870138f1469"
+  },
+  {
+    "path": "nexus-anterior/nexus/windows/bootstrap-nexus-local.ps1",
+    "original_sha256": "2340ef4483e7020ccc0c30530d3d0705173c229ba0b3b80246e533f8a5045e96",
+    "archive_sha256": "2340ef4483e7020ccc0c30530d3d0705173c229ba0b3b80246e533f8a5045e96"
+  },
+  {
+    "path": "nexus-anterior/nexus/windows/check-media-tools.ps1",
+    "original_sha256": "5bc2c98d73906156b43055a05f87f91c508b9791069602cd4e9bec666d3c9512",
+    "archive_sha256": "5bc2c98d73906156b43055a05f87f91c508b9791069602cd4e9bec666d3c9512"
+  },
+  {
+    "path": "nexus-anterior/nexus/windows/check-nexus.ps1",
+    "original_sha256": "5aa3801c44c146bb65e9114d5b6707ef8ba6d5a338c1f4a93ec880bfa2c3f7a9",
+    "archive_sha256": "5aa3801c44c146bb65e9114d5b6707ef8ba6d5a338c1f4a93ec880bfa2c3f7a9"
+  },
+  {
+    "path": "nexus-anterior/nexus/windows/check_media_tools.py",
+    "original_sha256": "0a0595962a0fa77550ee6fb167e96c705b5163c9cb28f1de99819818a858aa2f",
+    "archive_sha256": "0a0595962a0fa77550ee6fb167e96c705b5163c9cb28f1de99819818a858aa2f"
+  },
+  {
+    "path": "nexus-anterior/nexus/windows/configure-moneyprinterturbo-local.py",
+    "original_sha256": "1273924111f4e0057c425bdc89e1cfd678557f539d18d10fbb2ab4e162cdb331",
+    "archive_sha256": "5e734afa075e6a40623c437a6571dea9dce54669a7dd06c75b8b0ddd7a5a21d4"
+  },
+  {
+    "path": "nexus-anterior/nexus/windows/configure-open-notebook-local.py",
+    "original_sha256": "be890de6a962887ae6a653147dd0cd0c4ef667d69163a8318cd25d212228d07a",
+    "archive_sha256": "183086263b23258074c78d66e71cffa9b2fc04c290d8a2ccd6fa3a1811d6e66d"
+  },
+  {
+    "path": "nexus-anterior/nexus/windows/documentary_bridge.py",
+    "original_sha256": "01bbe650c7e0be5e11c395f977bdd62c768fbe2a3d2ea83aa1d3e840bab5bae0",
+    "archive_sha256": "7845aa0faefb33b4cf31be86325f2ac061845e85d49a493894eeb082489a16d2"
+  },
+  {
+    "path": "nexus-anterior/nexus/windows/install-media-tools.ps1",
+    "original_sha256": "4a1dc7b3c1b11ce15665b66fd3e54f2e6ade604b58a1ce91e71bfcef243e1b64",
+    "archive_sha256": "4a1dc7b3c1b11ce15665b66fd3e54f2e6ade604b58a1ce91e71bfcef243e1b64"
+  },
+  {
+    "path": "nexus-anterior/nexus/windows/install-nexus-complete.ps1",
+    "original_sha256": "317da25af1e588347887b0c852af06596e8d6fb984dde88592c4e25c527513e1",
+    "archive_sha256": "aefe16dc4ab38fb661feccd3adb3c06f6b9d17d1c1c0d03d91095f33732a86b2"
+  },
+  {
+    "path": "nexus-anterior/nexus/windows/install-nexus-test-isolated.ps1",
+    "original_sha256": "9654078933f47289ab529125f59f8dc429523850a405dc67b6c58ed2f3ea2b85",
+    "archive_sha256": "9654078933f47289ab529125f59f8dc429523850a405dc67b6c58ed2f3ea2b85"
+  },
+  {
+    "path": "nexus-anterior/nexus/windows/inventory-external-tools.ps1",
+    "original_sha256": "da6a96b49aae23f33b7e1ee1ad6244985596c127af8ef91cd804baeff02ac6cb",
+    "archive_sha256": "da6a96b49aae23f33b7e1ee1ad6244985596c127af8ef91cd804baeff02ac6cb"
+  },
+  {
+    "path": "nexus-anterior/nexus/windows/local-host/.gitattributes",
+    "original_sha256": "d5861c57d34ec66b16a1fcd3fed23eb908ff08dfa908cebb4ab340b56b290d90",
+    "archive_sha256": "d5861c57d34ec66b16a1fcd3fed23eb908ff08dfa908cebb4ab340b56b290d90"
+  },
+  {
+    "path": "nexus-anterior/nexus/windows/local-host/README.md",
+    "original_sha256": "f5cf8b4531edda6c1cf9f5fed38259a006ab9fbcd85226223e60d8974f9f87ab",
+    "archive_sha256": "f5cf8b4531edda6c1cf9f5fed38259a006ab9fbcd85226223e60d8974f9f87ab"
+  },
+  {
+    "path": "nexus-anterior/nexus/windows/local-host/VALIDATION.json",
+    "original_sha256": "c696417a75941ca7a5b18b3f8ffa1e79282a56a6b04e1098d7e17ce8fbeae929",
+    "archive_sha256": "c696417a75941ca7a5b18b3f8ffa1e79282a56a6b04e1098d7e17ce8fbeae929"
+  },
+  {
+    "path": "nexus-anterior/nexus/windows/local-host/files/Abrir Nexus.cmd",
+    "original_sha256": "d7b1ea6ab16be226eacf27f8c5615adc5bdbfb5c2c9b29568c65df8a864c3515",
+    "archive_sha256": "d7b1ea6ab16be226eacf27f8c5615adc5bdbfb5c2c9b29568c65df8a864c3515"
+  },
+  {
+    "path": "nexus-anterior/nexus/windows/local-host/files/abrir-nexus.py",
+    "original_sha256": "f2f476b3b3efffef5f5fdb13b71486887cea554bfe30b2a0768846be66eb76cb",
+    "archive_sha256": "f2f476b3b3efffef5f5fdb13b71486887cea554bfe30b2a0768846be66eb76cb"
+  },
+  {
+    "path": "nexus-anterior/nexus/windows/local-host/files/abrir-zotero.ps1",
+    "original_sha256": "729fa8bf305cbf03aa91db3c8d8a185a5fb93c2ee3be1193ad69b9d3fe368597",
+    "archive_sha256": "729fa8bf305cbf03aa91db3c8d8a185a5fb93c2ee3be1193ad69b9d3fe368597"
+  },
+  {
+    "path": "nexus-anterior/nexus/windows/local-host/files/configuracao/ponte-forge-local.py",
+    "original_sha256": "74ba3613c198f4356125a61f5c90b9e5e37135dbe3391ccebcaf5d6f0b5b7684",
+    "archive_sha256": "74ba3613c198f4356125a61f5c90b9e5e37135dbe3391ccebcaf5d6f0b5b7684"
+  },
+  {
+    "path": "nexus-anterior/nexus/windows/local-host/files/configuracao/ponte-piper-local.py",
+    "original_sha256": "ce5bf13585f61eddd74f6cc97b62cadfc9424a7aa01e340bddd4f33cfed1e20b",
+    "archive_sha256": "ab4120cd511c0f69cc296c7b1b1aa66dbebf42a98492de400724086f44b9c627"
+  },
+  {
+    "path": "nexus-anterior/nexus/windows/local-host/files/configuracao/servicos-ia-local.py",
+    "original_sha256": "70543b2e24e77cb132b66d2469372f3c775d4435d0f6e965c14dfed603a43f8b",
+    "archive_sha256": "70543b2e24e77cb132b66d2469372f3c775d4435d0f6e965c14dfed603a43f8b"
+  },
+  {
+    "path": "nexus-anterior/nexus/windows/local-host/files/configuracao/servicos-open-notebook.py",
+    "original_sha256": "0501c8aae8f04e9bebee9f6ded375558806cff0a435e4f538f95a581affb2714",
+    "archive_sha256": "0501c8aae8f04e9bebee9f6ded375558806cff0a435e4f538f95a581affb2714"
+  },
+  {
+    "path": "nexus-anterior/nexus/windows/local-host/files/configuracao/surreal-wsl.py",
+    "original_sha256": "bf42bf1c3507a9889a87e3018cfe2ebd15866c58a3ad6cf3b5fb6aa45a58bd4e",
+    "archive_sha256": "bf42bf1c3507a9889a87e3018cfe2ebd15866c58a3ad6cf3b5fb6aa45a58bd4e"
+  },
+  {
+    "path": "nexus-anterior/nexus/windows/local-host/install-local-host.ps1",
+    "original_sha256": "4a6fb00efed25642a347875aca4222fc20e1eb7d71a9a9ce8399c699bf36e71d",
+    "archive_sha256": "4a6fb00efed25642a347875aca4222fc20e1eb7d71a9a9ce8399c699bf36e71d"
+  },
+  {
+    "path": "nexus-anterior/nexus/windows/local-host/local-host-manifest.json",
+    "original_sha256": "43968366d64277ee8b448eb38a6e87e51994666b373abb7528ffdb2258c71043",
+    "archive_sha256": "43968366d64277ee8b448eb38a6e87e51994666b373abb7528ffdb2258c71043"
+  },
+  {
+    "path": "nexus-anterior/nexus/windows/local-host/moneyprinterturbo/UPSTREAM-LICENSE",
+    "original_sha256": "87dd19b6a0779e14a91c1b06423ef251df37e89666160c031130a26bae68c229",
+    "archive_sha256": "87dd19b6a0779e14a91c1b06423ef251df37e89666160c031130a26bae68c229"
+  },
+  {
+    "path": "nexus-anterior/nexus/windows/local-host/moneyprinterturbo/ace-step-local.patch",
+    "original_sha256": "68c91b8bdd02407427a9a4e6c04c7d41a1fe62b233c46314ca03296a4b3bcd36",
+    "archive_sha256": "68c91b8bdd02407427a9a4e6c04c7d41a1fe62b233c46314ca03296a4b3bcd36"
+  },
+  {
+    "path": "nexus-anterior/nexus/windows/local-host/moneyprinterturbo/base.json",
+    "original_sha256": "662e90cc0fe587bdd4507aad95e3ab795812069086b3f39a792a59b8f9bf2935",
+    "archive_sha256": "662e90cc0fe587bdd4507aad95e3ab795812069086b3f39a792a59b8f9bf2935"
+  },
+  {
+    "path": "nexus-anterior/nexus/windows/nexus-launcher.py",
+    "original_sha256": "6c4d0bf442cff3949e98735bccc9295765e92b4649b1f6e77befcd346a6093f1",
+    "archive_sha256": "6c4d0bf442cff3949e98735bccc9295765e92b4649b1f6e77befcd346a6093f1"
+  },
+  {
+    "path": "nexus-anterior/nexus/windows/plan-external-provisioning.ps1",
+    "original_sha256": "e0853e291f20b59b0820bd90a4135c89f0e8f47b800849e4b8f22bab4d87838e",
+    "archive_sha256": "e0853e291f20b59b0820bd90a4135c89f0e8f47b800849e4b8f22bab4d87838e"
+  },
+  {
+    "path": "nexus-anterior/nexus/windows/prepare-nexus-core.ps1",
+    "original_sha256": "10a55bc63c4fa8aa67da32363614fdde59e326971f4a63e13b87da19294ae78a",
+    "archive_sha256": "10a55bc63c4fa8aa67da32363614fdde59e326971f4a63e13b87da19294ae78a"
+  },
+  {
+    "path": "nexus-anterior/nexus/windows/setup-isolation.ps1",
+    "original_sha256": "c6121632f1c87b3c2e8562c4ade4ec73d8d16d0dc1cef2e975142e3d520f08ef",
+    "archive_sha256": "c6121632f1c87b3c2e8562c4ade4ec73d8d16d0dc1cef2e975142e3d520f08ef"
+  },
+  {
+    "path": "nexus-anterior/nexus/windows/start-nexus-test-isolated.ps1",
+    "original_sha256": "49e3cef24d331fe7619be8a6197737db8cd4930f7ceba5992e3213171f5ac7da",
+    "archive_sha256": "49e3cef24d331fe7619be8a6197737db8cd4930f7ceba5992e3213171f5ac7da"
+  },
+  {
+    "path": "nexus-anterior/nexus/windows/sync-nexus-code.ps1",
+    "original_sha256": "e535e1fff3c27cc74a5a5c1816f409495e724b812400b96708a67a2d6eb62c22",
+    "archive_sha256": "e535e1fff3c27cc74a5a5c1816f409495e724b812400b96708a67a2d6eb62c22"
+  },
+  {
+    "path": "nexus-anterior/nexus/windows/sync-nexus-pc.ps1",
+    "original_sha256": "35c27443d86a4127114f3a39b18e75c80eb898eddbe15ac572a563f8232114a3",
+    "archive_sha256": "35c27443d86a4127114f3a39b18e75c80eb898eddbe15ac572a563f8232114a3"
+  },
+  {
+    "path": "nexus-anterior/nexus/windows/test-isolation-s4u.ps1",
+    "original_sha256": "ab9dbc4bc70d2c6deaafce1ef42fd6887ac1222b6da1b3e43bca8cd22d4d7147",
+    "archive_sha256": "ab9dbc4bc70d2c6deaafce1ef42fd6887ac1222b6da1b3e43bca8cd22d4d7147"
+  },
+  {
+    "path": "nexus-anterior/nexus/windows/test-isolation.ps1",
+    "original_sha256": "19c1a34708819e61832cf5267e11dd5709e59949894368874f2b5fc7654fb3c5",
+    "archive_sha256": "19c1a34708819e61832cf5267e11dd5709e59949894368874f2b5fc7654fb3c5"
+  },
+  {
+    "path": "nexus-anterior/nexus/windows/test-post-install.ps1",
+    "original_sha256": "be85c19b9b96289c4598edaab7b2400015fd33baac805d22c30c779c548759e8",
+    "archive_sha256": "2987d95dc4df1cd3813e431225c641b544ba1062c13dc43b255d06f50e073b87"
+  },
+  {
+    "path": "nexus-anterior/nexus/windows/test-two-folders.ps1",
+    "original_sha256": "05be3b27801cc4ebf3795abb91e65edf1d7321b6629d7571f2b8cf820d9b49a3",
+    "archive_sha256": "05be3b27801cc4ebf3795abb91e65edf1d7321b6629d7571f2b8cf820d9b49a3"
+  },
+  {
+    "path": "nexus-anterior/nexus/windows_sandbox.py",
+    "original_sha256": "95e5b0424ea2019429365b6278619391093bb8d4309d6c067ad30898210f79c0",
+    "archive_sha256": "95e5b0424ea2019429365b6278619391093bb8d4309d6c067ad30898210f79c0"
+  },
+  {
+    "path": "nexus-anterior/package.json",
+    "original_sha256": "538d7eab97ec3b170cfe5cf3f457d48ccb478ed25d272f9313b4f4858da387f8",
+    "archive_sha256": "538d7eab97ec3b170cfe5cf3f457d48ccb478ed25d272f9313b4f4858da387f8"
+  },
+  {
+    "path": "nexus-anterior/requirements-auditoria.txt",
+    "original_sha256": "121cb94e6ddbac5d9fedeee36e2f09c2ac353a1a107f60a48bc374eb525b0b74",
+    "archive_sha256": "121cb94e6ddbac5d9fedeee36e2f09c2ac353a1a107f60a48bc374eb525b0b74"
+  },
+  {
+    "path": "nexus-anterior/server.js",
+    "original_sha256": "5bb213b9faa160bc5ff6a04d3b3f7d2d33ba6aea0cd098f893bca2777b9f9bca",
+    "archive_sha256": "5bb213b9faa160bc5ff6a04d3b3f7d2d33ba6aea0cd098f893bca2777b9f9bca"
+  },
+  {
+    "path": "nexus-anterior/tasks/IMP-001.md",
+    "original_sha256": "2d628bf2144039e08bc8f57764115f6afcb3d39da9098d88f226c5aa317f245b",
+    "archive_sha256": "2d628bf2144039e08bc8f57764115f6afcb3d39da9098d88f226c5aa317f245b"
+  },
+  {
+    "path": "folha-dagu/folha/ARQUIVADO.md",
+    "original_sha256": "513d57491b305badf265d548b34ddef44c71501042027c35ed2de957458cdd23",
+    "archive_sha256": "513d57491b305badf265d548b34ddef44c71501042027c35ed2de957458cdd23"
+  },
+  {
+    "path": "folha-dagu/folha/Migrate-FolhaMemory.ps1",
+    "original_sha256": "4bf160f1fbf0c5fa7504add996359bcc176d8daf4788e8ed1b75afb393af78b0",
+    "archive_sha256": "4bf160f1fbf0c5fa7504add996359bcc176d8daf4788e8ed1b75afb393af78b0"
+  },
+  {
+    "path": "folha-dagu/folha/PLANO-LOCAL.md",
+    "original_sha256": "acb776cbcc4d76648e2857b79e693a5800356c805e240ffbedb21d4e700ee256",
+    "archive_sha256": "acb776cbcc4d76648e2857b79e693a5800356c805e240ffbedb21d4e700ee256"
+  },
+  {
+    "path": "folha-dagu/folha/Tools-Folha.ps1",
+    "original_sha256": "7e95062f587ed7ecda2a224a210c927dd0fd73cf895fc54c20900999e92b9460",
+    "archive_sha256": "7e95062f587ed7ecda2a224a210c927dd0fd73cf895fc54c20900999e92b9460"
+  },
+  {
+    "path": "folha-dagu/folha/defaults/regras/autoridade-e-memorias.md",
+    "original_sha256": "7226dbf89946785bfda8fd9287c58ebd6bc66906209849ba4c122545a31297c5",
+    "archive_sha256": "7226dbf89946785bfda8fd9287c58ebd6bc66906209849ba4c122545a31297c5"
+  },
+  {
+    "path": "folha-dagu/folha/defaults/regras/revisao-livros.md",
+    "original_sha256": "84db0eeb0e5fb98c95eac7f9fafc7eb8cdc008dff24e0e9c50895b9623962eae",
+    "archive_sha256": "84db0eeb0e5fb98c95eac7f9fafc7eb8cdc008dff24e0e9c50895b9623962eae"
+  },
+  {
+    "path": "folha-dagu/folha/templates/pesquisar-tema.yaml",
+    "original_sha256": "a5db3a9c6d96161b8786abda46091b4897aee692972862352290c5972f1b6c5f",
+    "archive_sha256": "a5db3a9c6d96161b8786abda46091b4897aee692972862352290c5972f1b6c5f"
+  },
+  {
+    "path": "folha-dagu/folha/templates/podcast-texto.yaml",
+    "original_sha256": "739e36adcdfad7a3bb0c1af3ba885dfb5bfe87b5274b9868f7102d3eafc95bf8",
+    "archive_sha256": "739e36adcdfad7a3bb0c1af3ba885dfb5bfe87b5274b9868f7102d3eafc95bf8"
+  },
+  {
+    "path": "folha-dagu/folha/templates/resumir-texto.yaml",
+    "original_sha256": "12569f162c6bda06c5f70e4eeb92bc46c84cebf19494741ac55f697e1fc238b0",
+    "archive_sha256": "12569f162c6bda06c5f70e4eeb92bc46c84cebf19494741ac55f697e1fc238b0"
+  },
+  {
+    "path": "folha-dagu/folha/templates/rever-capitulo.yaml",
+    "original_sha256": "4e010ec36f076eae7e76ec71d42edc9dfac5398aad6a289123c61d37ca20f20b",
+    "archive_sha256": "4e010ec36f076eae7e76ec71d42edc9dfac5398aad6a289123c61d37ca20f20b"
+  },
+  {
+    "path": "folha-dagu/folha/tests/artifacts.ps1",
+    "original_sha256": "4c8e1356fa4b062fac86209d74592393229b7e60ffa22961192c81cc1fe3c59f",
+    "archive_sha256": "4c8e1356fa4b062fac86209d74592393229b7e60ffa22961192c81cc1fe3c59f"
+  },
+  {
+    "path": "folha-dagu/folha/.gitignore",
+    "original_sha256": "2f97c77eb3918c2e4edce3f70d32125f234a3d75c8fb32e44c769d17ea4b1ca9",
+    "archive_sha256": "2f97c77eb3918c2e4edce3f70d32125f234a3d75c8fb32e44c769d17ea4b1ca9"
+  },
+  {
+    "path": "folha-dagu/folha/Index-Folha.ps1",
+    "original_sha256": "896fb1f59f83c9f97ebc6f1d56e867791db401f26d0de2f68d5b0586cba60fb1",
+    "archive_sha256": "896fb1f59f83c9f97ebc6f1d56e867791db401f26d0de2f68d5b0586cba60fb1"
+  },
+  {
+    "path": "folha-dagu/folha/Install-Folha.ps1",
+    "original_sha256": "438b99c9def08bfc9a1a5dd58ee8dee771d581997997ec8bb552cbe5ba37b5b7",
+    "archive_sha256": "438b99c9def08bfc9a1a5dd58ee8dee771d581997997ec8bb552cbe5ba37b5b7"
+  },
+  {
+    "path": "folha-dagu/folha/README.md",
+    "original_sha256": "eb0fd5210e3d5e5f4c5209d13b381909a721859e0e6ad9b98caafb87f658bf23",
+    "archive_sha256": "eb0fd5210e3d5e5f4c5209d13b381909a721859e0e6ad9b98caafb87f658bf23"
+  },
+  {
+    "path": "folha-dagu/folha/SQLITE.md",
+    "original_sha256": "ad4c122446ae9e5550bc19464c3945f10f715cacc5a07b3dbb1f6ff32165c310",
+    "archive_sha256": "ad4c122446ae9e5550bc19464c3945f10f715cacc5a07b3dbb1f6ff32165c310"
+  },
+  {
+    "path": "folha-dagu/folha/Start-Folha.ps1",
+    "original_sha256": "b802182a0aa4f9543432f0095bbacd5535d78657a120dd973303de76ab422fd6",
+    "archive_sha256": "b802182a0aa4f9543432f0095bbacd5535d78657a120dd973303de76ab422fd6"
+  },
+  {
+    "path": "folha-dagu/folha/Submit-Folha.ps1",
+    "original_sha256": "35c50a069274d86040133e773ed2d55013f01dbe9f7089599e3fb693ad4ed6ac",
+    "archive_sha256": "35c50a069274d86040133e773ed2d55013f01dbe9f7089599e3fb693ad4ed6ac"
+  },
+  {
+    "path": "folha-dagu/folha/defaults/regras/execucao-e-capacidade.md",
+    "original_sha256": "f975adb75ddd527f26758452ae047a6fbe2fbf8e836e0c772035d43734c704be",
+    "archive_sha256": "f975adb75ddd527f26758452ae047a6fbe2fbf8e836e0c772035d43734c704be"
+  },
+  {
+    "path": "folha-dagu/folha/defaults/regras/verificacao-fontes.md",
+    "original_sha256": "0c6525167ac0fa3437dbe0092193fb133e58bb10607d1f79518a36684aa25d0e",
+    "archive_sha256": "0c6525167ac0fa3437dbe0092193fb133e58bb10607d1f79518a36684aa25d0e"
+  },
+  {
+    "path": "folha-dagu/folha/templates/converter-pdf.yaml",
+    "original_sha256": "68eda5f0b085e3a582537a173038e7fca675953b114094eb13f77c947c3c2f09",
+    "archive_sha256": "68eda5f0b085e3a582537a173038e7fca675953b114094eb13f77c947c3c2f09"
+  },
+  {
+    "path": "folha-dagu/folha/templates/guardar-texto.yaml",
+    "original_sha256": "8f49129f4f773e9e2e8b900a749587865ce0f34e30f02094b0f1a6cfc36b0339",
+    "archive_sha256": "8f49129f4f773e9e2e8b900a749587865ce0f34e30f02094b0f1a6cfc36b0339"
+  },
+  {
+    "path": "folha-dagu/folha/templates/pesquisar-biblioteca.yaml",
+    "original_sha256": "c788c87125741362157cd0945279056f5c5471ac4be7f2235ed7ae179204a37b",
+    "archive_sha256": "c788c87125741362157cd0945279056f5c5471ac4be7f2235ed7ae179204a37b"
+  },
+  {
+    "path": "folha-dagu/folha/templates/verificar.yaml",
+    "original_sha256": "fbca51053a9d6f43d779f0bc9175f0d7e98967bcdb05a5bccf60d7bffb4a721d",
+    "archive_sha256": "fbca51053a9d6f43d779f0bc9175f0d7e98967bcdb05a5bccf60d7bffb4a721d"
+  },
+  {
+    "path": "folha-dagu/folha/tests/browser.cjs",
+    "original_sha256": "1ef4c451ec84bfbd51227a979ca1b974b384979f55d956ee722e31f3e7777606",
+    "archive_sha256": "1ef4c451ec84bfbd51227a979ca1b974b384979f55d956ee722e31f3e7777606"
+  },
+  {
+    "path": "folha-dagu/folha/tests/index.ps1",
+    "original_sha256": "876488c535a389c2f45944469bc6957bdffa13e486a129571da38e9e1d310ba4",
+    "archive_sha256": "876488c535a389c2f45944469bc6957bdffa13e486a129571da38e9e1d310ba4"
+  },
+  {
+    "path": "folha-dagu/folha/tests/integration.mjs",
+    "original_sha256": "175cfd3186c2cae58fd5c8a05959fa93036eb981c5677c23d45b97c53d6783e1",
+    "archive_sha256": "175cfd3186c2cae58fd5c8a05959fa93036eb981c5677c23d45b97c53d6783e1"
+  },
+  {
+    "path": "folha-dagu/folha/ui/app.js",
+    "original_sha256": "5812f029f36a33a0e7a59d0438329f05ebc5eae4848dfebfc5c908f39d3a2b88",
+    "archive_sha256": "5812f029f36a33a0e7a59d0438329f05ebc5eae4848dfebfc5c908f39d3a2b88"
+  },
+  {
+    "path": "folha-dagu/folha/ui/index.html",
+    "original_sha256": "241f7ea086405a4afdad9b18dcbafc2ef1ddcddf7e342949d5c6de3cf1c7c866",
+    "archive_sha256": "241f7ea086405a4afdad9b18dcbafc2ef1ddcddf7e342949d5c6de3cf1c7c866"
+  },
+  {
+    "path": "folha-dagu/folha/ui/style.css",
+    "original_sha256": "64cf291a11b9827cece4d4c318b114d8a16de76b52e91a60b37fa9744745139e",
+    "archive_sha256": "64cf291a11b9827cece4d4c318b114d8a16de76b52e91a60b37fa9744745139e"
+  },
+  {
+    "path": "integracoes-locais/configuracao/ace-instalado-requirements.txt",
+    "original_sha256": "c22840a539e9da16070d6c409334addccab778e82e84c86889746070364c78a0",
+    "archive_sha256": "c22840a539e9da16070d6c409334addccab778e82e84c86889746070364c78a0"
+  },
+  {
+    "path": "integracoes-locais/configuracao/avatar-instalado-requirements.txt",
+    "original_sha256": "30ce98e668245d2abfd066d8f0b6c761a4a91e20f90b15fc3f33da11b9c64b0c",
+    "archive_sha256": "30ce98e668245d2abfd066d8f0b6c761a4a91e20f90b15fc3f33da11b9c64b0c"
+  },
+  {
+    "path": "integracoes-locais/configuracao/avatar-local.py",
+    "original_sha256": "8bc92b70f06dba954cc4fc2b7927ca205264fcb4536dcc8cafd7d205b7dd08a5",
+    "archive_sha256": "8bc92b70f06dba954cc4fc2b7927ca205264fcb4536dcc8cafd7d205b7dd08a5"
+  },
+  {
+    "path": "integracoes-locais/configuracao/check-media-tools.ps1",
+    "original_sha256": "5bc2c98d73906156b43055a05f87f91c508b9791069602cd4e9bec666d3c9512",
+    "archive_sha256": "5bc2c98d73906156b43055a05f87f91c508b9791069602cd4e9bec666d3c9512"
+  },
+  {
+    "path": "integracoes-locais/configuracao/ferramentas-nexus.py",
+    "original_sha256": "ac9507490db31d01a006c963bf7dd5a0be6ac5bfc7dccbdb780024bf6813d6f5",
+    "archive_sha256": "ac9507490db31d01a006c963bf7dd5a0be6ac5bfc7dccbdb780024bf6813d6f5"
+  },
+  {
+    "path": "integracoes-locais/configuracao/forge-constraints.txt",
+    "original_sha256": "0191dc7769ae44a5576d7a07161261c1bf3dde7bcb27b626f195ab46d4b7f5a7",
+    "archive_sha256": "0191dc7769ae44a5576d7a07161261c1bf3dde7bcb27b626f195ab46d4b7f5a7"
+  },
+  {
+    "path": "integracoes-locais/configuracao/forge-instalado-requirements.txt",
+    "original_sha256": "bd05f6638894a698b6f8fc93b4a392670582dcd59fef3498adf4b8f59b763106",
+    "archive_sha256": "bd05f6638894a698b6f8fc93b4a392670582dcd59fef3498adf4b8f59b763106"
+  },
+  {
+    "path": "integracoes-locais/configuracao/iniciar-open-notebook-mcp.py",
+    "original_sha256": "72e935d4890cc600afa0413af4a45f92f4e273f452e58dbac991e5fb406b1284",
+    "archive_sha256": "72e935d4890cc600afa0413af4a45f92f4e273f452e58dbac991e5fb406b1284"
+  },
+  {
+    "path": "integracoes-locais/configuracao/instalar-componentes-independentes.ps1",
+    "original_sha256": "dcf7270797608d5d626c1c9846e5a801cf4bd2c6eb6ffe6dd4110745e121cc53",
+    "archive_sha256": "dcf7270797608d5d626c1c9846e5a801cf4bd2c6eb6ffe6dd4110745e121cc53"
+  },
+  {
+    "path": "integracoes-locais/configuracao/instalar-ferramentas.ps1",
+    "original_sha256": "77b5eb9373650afb5ca1f3ed1d2a58052e16093ca430ec4268d5dec318749c18",
+    "archive_sha256": "8209b553d6a9e25b0a219642cfb2d9a83c12c9b79725728e72f4ba2c4ea5823f"
+  },
+  {
+    "path": "integracoes-locais/configuracao/instalar-media-oficial.ps1",
+    "original_sha256": "190d19780baeafefe232a525379759dd0bc230bede1345e7a6e708230ae714e7",
+    "archive_sha256": "190d19780baeafefe232a525379759dd0bc230bede1345e7a6e708230ae714e7"
+  },
+  {
+    "path": "integracoes-locais/configuracao/open-notebook-mcp-requirements.txt",
+    "original_sha256": "7decbe240ae6e2d7bf4693ac429d27f73ff3fd96bb827b91954a8c112a35c596",
+    "archive_sha256": "7decbe240ae6e2d7bf4693ac429d27f73ff3fd96bb827b91954a8c112a35c596"
+  },
+  {
+    "path": "integracoes-locais/configuracao/ponte-forge-local.py",
+    "original_sha256": "74ba3613c198f4356125a61f5c90b9e5e37135dbe3391ccebcaf5d6f0b5b7684",
+    "archive_sha256": "74ba3613c198f4356125a61f5c90b9e5e37135dbe3391ccebcaf5d6f0b5b7684"
+  },
+  {
+    "path": "integracoes-locais/configuracao/ponte-piper-local.py",
+    "original_sha256": "ce5bf13585f61eddd74f6cc97b62cadfc9424a7aa01e340bddd4f33cfed1e20b",
+    "archive_sha256": "ab4120cd511c0f69cc296c7b1b1aa66dbebf42a98492de400724086f44b9c627"
+  },
+  {
+    "path": "integracoes-locais/configuracao/preparar-nucleo.ps1",
+    "original_sha256": "77bda2cd910f15bb148cf23c01a455a790acefe88c488ed2f238537856c2f812",
+    "archive_sha256": "77bda2cd910f15bb148cf23c01a455a790acefe88c488ed2f238537856c2f812"
+  },
+  {
+    "path": "integracoes-locais/configuracao/preservar-open-notebook.py",
+    "original_sha256": "ba5a73c0a352540b02089eac009f39069a7be8df2a072ae978cd7bcdc2a8ece1",
+    "archive_sha256": "ba5a73c0a352540b02089eac009f39069a7be8df2a072ae978cd7bcdc2a8ece1"
+  },
+  {
+    "path": "integracoes-locais/configuracao/servicos-ia-local.py",
+    "original_sha256": "70543b2e24e77cb132b66d2469372f3c775d4435d0f6e965c14dfed603a43f8b",
+    "archive_sha256": "70543b2e24e77cb132b66d2469372f3c775d4435d0f6e965c14dfed603a43f8b"
+  },
+  {
+    "path": "integracoes-locais/configuracao/servicos-open-notebook.py",
+    "original_sha256": "0501c8aae8f04e9bebee9f6ded375558806cff0a435e4f538f95a581affb2714",
+    "archive_sha256": "0501c8aae8f04e9bebee9f6ded375558806cff0a435e4f538f95a581affb2714"
+  },
+  {
+    "path": "integracoes-locais/configuracao/speaches-instalado-requirements.txt",
+    "original_sha256": "a7e8ff10c91139e4aee32ea483c57de89465b69980d9288a5e721cd82615619e",
+    "archive_sha256": "a7e8ff10c91139e4aee32ea483c57de89465b69980d9288a5e721cd82615619e"
+  },
+  {
+    "path": "integracoes-locais/configuracao/surreal-wsl.py",
+    "original_sha256": "bf42bf1c3507a9889a87e3018cfe2ebd15866c58a3ad6cf3b5fb6aa45a58bd4e",
+    "archive_sha256": "bf42bf1c3507a9889a87e3018cfe2ebd15866c58a3ad6cf3b5fb6aa45a58bd4e"
+  },
+  {
+    "path": "integracoes-locais/configuracao/testar-arranque-modelos.py",
+    "original_sha256": "05329618e8e0f76a75a56217b91a87b17454e6b7f0f126ed83ae2bb5e8f9a96b",
+    "archive_sha256": "05329618e8e0f76a75a56217b91a87b17454e6b7f0f126ed83ae2bb5e8f9a96b"
+  },
+  {
+    "path": "integracoes-locais/configuracao/testar-deforum.py",
+    "original_sha256": "62503d4fb9db56b3c65039a41824548c1f56126a9f5eb27d11abaaf246a89d59",
+    "archive_sha256": "62503d4fb9db56b3c65039a41824548c1f56126a9f5eb27d11abaaf246a89d59"
+  },
+  {
+    "path": "integracoes-locais/configuracao/testar-media-apis.py",
+    "original_sha256": "11547c9ff5f4737287af2de45e83602b6ad0e40a11b3a4dfa573be5b4987c013",
+    "archive_sha256": "11547c9ff5f4737287af2de45e83602b6ad0e40a11b3a4dfa573be5b4987c013"
+  },
+  {
+    "path": "integracoes-locais/configuracao/testar-musica.py",
+    "original_sha256": "35b6c62873a6ca7f7b36052ed6ff6c910673065eb4ad7a869357ad7174aae16f",
+    "archive_sha256": "35b6c62873a6ca7f7b36052ed6ff6c910673065eb4ad7a869357ad7174aae16f"
+  },
+  {
+    "path": "integracoes-locais/configuracao/testar-nucleo.py",
+    "original_sha256": "b4891f431fca1f280011286cbd34f5063ad556c833347ee06faeb6a0fbcdd9cd",
+    "archive_sha256": "807fcce24f8d631928c099ad4ae164de2306c0ec5f655a66c3548ce35c7cd64f"
+  },
+  {
+    "path": "integracoes-locais/configuracao/testar-open-notebook-mcp.py",
+    "original_sha256": "1bfde532aa4921c87a97fefb85868f7effc54a368b69279b23bf8a7e2a2bd7d4",
+    "archive_sha256": "1bfde532aa4921c87a97fefb85868f7effc54a368b69279b23bf8a7e2a2bd7d4"
+  },
+  {
+    "path": "integracoes-locais/configuracao/testar-revisao-natural.py",
+    "original_sha256": "b68f73e4b2929b808b75727b217cc1e4999a6149a58b1b2f8b8e883a4414623a",
+    "archive_sha256": "54c0fe1adbfb7f4e0103ad27cd129b6254859377e64c15e38ef0d209405530dc"
+  },
+  {
+    "path": "integracoes-locais/configuracao/testes-reais.py",
+    "original_sha256": "805df8e337f01675aa1afc294c8fd2cb5e4e8bd147971cec2bb816887e58418e",
+    "archive_sha256": "805df8e337f01675aa1afc294c8fd2cb5e4e8bd147971cec2bb816887e58418e"
+  },
+  {
+    "path": "integracoes-locais/configuracao/verificar-media-resultados.py",
+    "original_sha256": "2c4283077945bb9ca8f4949a12eefeafb6c5db02ea2723e0cd1c37187baa1823",
+    "archive_sha256": "2c4283077945bb9ca8f4949a12eefeafb6c5db02ea2723e0cd1c37187baa1823"
+  },
+  {
+    "path": "integracoes-locais/configuracao/verificar-open-notebook.py",
+    "original_sha256": "d211dfc6c53a8aa959f80c25d789371a846677ab3bb471b2dfc67968963d40f0",
+    "archive_sha256": "d211dfc6c53a8aa959f80c25d789371a846677ab3bb471b2dfc67968963d40f0"
+  },
+  {
+    "path": "integracoes-locais/configuracao/verificar-surreal-wsl.py",
+    "original_sha256": "e8548ffe7c92054554c9521cd2b7aa78db15e2d8536a5d1986e83898f1feb073",
+    "archive_sha256": "e8548ffe7c92054554c9521cd2b7aa78db15e2d8536a5d1986e83898f1feb073"
+  },
+  {
+    "path": "integracoes-locais/abrir-nexus.py",
+    "original_sha256": "f2f476b3b3efffef5f5fdb13b71486887cea554bfe30b2a0768846be66eb76cb",
+    "archive_sha256": "f2f476b3b3efffef5f5fdb13b71486887cea554bfe30b2a0768846be66eb76cb"
+  },
+  {
+    "path": "integracoes-locais/servicos_nexus.py",
+    "original_sha256": "ad16d70b983f9763bd50c8e65bb82bc82cf4faf1f6ceff7e708caa694e7453af",
+    "archive_sha256": "ad16d70b983f9763bd50c8e65bb82bc82cf4faf1f6ceff7e708caa694e7453af"
+  },
+  {
+    "path": "integracoes-locais/abrir-zotero.ps1",
+    "original_sha256": "729fa8bf305cbf03aa91db3c8d8a185a5fb93c2ee3be1193ad69b9d3fe368597",
+    "archive_sha256": "729fa8bf305cbf03aa91db3c8d8a185a5fb93c2ee3be1193ad69b9d3fe368597"
+  },
+  {
+    "path": "integracoes-locais/Abrir Nexus.cmd",
+    "original_sha256": "d7b1ea6ab16be226eacf27f8c5615adc5bdbfb5c2c9b29568c65df8a864c3515",
+    "archive_sha256": "d7b1ea6ab16be226eacf27f8c5615adc5bdbfb5c2c9b29568c65df8a864c3515"
+  },
+  {
+    "path": "integracoes-locais/Testar Nexus.bat",
+    "original_sha256": "2f0d6d0d6b8485c18891308e73adf0b1232c67ccd3cf794380afadb6c23d1fa2",
+    "archive_sha256": "2f0d6d0d6b8485c18891308e73adf0b1232c67ccd3cf794380afadb6c23d1fa2"
+  }
+]

@@ -1,0 +1,31 @@
+{
+  "run_id": 37233045607,
+  "run_url": "https://github.com/PAPACREATOR/cerebro-parvo-/actions/runs/37233045607",
+  "tested_commit": "ca8b034e1fd68cfdc78ba1368485c5b054472a65",
+  "tested_tree": "4671fa96fb9d44a4659635ef2be808a12e828cba",
+  "scope": "boundary tests with real FFmpeg/native auth; learned model substituted",
+  "jobs": [
+    {
+      "os": "Windows",
+      "job_id": 111526590837,
+      "conclusion": "success",
+      "passed": 165,
+      "failed": 0,
+      "skipped": 0,
+      "seconds": 11.46,
+      "artifact_id": 11314742466,
+      "artifact_zip_sha256": "3e0729d299cee8fb972f58c3fd9d8ec33074d1c02645ce688c7d3b16c6c68cad"
+    },
+    {
+      "os": "Ubuntu",
+      "job_id": 111526591188,
+      "conclusion": "success",
+      "passed": 165,
+      "failed": 0,
+      "skipped": 0,
+      "seconds": 11.4,
+      "artifact_id": 11314059640,
+      "artifact_zip_sha256": "4a8b025dfc91fdd15813c4a040702c548e564efbdd0a19b8c30366f83f6ab552"
+    }
+  ]
+}
